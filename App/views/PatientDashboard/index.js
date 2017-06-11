@@ -6,13 +6,13 @@ import {
   Text,
   View
 } from 'react-native';
-import EventList from '../../components/EventList/';
+import EventListContainer from '../../components/EventList/';
 
 export default class PatientDashboard extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <EventList />
+            <EventListContainer />
         </View>
     );
   }

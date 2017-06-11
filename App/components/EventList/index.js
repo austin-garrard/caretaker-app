@@ -5,22 +5,33 @@ import {
     Text,
     View
 } from 'react-native';
+import EventGateway from '../../gateway/event.js'
 
-export default class EventList extends Component {
-    _getAllEvents() {
-        return [
-            {key: 1, date: 'July 1', name: 'Chemotherapy', volunteer: 'Jack'},
-            {key: 2, date: 'July 3rd', name: 'Toxicity Check', volunteer: 'TBD'},
-            {key: 3, date: 'July 7th', name: 'Weekend', volunteer: 'Sarah'}
-        ]
-    }
+export default class EventListContainer extends Component {
+  constructor() {
+    super();
+    this.gateway = new EventGateway();
+    this.state = {
+      events: []
+    };
+  }
 
+  componentDidMount() {
+    this.setState({events: this.gateway.getAll()});
+  }
+
+  render() {
+    return <EventList events={this.state.events} />;
+  }
+}
+
+export class EventList extends Component {
     render() {
         return (
             <View style={styles.container}>
             <Text style={styles.title}>Upcoming Events</Text>
             <FlatList
-               data={ this._getAllEvents() }
+               data={this.props.events}
                renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.volunteer}</Text>}
             />
             </View>
