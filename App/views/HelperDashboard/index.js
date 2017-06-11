@@ -5,13 +5,16 @@ import {
   Text,
   View
 } from 'react-native';
-import EventListContainer from '../../components/EventList/';
 
-export default class PatientDashboard extends Component {
+export default class HelperDashboard extends Component {
+  static navigationOptions = {
+    title: 'Helper Screen'
+  };
+
   render() {
     return (
         <View style={styles.container}>
-            <EventListContainer />
+            <Text style={styles.title}>Helper View</Text>
         </View>
     );
   }
