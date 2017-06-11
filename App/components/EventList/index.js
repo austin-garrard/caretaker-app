@@ -5,25 +5,19 @@ import {
     Text,
     View
 } from 'react-native';
+import EventGateway from '../../gateway/event.js'
 
 export default class EventListContainer extends Component {
-
   constructor() {
     super();
+    this.gateway = new EventGateway();
     this.state = {
       events: []
-    }
+    };
   }
 
   componentDidMount() {
-    // This will be an api call at some point
-    let events = [
-      {key: 1, date: 'July 1', name: 'Chemotherapy', volunteer: 'Jack'},
-      {key: 2, date: 'July 3rd', name: 'Toxicity Check', volunteer: 'TBD'},
-      {key: 3, date: 'July 7th', name: 'Weekend', volunteer: 'Sarah'}
-    ];
-
-    this.setState({events: events});
+    this.setState({events: this.gateway.getAll()});
   }
 
   render() {
