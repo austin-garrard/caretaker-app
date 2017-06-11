@@ -6,12 +6,14 @@ import {
   Text,
   View
 } from 'react-native';
-import PatientDashboard from './App/views/PatientDashboard/';
+import EventList from '../../components/EventList/';
 
-export default class caretaker extends Component {
+export default class PatientDashboard extends Component {
   render() {
     return (
-        <PatientDashboard />
+        <View style={styles.container}>
+            <EventList />
+        </View>
     );
   }
 }
@@ -27,5 +29,3 @@ const styles = StyleSheet.create({
     margin: 15,
   },
 });
-
-AppRegistry.registerComponent('caretaker', () => caretaker);

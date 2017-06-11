@@ -18,6 +18,7 @@ export default class EventList extends Component {
     render() {
         return (
             <View style={styles.container}>
+            <Text style={styles.title}>Upcoming Events</Text>
             <FlatList
                data={ this._getAllEvents() }
                renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.volunteer}</Text>}
@@ -31,6 +32,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F5FCFF',
+  },
+  title: {
+    fontSize: 24,
+    textAlign: 'center',
+    margin: 15,
   },
   item: {
     fontSize: 20,
