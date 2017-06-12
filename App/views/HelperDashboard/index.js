@@ -5,6 +5,8 @@ import {
   Text,
   View
 } from 'react-native';
+import AssignedEventListContainer from '../../components/AssignedEventList/';
+import UnassignedEventListContainer from '../../components/UnassignedEventList/';
 
 export default class HelperDashboard extends Component {
   static navigationOptions = {
@@ -14,7 +16,8 @@ export default class HelperDashboard extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Helper View</Text>
+            <AssignedEventListContainer />
+            <UnassignedEventListContainer />
         </View>
     );
   }

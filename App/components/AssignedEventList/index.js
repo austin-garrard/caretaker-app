@@ -7,37 +7,38 @@ import {
 } from 'react-native';
 import EventGateway from '../../gateway/event.js'
 
-export default class UnassignedEventListContainer extends Component {
+export default class AssignedEventListContainer extends Component {
   constructor() {
     super();
     this.gateway = new EventGateway();
     this.state = {
       events: []
     };
+    this.name = "Sarah"
   }
 
   componentDidMount() {
     this.setState({events: this.gateway.getAll()});
   }
 
-  getUnassigned() {
-      var groupedEvents = this.state.events.filter(function(event){ return event.volunteer === 'TBD' });
-      return groupedEvents;
-    }
+  getAssignedTo(volunteerName) {
+    var assignedEvents = this.state.events.filter(function(event){ return event.volunteer === volunteerName });
+    return assignedEvents;
+  }
 
   render() {
-    return <UnassignedEventList events={this.getUnassigned()} />;
+    return <AssignedEventList events={this.getAssignedTo(this.name)} />;
   }
 }
 
-export class UnassignedEventList extends Component {
+export class AssignedEventList extends Component {
     render() {
         return (
             <View style={styles.container}>
-            <Text style={styles.title}>Events Still Looking for People</Text>
+            <Text style={styles.title}>Assigned Upcoming Events</Text>
             <FlatList
                data={this.props.events}
-               renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
+               renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name}</Text>}
             />
             </View>
         );
