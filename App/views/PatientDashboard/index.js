@@ -8,6 +8,10 @@ import {
 import EventListContainer from '../../components/EventList/';
 
 export default class PatientDashboard extends Component {
+  static navigationOptions = {
+    title: 'Patient Screen'
+  };
+
   render() {
     return (
         <View style={styles.container}>

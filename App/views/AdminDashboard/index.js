@@ -5,6 +5,7 @@ import {
   Text,
   View
 } from 'react-native';
+import UnassignedEventListContainer from '../../components/UnassignedEventList/';
 
 export default class AdminDashboard extends Component {
   static navigationOptions = {
@@ -14,7 +15,7 @@ export default class AdminDashboard extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Admin View</Text>
+            <UnassignedEventListContainer />
         </View>
     );
   }
