@@ -9,7 +9,6 @@ import {
     View
 } from 'react-native';
 import EventGateway from '../../gateway/event.js'
-import EventDetailsModal from '../../modals/EventDetailsModal'
 
 export default class EventListContainer extends Component {
   constructor() {
@@ -39,7 +38,7 @@ class MyListItem extends React.PureComponent {
         return (
             <TouchableOpacity onPress={this._onPress}>
                 <View style={styles.button}>
-                   <Text>{item.date}: {item.name} - {item.volunteer}</Text>
+                   <Text style={styles.item}>{item.date}: {item.name} - {item.volunteer}</Text>
                 </View>
             </TouchableOpacity>
         )
@@ -68,14 +67,14 @@ export class EventList extends Component {
 
     _renderModalContent = () => (
         <View style={styles.modalContent}>
-              <Text>{this.state.event.name}</Text>
+              <Text style={styles.modalTitle}>{this.state.event.name}</Text>
 
-              <Text>{this.state.event.date} {this.state.event.time}</Text>
-              <Text>{this.state.event.location}</Text>
+              <Text style={styles.modalInfo}>{this.state.event.date} {this.state.event.time}</Text>
+              <Text style={styles.modalInfo}>{this.state.event.location}</Text>
 
-              <Text>{this.state.event.role}:{this.state.event.volunteer}</Text>
+              <Text style={styles.modalInfo}>{this.state.event.role}:{this.state.event.volunteer}</Text>
 
-              <Text>{this.state.event.description}</Text>
+              <Text style={styles.modalInfo}>{this.state.event.description}</Text>
             {this._renderButton('Close', () => this.setState({ visibleModal: false }))}
         </View>
     );
@@ -130,5 +129,15 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     margin: 13,
+  },
+  modalTitle: {
+    fontSize: 24,
+    textAlign: 'center',
+    margin: 15
+  },
+  modalInfo: {
+    fontSize: 20,
+    textAlign: 'left',
+    margin: 10
   }
 });
