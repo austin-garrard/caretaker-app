@@ -6,26 +6,8 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
-import EventGateway from '../../gateway/event.js';
+import {ContainerFor} from './container.js';
 import EventModal from '../shared/EventModal.js';
-
-export default class EventListContainer extends Component {
-  constructor() {
-    super();
-    this.gateway = new EventGateway();
-    this.state = {
-      events: []
-    };
-  }
-
-  componentDidMount() {
-    this.setState({events: this.gateway.getAll()});
-  }
-
-  render() {
-    return <EventList events={this.state.events} />;
-  }
-}
 
 class MyListItem extends React.PureComponent {
     _onPress = () => {
@@ -44,7 +26,7 @@ class MyListItem extends React.PureComponent {
     }
 }
 
-export class EventList extends Component {
+class EventList extends Component {
     state = {
         visibleModal: false,
         event: {key: 1, date: 'July 1', time: '13:00-14:00', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteer: 'Jack', role: 'driver', description: ''},
@@ -117,3 +99,5 @@ const styles = StyleSheet.create({
     margin: 10
   }
 });
+
+export default ContainerFor(EventList);

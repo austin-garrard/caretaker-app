@@ -18,19 +18,22 @@ export default class EventModal extends Component {
       </TouchableOpacity>
   );
 
-  _renderModalContent = () => (
+  _renderModalContent = () => {
+    const props = this.props;
+    const event = props.event;
+    return (
       <View style={styles.modalContent}>
-        <Text style={styles.modalTitle}>{this.props.event.name}</Text>
+        <Text style={styles.modalTitle}>{event.name}</Text>
 
-        <Text style={styles.modalInfo}>{this.props.event.date} {this.props.event.time}</Text>
-        <Text style={styles.modalInfo}>{this.props.event.location}</Text>
+        <Text style={styles.modalInfo}>{event.date} {event.time}</Text>
+        <Text style={styles.modalInfo}>{event.location}</Text>
 
-        <Text style={styles.modalInfo}>{this.props.event.role}:{this.props.event.volunteer}</Text>
+        <Text style={styles.modalInfo}>{event.role}:{event.volunteer}</Text>
 
-        <Text style={styles.modalInfo}>{this.props.event.description}</Text>
-        {this._renderButton('Close', this.props.close())}
-      </View>
-  );
+        <Text style={styles.modalInfo}>{event.description}</Text>
+        {this._renderButton('Close', props.close())}
+      </View>);
+  };
 
   render() {
     return (
