@@ -13,11 +13,17 @@ import { StackNavigator } from 'react-navigation';
 import PatientDashboard from './App/views/PatientDashboard/';
 import AdminDashboard from './App/views/AdminDashboard/';
 import HelperDashboard from './App/views/HelperDashboard/';
+import UserGateway from './App/gateway/user.js';
 
 export default class HomeScreen extends Component {
-  static navigationOptions = {
-    title: 'Patient Screen'
-  };
+    constructor() {
+        super();
+        UserGateway.signIn();
+    }
+
+    static navigationOptions = {
+        title: 'Patient Screen'
+    };
 
   render() {
     const {navigate} = this.props.navigation

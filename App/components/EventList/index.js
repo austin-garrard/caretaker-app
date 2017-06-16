@@ -7,7 +7,7 @@ import {
     View
 } from 'react-native';
 import {ContainerFor} from './container.js';
-import EventModal from '../shared/EventModal';
+import EventModal from '../shared/EventModal/';
 
 class MyListItem extends React.PureComponent {
     _onPress = () => {
