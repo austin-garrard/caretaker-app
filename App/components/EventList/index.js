@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {
-    Button,
     FlatList,
-    Modal,
     StyleSheet,
     Text,
     TouchableOpacity,
     View
 } from 'react-native';
-import EventGateway from '../../gateway/event.js'
+import EventGateway from '../../gateway/event.js';
+import EventModal from '../shared/EventModal.js';
 
 export default class EventListContainer extends Component {
   constructor() {
@@ -51,37 +50,15 @@ export class EventList extends Component {
         event: {key: 1, date: 'July 1', time: '13:00-14:00', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteer: 'Jack', role: 'driver', description: ''},
     };
 
-    _eventDetails = (event) => (
-        <View>
-        <EventDetailsModal event />
-        </View>
-    );
-
-    _renderButton = (text, onPress) => (
-        <TouchableOpacity onPress={onPress}>
-          <View style={styles.button}>
-            <Text>{text}</Text>
-          </View>
-        </TouchableOpacity>
-    );
-
-    _renderModalContent = () => (
-        <View style={styles.modalContent}>
-              <Text style={styles.modalTitle}>{this.state.event.name}</Text>
-
-              <Text style={styles.modalInfo}>{this.state.event.date} {this.state.event.time}</Text>
-              <Text style={styles.modalInfo}>{this.state.event.location}</Text>
-
-              <Text style={styles.modalInfo}>{this.state.event.role}:{this.state.event.volunteer}</Text>
-
-              <Text style={styles.modalInfo}>{this.state.event.description}</Text>
-            {this._renderButton('Close', () => this.setState({ visibleModal: false }))}
-        </View>
-    );
-
     _onPressItem = (eventItem) => {
         this.setState({ visibleModal: true, event: eventItem});
     };
+
+    _onCloseModal = () => {
+      let newState = this.state;
+      newState.visibleModal = false;
+      this.setState(newState);
+    }
 
     _renderItem = ({item}) => (
         <MyListItem
@@ -95,12 +72,11 @@ export class EventList extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Modal visible={this.state.visibleModal === true}
-                    animationType={"fade"}
-                    transparent={false}
-                    onRequestClose={() => {alert("Modal has been closed.")}}>
-                      {this._renderModalContent()}
-                </Modal>
+                <EventModal
+                  event={this.state.event}
+                  visible={this.state.visibleModal}
+                  close={() => this._onCloseModal}
+                />
                 <Text style={styles.title}>Upcoming Events</Text>
                 <FlatList
                    data={this.props.events}
