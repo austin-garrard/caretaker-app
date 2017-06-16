@@ -31,7 +31,7 @@ export default class UserGateway {
     }
 
     static isSignedIn() {
-        return this.currentUser = null;
+        return this.currentUser !== null;
     }
 
     static signIn() {
