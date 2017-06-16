@@ -27,27 +27,30 @@ class MyListItem extends React.PureComponent {
 }
 
 class EventList extends Component {
-    state = {
-        visibleModal: false,
-        event: {key: 1, date: 'July 1', time: '13:00-14:00', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteer: 'Jack', role: 'driver', description: ''},
-    };
+    constructor() {
+        super();
+        this.state = {
+            visibleModal: false,
+            event: {key: 1, date: 'July 1', time: '13:00-14:00', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteer: 'Jack', role: 'driver', description: ''},
+        };
+    }
 
     _onPressItem = (eventItem) => {
         this.setState({ visibleModal: true, event: eventItem});
     };
 
     _onCloseModal = () => {
-      let newState = this.state;
-      newState.visibleModal = false;
-      this.setState(newState);
+        let newState = this.state;
+        newState.visibleModal = false;
+        this.setState(newState);
     }
 
     _renderItem = ({item}) => (
         <MyListItem
-          id={item.key}
-          item={item}
-          onPressItem={this._onPressItem}
-          title={item.title}
+            id={item.key}
+            item={item}
+            onPressItem={this._onPressItem}
+            title={item.title}
         />
     );
 
@@ -55,9 +58,11 @@ class EventList extends Component {
         return (
             <View style={styles.container}>
                 <EventModal
-                  event={this.state.event}
-                  visible={this.state.visibleModal}
-                  close={() => this._onCloseModal}
+                    event={this.state.event}
+                    visible={this.state.visibleModal}
+                    close={this._onCloseModal}
+                    edit={this._onEditEvent}
+                    exportToCalendar={this._onExportToCalendar}
                 />
                 <Text style={styles.title}>Upcoming Events</Text>
                 <FlatList
