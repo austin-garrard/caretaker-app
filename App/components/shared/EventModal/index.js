@@ -8,6 +8,7 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
+import UserGateway from '../../../gateway/user.js';
 
 export default class EventModal extends Component {
     _renderButton = (text, onPress) => (
@@ -18,18 +19,6 @@ export default class EventModal extends Component {
         </TouchableOpacity>
     );
 
-    isAvailable(volunteer) {
-        return volunteer === 'TBD';
-    }
-
-    isSelf(volunteer) {
-        return volunteer === 'Jack';
-    }
-
-    isAdmin(volunteer) {
-        return volunteer === 'Sarah';
-    }
-
     _onPickUpEvent = () => alert('volunteered!');
 
     _onDropEvent = () => alert('un-volunteered :(');
@@ -39,35 +28,35 @@ export default class EventModal extends Component {
     _onExportToCalendar = () => alert('exported!');
 
     _renderPickUpEventbutton = (volunteer) => {
-        if(this.isAvailable(volunteer)) {
+        if(volunteer === 'TBD') {
             return this._renderButton('[pick up event]', this._onPickUpEvent);
         } else {
             return null;
         }
     }
 
-    _renderDropEventButton = (volunteer) => {
-        if(this.isSelf(volunteer)) {
+    _renderDropEventButton = (volunteerId) => {
+        if(UserGateway.isSelf(volunteerId)) {
             return this._renderButton('[drop event]', this._onDropEvent);
         } else {
             return null;
         }
     }
 
-    _renderEditEventButton = (volunteer) => {
-        if(this.isAdmin(volunteer)) {
+    _renderEditEventButton = (volunteerId) => {
+        if(UserGateway.isAdmin(volunteerId)) {
             return this._renderButton('[edit event]', this._onEditEvent);
         } else {
             return null;
         }
     }
 
-    _renderVolunteerInfo = (role, volunteer) => {
+    _renderVolunteerInfo = (role, volunteer, volunteerId) => {
         return (
             <View>
                 <Text style={styles.modalInfo}>{role}:{volunteer}</Text>
-                {this._renderPickUpEventbutton(volunteer)}
-                {this._renderDropEventButton(volunteer)}
+                {this._renderPickUpEventbutton(volunteerId)}
+                {this._renderDropEventButton(volunteerId)}
             </View>
         );
     }
@@ -84,7 +73,7 @@ export default class EventModal extends Component {
             <Text style={styles.modalInfo}>{event.date} {event.time}</Text>
             <Text style={styles.modalInfo}>{event.location}</Text>
 
-            {this._renderVolunteerInfo(event.role, event.volunteer)}
+            {this._renderVolunteerInfo(event.role, event.volunteer, event.volunteerId)}
 
             <Text style={styles.modalInfo}>{event.description}</Text>
             {this._renderButton('Close', props.close)}
