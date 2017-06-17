@@ -11,7 +11,6 @@ import UserGateway from '../../gateway/user.js';
 export default class AssignedEventListContainer extends Component {
     constructor() {
         super();
-        this.eventGateway = new EventGateway();
         this.state = {
             events: []
         };
@@ -19,7 +18,7 @@ export default class AssignedEventListContainer extends Component {
     }
 
     componentDidMount() {
-        const events = this.eventGateway
+        const events = EventGateway
             .getAll()
             .filter((event) => UserGateway.isSelf(event.volunteerId))
 

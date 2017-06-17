@@ -10,17 +10,17 @@ import EventGateway from '../../gateway/event.js'
 export default class UnassignedEventListContainer extends Component {
   constructor() {
     super();
-    this.gateway = new EventGateway();
     this.state = {
       events: []
     };
   }
 
-  componentDidMount() {
-      let newState = this.state;
-      newState.events = this.gateway.getAll();
-      this.setState(newState);
-  }
+    componentDidMount() {
+        const events = EventGateway
+            .getAll()
+            .filter((event) => event.volunteerId == 'TBD');
+        this.setState({events: events});
+    }
 
   getUnassigned() {
       var groupedEvents = this.state.events.filter(function(event){ return event.volunteerId === 'TBD' });
