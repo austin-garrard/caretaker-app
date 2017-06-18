@@ -39,6 +39,7 @@ export class UnassignedEventList extends Component {
             <Text style={styles.title}>Events Still Looking for People</Text>
             <FlatList
                data={this.props.events}
+               keyExtractor={(item) => item.id}
                renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
             />
             </View>

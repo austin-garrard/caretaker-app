@@ -37,6 +37,7 @@ export class AssignedEventList extends Component {
             <Text style={styles.title}>Assigned Upcoming Events</Text>
             <FlatList
                data={this.props.events}
+               keyExtractor={(item) => item.id}
                renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name}</Text>}
             />
             </View>
