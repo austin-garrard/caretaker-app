@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnassignedEventList should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 24,
+        "margin": 15,
+        "textAlign": "center",
+      }
+    }
+  >
+    Events Still Looking for People
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "date": "July 5th",
+          "description": "",
+          "key": 3,
+          "location": "1120 S Lamar Blvd, Austin, TX 78704",
+          "name": "Checkin",
+          "role": "active friend",
+          "time": "08:30-09:30",
+          "volunteerId": "TBD",
+        },
+        Object {
+          "date": "July 9th",
+          "description": "",
+          "key": 5,
+          "location": "6818 Austin Center Blvd, Austin, TX 78731",
+          "name": "Chemotherapy",
+          "role": "driver",
+          "time": "10:15-12:15",
+          "volunteerId": "TBD",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onViewableItemsChanged={undefined}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 20,
+              "margin": 13,
+              "textAlign": "left",
+            }
+          }
+        >
+          July 5th
+          : 
+          Checkin
+           - 
+          active friend
+        </Text>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 20,
+              "margin": 13,
+              "textAlign": "left",
+            }
+          }
+        >
+          July 9th
+          : 
+          Chemotherapy
+           - 
+          driver
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 0,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

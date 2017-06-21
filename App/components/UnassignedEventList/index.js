@@ -17,11 +17,13 @@ export default class UnassignedEventListContainer extends Component {
   }
 
   componentDidMount() {
-    this.setState({events: this.gateway.getAll()});
+      let newState = this.state;
+      newState.events = this.gateway.getAll();
+      this.setState(newState);
   }
 
   getUnassigned() {
-      var groupedEvents = this.state.events.filter(function(event){ return event.volunteer === 'TBD' });
+      var groupedEvents = this.state.events.filter(function(event){ return event.volunteerId === 'TBD' });
       return groupedEvents;
     }
 
