@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AssignedEventListContainer should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 24,
+        "margin": 15,
+        "textAlign": "center",
+      }
+    }
+  >
+    Assigned Upcoming Events
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "date": "July 3rd",
+          "description": "Quick check",
+          "key": 2,
+          "location": "6818 Austin Center Blvd, Austin, TX 78731",
+          "name": "Toxicity Check",
+          "role": "driver",
+          "time": "11:00-12:00",
+          "volunteerId": "sarah@emailprovider.com",
+        },
+        Object {
+          "date": "July 7th",
+          "description": "Need to keep busy",
+          "key": 4,
+          "location": "1100 Congress Ave, Austin, TX 78701",
+          "name": "Weekend",
+          "role": "active friend",
+          "time": "All Day",
+          "volunteerId": "sarah@emailprovider.com",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onViewableItemsChanged={undefined}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 20,
+              "margin": 13,
+              "textAlign": "left",
+            }
+          }
+        >
+          July 3rd
+          : 
+          Toxicity Check
+        </Text>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 20,
+              "margin": 13,
+              "textAlign": "left",
+            }
+          }
+        >
+          July 7th
+          : 
+          Weekend
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 0,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

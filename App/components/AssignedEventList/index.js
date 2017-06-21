@@ -5,30 +5,30 @@ import {
     Text,
     View
 } from 'react-native';
-import EventGateway from '../../gateway/event.js'
+import EventGateway from '../../gateway/event.js';
+import UserGateway from '../../gateway/user.js';
 
 export default class AssignedEventListContainer extends Component {
-  constructor() {
-    super();
-    this.gateway = new EventGateway();
-    this.state = {
-      events: []
-    };
-    this.name = "Sarah"
-  }
+    constructor() {
+        super();
+        this.eventGateway = new EventGateway();
+        this.state = {
+            events: []
+        };
+        this.currentUser = '';
+    }
 
-  componentDidMount() {
-    this.setState({events: this.gateway.getAll()});
-  }
+    componentDidMount() {
+        const events = this.eventGateway
+            .getAll()
+            .filter((event) => UserGateway.isSelf(event.volunteerId))
 
-  getAssignedTo(volunteerName) {
-    var assignedEvents = this.state.events.filter(function(event){ return event.volunteer === volunteerName });
-    return assignedEvents;
-  }
+        this.setState({events: events});
+    }
 
-  render() {
-    return <AssignedEventList events={this.getAssignedTo(this.name)} />;
-  }
+    render() {
+        return <AssignedEventList events={this.state.events} />;
+    }
 }
 
 export class AssignedEventList extends Component {
