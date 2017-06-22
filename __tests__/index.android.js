@@ -5,8 +5,16 @@ import Index from '../index.android.js';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-  const tree = renderer.create(
-    <Index />
-  );
-});
+describe('Android app', () => {
+    let navigation;
+
+    beforeEach(() => {
+        navigation = jest.fn();
+    });
+
+    it('renders correctly', () => {
+        const tree = renderer.create(
+            <Index navigation={navigation} />
+        );
+    });
+})
