@@ -3,11 +3,10 @@ import renderer from 'react-test-renderer';
 import EventList from './index.js';
 import UserGateway from '../../gateway/user.js';
 import EventGateway from '../../gateway/event.js';
-import {ContainerFor} from './container.js';
 
 describe('EventList', () => {
     beforeEach(() => {
-        UserGateway.signIn();
+        UserGateway.signIn(); //todo: mock/stub gateways
     });
 
     it('should render correctly', () => {
