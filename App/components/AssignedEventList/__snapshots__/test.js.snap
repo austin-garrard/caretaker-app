@@ -29,7 +29,7 @@ exports[`AssignedEventListContainer should render correctly 1`] = `
         Object {
           "date": "July 3rd",
           "description": "Quick check",
-          "key": 2,
+          "id": 2,
           "location": "6818 Austin Center Blvd, Austin, TX 78731",
           "name": "Toxicity Check",
           "role": "driver",
@@ -39,7 +39,7 @@ exports[`AssignedEventListContainer should render correctly 1`] = `
         Object {
           "date": "July 7th",
           "description": "Need to keep busy",
-          "key": 4,
+          "id": 4,
           "location": "1100 Congress Ave, Austin, TX 78701",
           "name": "Weekend",
           "role": "active friend",

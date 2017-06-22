@@ -29,7 +29,7 @@ exports[`UnassignedEventList should render correctly 1`] = `
         Object {
           "date": "July 5th",
           "description": "",
-          "key": 3,
+          "id": 3,
           "location": "1120 S Lamar Blvd, Austin, TX 78704",
           "name": "Checkin",
           "role": "active friend",
@@ -39,7 +39,7 @@ exports[`UnassignedEventList should render correctly 1`] = `
         Object {
           "date": "July 9th",
           "description": "",
-          "key": 5,
+          "id": 5,
           "location": "6818 Austin Center Blvd, Austin, TX 78731",
           "name": "Chemotherapy",
           "role": "driver",

@@ -11,7 +11,6 @@ import UserGateway from '../../gateway/user.js';
 export default class AssignedEventListContainer extends Component {
     constructor() {
         super();
-        this.eventGateway = new EventGateway();
         this.state = {
             events: []
         };
@@ -19,7 +18,7 @@ export default class AssignedEventListContainer extends Component {
     }
 
     componentDidMount() {
-        const events = this.eventGateway
+        const events = EventGateway
             .getAll()
             .filter((event) => UserGateway.isSelf(event.volunteerId))
 
@@ -38,6 +37,7 @@ export class AssignedEventList extends Component {
             <Text style={styles.title}>Assigned Upcoming Events</Text>
             <FlatList
                data={this.props.events}
+               keyExtractor={(item) => item.id}
                renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name}</Text>}
             />
             </View>

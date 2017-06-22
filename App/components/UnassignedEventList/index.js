@@ -10,17 +10,17 @@ import EventGateway from '../../gateway/event.js'
 export default class UnassignedEventListContainer extends Component {
   constructor() {
     super();
-    this.gateway = new EventGateway();
     this.state = {
       events: []
     };
   }
 
-  componentDidMount() {
-      let newState = this.state;
-      newState.events = this.gateway.getAll();
-      this.setState(newState);
-  }
+    componentDidMount() {
+        const events = EventGateway
+            .getAll()
+            .filter((event) => event.volunteerId == 'TBD');
+        this.setState({events: events});
+    }
 
   getUnassigned() {
       var groupedEvents = this.state.events.filter(function(event){ return event.volunteerId === 'TBD' });
@@ -39,6 +39,7 @@ export class UnassignedEventList extends Component {
             <Text style={styles.title}>Events Still Looking for People</Text>
             <FlatList
                data={this.props.events}
+               keyExtractor={(item) => item.id}
                renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
             />
             </View>
