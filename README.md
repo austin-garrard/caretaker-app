@@ -1,4 +1,5 @@
 # caretaker-app
+[![Build Status](https://travis-ci.org/araneforseti/caretaker-app.svg?branch=master)](https://travis-ci.org/araneforseti/caretaker-app)
 
 Home of the caretaker app! WIP
 
