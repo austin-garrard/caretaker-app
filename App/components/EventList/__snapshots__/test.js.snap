@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventList should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 24,
+        "margin": 15,
+        "textAlign": "center",
+      }
+    }
+  >
+    Upcoming Events
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "date": "July 1",
+          "description": "",
+          "id": 1,
+          "location": "6818 Austin Center Blvd, Austin, TX 78731",
+          "name": "Chemotherapy",
+          "role": "driver",
+          "time": "13:00-14:00",
+          "volunteer": "Jack",
+          "volunteerId": "jack@coolwebsite.com",
+        },
+        Object {
+          "date": "July 3rd",
+          "description": "Quick check",
+          "id": 2,
+          "location": "6818 Austin Center Blvd, Austin, TX 78731",
+          "name": "Toxicity Check",
+          "role": "driver",
+          "time": "11:00-12:00",
+          "volunteer": "Sarah",
+          "volunteerId": "sarah@emailprovider.com",
+        },
+        Object {
+          "date": "July 5th",
+          "description": "",
+          "id": 3,
+          "location": "1120 S Lamar Blvd, Austin, TX 78704",
+          "name": "Checkin",
+          "role": "active friend",
+          "time": "08:30-09:30",
+          "volunteer": "TBD",
+          "volunteerId": "TBD",
+        },
+        Object {
+          "date": "July 7th",
+          "description": "Need to keep busy",
+          "id": 4,
+          "location": "1100 Congress Ave, Austin, TX 78701",
+          "name": "Weekend",
+          "role": "active friend",
+          "time": "All Day",
+          "volunteer": "Sarah",
+          "volunteerId": "sarah@emailprovider.com",
+        },
+        Object {
+          "date": "July 9th",
+          "description": "",
+          "id": 5,
+          "location": "6818 Austin Center Blvd, Austin, TX 78731",
+          "name": "Chemotherapy",
+          "role": "driver",
+          "time": "10:15-12:15",
+          "volunteer": "TBD",
+          "volunteerId": "TBD",
+        },
+        Object {
+          "date": "July 10th",
+          "description": "",
+          "id": 6,
+          "location": "6818 Austin Center Blvd, Austin, TX 78731",
+          "name": "Chemotherapy",
+          "role": "driver",
+          "time": "10:15-12:15",
+          "volunteer": "Austin",
+          "volunteerId": "austin@yeehaw.com",
+        },
+      ]
+    }
+    dataWhichCouldChange={
+      Array [
+        "Jack",
+        "Sarah",
+        "TBD",
+        "Sarah",
+        "TBD",
+        "Austin",
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onViewableItemsChanged={undefined}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 13,
+                  "textAlign": "left",
+                }
+              }
+            >
+              July 1
+              : 
+              Chemotherapy
+               - 
+              Jack
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 13,
+                  "textAlign": "left",
+                }
+              }
+            >
+              July 3rd
+              : 
+              Toxicity Check
+               - 
+              Sarah
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 13,
+                  "textAlign": "left",
+                }
+              }
+            >
+              July 5th
+              : 
+              Checkin
+               - 
+              TBD
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 13,
+                  "textAlign": "left",
+                }
+              }
+            >
+              July 7th
+              : 
+              Weekend
+               - 
+              Sarah
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 13,
+                  "textAlign": "left",
+                }
+              }
+            >
+              July 9th
+              : 
+              Chemotherapy
+               - 
+              TBD
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 13,
+                  "textAlign": "left",
+                }
+              }
+            >
+              July 10th
+              : 
+              Chemotherapy
+               - 
+              Austin
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 0,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;
