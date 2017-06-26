@@ -14,6 +14,7 @@ import PatientDashboard from './App/views/PatientDashboard/';
 import AdminDashboard from './App/views/AdminDashboard/';
 import HelperDashboard from './App/views/HelperDashboard/';
 import UserGateway from './App/gateway/user.js';
+import Login from './App/views/Login/';
 
 export default class HomeScreen extends Component {
     constructor() {
@@ -45,6 +46,7 @@ export default class HomeScreen extends Component {
 }
 
 const caretaker = StackNavigator({
+    Login: { screen: Login },
     Home: { screen: HomeScreen },
     Admin: { screen: AdminDashboard },
     Helper: { screen: HelperDashboard }
