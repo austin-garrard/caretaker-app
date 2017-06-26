@@ -10,6 +10,10 @@ import UserGateway from '../../gateway/user.js';
 
 export default class Login extends Component {
 
+    static navigationOptions = {
+        title: 'Login'
+    }
+
     constructor() {
         super();
         this.state = {

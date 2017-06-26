@@ -1,6 +1,6 @@
 
 
-class Permissions {
+export class Permissions {
     static FOCUS = 'focus';
     static ADMIN = 'admin';
     static HELPER = 'helper;';
@@ -50,5 +50,9 @@ export default class UserGateway {
     static isAdmin() {
         return this.currentUser.permission === Permissions.ADMIN
             || this.currentUser.permission === Permissions.FOCUS;
+    }
+
+    static getCurrentPermissions() {
+        return this.currentUser.permission;
     }
 }

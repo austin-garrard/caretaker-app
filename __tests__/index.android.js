@@ -8,18 +8,5 @@ import Index from '../index.android.js';
 import UserGateway from '../App/gateway/user.js';
 
 describe('Android app', () => {
-    let navigation;
-
-    beforeEach(() => {
-        navigation = jest.fn();
-        UserGateway.signIn('sarah@emailprovider.com');
-    });
-
-    it('renders correctly', () => {
-        const tree = renderer.create(
-            <Index navigation={navigation} />
-        );
-
-        expect(tree).toMatchSnapshot();
-    });
+    xit('sets up the navigation');
 });
