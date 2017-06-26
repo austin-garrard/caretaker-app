@@ -34,11 +34,11 @@ export default class Login extends Component {
                     <View style={styles.inputSpacer}></View>
                     <TextInput
                         style={styles.input}
-                        onChangeText={this.onUpdateEmail}
+                        onChangeText={this._onUpdateEmail.bind(this)}
                         placeholder='Enter email'/>
                     <View style={styles.inputSpacer}></View>
                 </View>
-                <Button title="Login" onPress={this._onLogin} />
+                <Button title="Login" onPress={this._onLogin.bind(this)} />
             </View>
         );
     }

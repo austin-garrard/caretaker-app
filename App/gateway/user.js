@@ -34,10 +34,10 @@ export default class UserGateway {
         return this.currentUser !== null;
     }
 
-    static signIn() {
+    static signIn(email) {
         //make call to google oauth and store the results
         let results = {
-            email: 'sarah@emailprovider.com'
+            email: email
         };
         let userFromBackend = this.getAll().find((user) => user.identifier === results.email);
         this.currentUser = userFromBackend;

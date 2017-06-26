@@ -12,6 +12,7 @@ describe('Android app', () => {
 
     beforeEach(() => {
         navigation = jest.fn();
+        UserGateway.signIn('sarah@emailprovider.com');
     });
 
     it('renders correctly', () => {
@@ -20,15 +21,5 @@ describe('Android app', () => {
         );
 
         expect(tree).toMatchSnapshot();
-    });
-
-    it('should log the user in', () => {
-        const spy = jest.spyOn(UserGateway, 'signIn');
-
-        renderer.create(
-            <Index navigation={navigation} />
-        );
-
-        expect(spy).toHaveBeenCalled()
     });
 });

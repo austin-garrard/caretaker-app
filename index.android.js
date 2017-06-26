@@ -19,7 +19,6 @@ import Login from './App/views/Login/';
 export default class HomeScreen extends Component {
     constructor() {
         super();
-        UserGateway.signIn();
     }
 
     static navigationOptions = {
