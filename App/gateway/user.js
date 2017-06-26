@@ -1,6 +1,6 @@
 
 
-class Permissions {
+export class Permissions {
     static FOCUS = 'focus';
     static ADMIN = 'admin';
     static HELPER = 'helper;';
@@ -34,10 +34,10 @@ export default class UserGateway {
         return this.currentUser !== null;
     }
 
-    static signIn() {
+    static signIn(email) {
         //make call to google oauth and store the results
         let results = {
-            email: 'sarah@emailprovider.com'
+            email: email
         };
         let userFromBackend = this.getAll().find((user) => user.identifier === results.email);
         this.currentUser = userFromBackend;
@@ -50,5 +50,9 @@ export default class UserGateway {
     static isAdmin() {
         return this.currentUser.permission === Permissions.ADMIN
             || this.currentUser.permission === Permissions.FOCUS;
+    }
+
+    static getCurrentPermissions() {
+        return this.currentUser.permission;
     }
 }

@@ -6,7 +6,7 @@ import EventGateway from '../../gateway/event.js';
 
 describe('EventList', () => {
     beforeEach(() => {
-        UserGateway.signIn(); //todo: mock/stub gateways
+        UserGateway.signIn('sarah@emailprovider.com'); //todo: mock/stub gateways
     });
 
     it('should render correctly', () => {

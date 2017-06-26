@@ -5,7 +5,7 @@ import UserGateway from '../../gateway/user.js';
 
 describe('AssignedEventListContainer', () => {
     beforeEach(() => {
-        UserGateway.signIn();
+        UserGateway.signIn('sarah@emailprovider.com');
     });
 
     it('should render correctly', () => {
