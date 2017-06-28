@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  Button,
-  Alert,
-  FlatList,
-  Modal,
-  StyleSheet,
-  Text,
-  View
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import Login from './App/views/Login/';
-import HomeScreen from './App/views/Home/';
 
-const caretaker = StackNavigator({
-    Login: { screen: Login },
-    Home: { screen: HomeScreen }
-});
+import {LoginStack} from './App/config/MainNavigator';
 
-AppRegistry.registerComponent('caretaker', () => caretaker);
+class App extends Component {
+    render() {
+        return <LoginStack />;
+    }
+}
+
+export default App;
+
+AppRegistry.registerComponent('caretaker', () => App);
