@@ -5,9 +5,9 @@ import {
   View
 } from 'react-native';
 import UserGateway, { Permissions } from '../../gateway/user.js';
-import PatientDashboard from '../PatientDashboard/';
-import AdminDashboard from '../AdminDashboard/';
-import HelperDashboard from '../HelperDashboard/';
+import PatientDashboard from './PatientDashboard/';
+import AdminDashboard from './AdminDashboard/';
+import HelperDashboard from './HelperDashboard/';
 
 export default class HomeScreen extends Component {
     constructor() {
