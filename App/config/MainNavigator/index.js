@@ -5,6 +5,7 @@ import HomeScreen from '../../views/Home/';
 import CaretakerRolesMenu from '../../views/CaretakerRolesMenu/';
 import Announcements from '../../views/Announcements/';
 import UserProfile from '../../views/UserProfile/';
+import CommunityAdmin from '../../views/CommunityAdmin/';
 import Navigation from '../../views/Navigation'
 
 export const LoginStack = StackNavigator({
@@ -22,4 +23,14 @@ export const Tabs = TabNavigator({
     UserProfile: { screen: UserProfile }
 },  {
      mode: 'modal'
+})
+
+export const AdminTabs = TabNavigator({
+    Home: { screen: HomeScreen },
+    Announcements: { screen: Announcements },
+    CaretakerRolesMenu: { screen: CaretakerRolesMenu },
+    UserProfile: { screen: UserProfile },
+    CommunityAdmin: { screen: CommunityAdmin }
+},  {
+  mode: 'modal'
 })
