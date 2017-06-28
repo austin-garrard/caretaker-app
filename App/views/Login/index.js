@@ -26,8 +26,11 @@ export default class Login extends Component {
     }
 
     _onLogin = () => {
-        UserGateway.signIn(this.state.email);
-        this.props.navigation.navigate('Home');
+        if(UserGateway.signIn(this.state.email)) {
+            this.props.navigation.navigate('Home');
+        } else {
+            alert('Not an approved user.')
+        }
     }
 
     render() {
