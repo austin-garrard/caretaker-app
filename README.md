@@ -7,6 +7,8 @@ Home of the caretaker app! WIP
 
 Check out the Trello board for the plans: https://trello.com/caretakerapp
 
+Repo for eventual server: https://github.com/araneforseti/caretaker-community-server
+
 To setup for development:
 1) Prepare git for the standard [fork & PR workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 2) Install dependencies: `npm install`
