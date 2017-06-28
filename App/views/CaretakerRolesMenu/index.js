@@ -4,32 +4,17 @@ import {
   Text,
   View
 } from 'react-native';
+import CaretakerRolesContainer from '../../components/CaretakerRolesList/';
 
 export default class CaretakerRolesMenu extends Component {
-    constructor() {
-        super();
-        this.state = {
-            screen: null
-        }
-    }
-
-    componentDidMount() {
-
-    }
-
     static navigationOptions = {
         title: 'Caretaker Role Screen'
     };
 
     render() {
         return (
-            <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-                <Text>Insert Caretaker Menu Here</Text>
+            <View style={styles.container}>
+                <CaretakerRolesContainer />
             </View>
         );
     }
