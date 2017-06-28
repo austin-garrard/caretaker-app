@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import AssignedEventListContainer from './index.js';
-import UserGateway from '../../gateway/user.js';
+import UserGateway from '../../data/UserGateway';
 
 describe('AssignedEventListContainer', () => {
     beforeEach(() => {

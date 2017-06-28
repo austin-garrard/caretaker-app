@@ -5,8 +5,8 @@ import {
     Text,
     View
 } from 'react-native';
-import EventGateway from '../../gateway/event.js';
-import UserGateway from '../../gateway/user.js';
+import EventGateway from '../../data/EventGateway';
+import UserGateway from '../../data/UserGateway';
 
 export default class AssignedEventListContainer extends Component {
     constructor() {

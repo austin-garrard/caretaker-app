@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import renderer from 'react-test-renderer';
 import EventModal from './index.js';
-import UserGateway from '../../../gateway/user.js';
-import EventGateway from '../../../gateway/event.js';
+import UserGateway from '../../../data/UserGateway';
+import EventGateway from '../../../data/EventGateway';
 
 describe('EventModal', () => {
     let modal;
