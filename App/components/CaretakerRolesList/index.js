@@ -18,7 +18,6 @@ class MyListItem extends PureComponent {
             <TouchableOpacity
                 onLongPress={this._onLongPress}
                 onPress={this._onPress}>
-
                 <View style={styles.button}>
                    <Text style={styles.item}>{this.props.name}: {this.props.description}</Text>
                 </View>

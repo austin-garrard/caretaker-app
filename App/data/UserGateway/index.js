@@ -15,10 +15,10 @@ export default class UserGateway {
         if(this.allUsers === null) {
             //api call goes here
             this.allUsers = [
-                {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS},
-                {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN},
-                {name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER},
-                {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER}
+                {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: []},
+                {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN, roles: ['driver', 'coordinator']},
+                {name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER, roles: ['active friend']},
+                {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER, roles: []}
             ]
         }
         return this.allUsers;
@@ -27,6 +27,11 @@ export default class UserGateway {
     static getName(identifier) {
         const user = this.allUsers.find((user) => user.identifier === identifier)
         return user ? user.name : 'TBD';
+    }
+
+    static getRoles(identifier) {
+        const user = this.allUsers.find((user) => user.identifier === identifier)
+        return user ? user.roles : [];
     }
 
     static signIn(email) {
