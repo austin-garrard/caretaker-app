@@ -8,18 +8,26 @@ import {
     View
 } from 'react-native';
 import {ContainerFor} from './container.js';
-import UserGateway from '../../data/UserGateway';
+import UserGateway, { Permissions } from '../../data/UserGateway';
+import renderif from '../../utils/renderif.js';
 
 class MyListItem extends PureComponent {
     constructor() {
         super();
         this.state = {
-            switchValue: null
+            switchValue: null,
+            notIsFocus: false
         }
     }
 
     componentDidMount() {
         this.state.switchValue = this.props.hasRole;
+        const permissions = UserGateway.getCurrentPermissions();
+        if( permissions == Permissions.FOCUS) {
+            this.setState({isHelper: false});
+        } else {
+            this.setState({isHelper: true});
+        }
     }
 
     _onLongPress = ()  => alert('Insert Edit Caretaker Role Screen Here');
@@ -37,10 +45,12 @@ class MyListItem extends PureComponent {
             <TouchableOpacity
                 onLongPress={this._onLongPress}>
                 <View style={styles.button}>
-                    <Switch
-                        onValueChange={(value) => this.toggleSwitch(value, this.props.name)}
-                        value = {this.state.switchValue}
-                    />
+                    {renderif(this.state.isHelper,
+                        <Switch
+                            onValueChange={(value) => this.toggleSwitch(value, this.props.name)}
+                            value = {this.state.switchValue}
+                        />
+                    )}
                    <Text style={styles.item}>{this.props.name}: {this.props.description}</Text>
                 </View>
             </TouchableOpacity>
