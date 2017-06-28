@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import renderer from 'react-test-renderer';
 import EventList from './index.js';
-import UserGateway from '../../gateway/user.js';
-import EventGateway from '../../gateway/event.js';
+import UserGateway from '../../data/UserGateway';
+import EventGateway from '../../data/EventGateway';
 
 describe('EventList', () => {
     beforeEach(() => {

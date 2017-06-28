@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 import CaretakerRolesContainer from '../../components/CaretakerRolesList/';
-import UserGateway, { Permissions } from '../../gateway/user.js';
+import UserGateway, { Permissions } from '../../data/UserGateway';
 import renderif from '../../utils/renderif.js';
 
 export default class CaretakerRolesMenu extends Component {

@@ -6,7 +6,7 @@ import {
   Button,
   TextInput
 } from 'react-native';
-import UserGateway from '../../gateway/user.js';
+import UserGateway from '../../data/UserGateway';
 
 export default class Login extends Component {
 

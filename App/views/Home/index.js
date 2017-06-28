@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-import UserGateway, { Permissions } from '../../gateway/user.js';
+import UserGateway, { Permissions } from '../../data/UserGateway';
 import PatientDashboard from './PatientDashboard/';
 import AdminDashboard from './AdminDashboard/';
 import HelperDashboard from './HelperDashboard/';

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Button } from 'react-native';
 import renderer from 'react-test-renderer';
-import UserGateway from '../../gateway/user.js';
+import UserGateway from '../../data/UserGateway';
 import Login from './index.js';
 
 describe('Login Screen', () => {

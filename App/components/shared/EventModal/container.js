@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import UserGateway from '../../../gateway/user.js';
-import EventGateway from '../../../gateway/event.js';
+import UserGateway from '../../../data/UserGateway';
+import EventGateway from '../../../data/EventGateway';
 
 export var ContainerFor = (EventModal) => class extends Component {
 

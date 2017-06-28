@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import EventGateway from '../../gateway/event.js';
-import UserGateway from '../../gateway/user.js';
+import EventGateway from '../../data/EventGateway';
+import UserGateway from '../../data/UserGateway';
 
 export var ContainerFor = (EventList) => class extends Component {
     constructor() {

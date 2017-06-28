@@ -1,4 +1,4 @@
-import UserGateway from './user.js';
+import UserGateway from './index.js';
 
 describe('UserGateway', () => {
 

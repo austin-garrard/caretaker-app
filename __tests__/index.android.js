@@ -5,7 +5,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Index from '../index.android.js';
-import UserGateway from '../App/gateway/user.js';
+import UserGateway from '../App/data/UserGateway';
 
 describe('Android app', () => {
     xit('sets up the navigation');

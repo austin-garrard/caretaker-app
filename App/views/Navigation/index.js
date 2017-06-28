@@ -8,7 +8,7 @@ import {
 
 import {AdminTabs, Tabs} from '../../config/MainNavigator';
 
-import UserGateway, { Permissions } from '../../gateway/user.js';
+import UserGateway, { Permissions } from '../../data/UserGateway';
 
 export default class Navigation extends Component {
     constructor() {
