@@ -9,11 +9,16 @@ import {
 import {ContainerFor} from './container.js';
 
 class MyListItem extends PureComponent {
-    _onPress = ()  => alert('Insert Edit Caretaker Role Screen Here');
+    _onLongPress = ()  => alert('Insert Edit Caretaker Role Screen Here');
+
+    _onPress = () => alert('Toggling Caretaker Role Action Here');
 
     render() {
         return (
-            <TouchableOpacity onLongPress={this._onPress}>
+            <TouchableOpacity
+                onLongPress={this._onLongPress}
+                onPress={this._onPress}>
+
                 <View style={styles.button}>
                    <Text style={styles.item}>{this.props.name}: {this.props.description}</Text>
                 </View>
@@ -27,7 +32,8 @@ class CaretakerRoleList extends Component {
     _renderItem = ({item}) => (
         <MyListItem
             id={item.id}
-            onLongPress={this.props.onPressItem}
+            onLongPress={this.props.onLongPressItem}
+            onPress={this.onPress}
             name={item.name}
             description={item.description}
         />
