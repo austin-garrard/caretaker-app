@@ -9,13 +9,11 @@ import {
 import {ContainerFor} from './container.js';
 
 class MyListItem extends PureComponent {
-    _onPress = () => {
-        this.props.onPressItem(this.props.id);
-    };
+    _onPress = ()  => alert('Clicked');
 
     render() {
         return (
-            <TouchableOpacity onPress={this._onPress}>
+            <TouchableOpacity onLongPress={this._onPress}>
                 <View style={styles.button}>
                    <Text style={styles.item}>{this.props.name}: {this.props.description}</Text>
                 </View>
@@ -29,7 +27,7 @@ class CaretakerRoleList extends Component {
     _renderItem = ({item}) => (
         <MyListItem
             id={item.id}
-            onPressItem={this.props.onPressItem}
+            onLongPress={this.props.onPressItem}
             name={item.name}
             description={item.description}
         />
@@ -38,7 +36,6 @@ class CaretakerRoleList extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>Caretaker Roles</Text>
                 <FlatList
                    data={this.props.caretakerRoles}
                    dataWhichCouldChange={this.props.caretakerRoles.map((caretakerRole) => caretakerRole.volunteer)}
