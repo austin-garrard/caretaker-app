@@ -1,5 +1,3 @@
-
-
 export class Permissions {
     static FOCUS = 'focus';
     static ADMIN = 'admin';
@@ -29,9 +27,8 @@ export default class UserGateway {
         return user ? user.name : 'TBD';
     }
 
-    static getRoles(identifier) {
-        const user = this.allUsers.find((user) => user.identifier === identifier)
-        return user ? user.roles : [];
+    static getRoles() {
+        return this.currentUser.roles
     }
 
     static signIn(email) {

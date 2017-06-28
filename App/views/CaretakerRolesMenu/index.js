@@ -13,7 +13,8 @@ export default class CaretakerRolesMenu extends Component {
     constructor() {
         super();
         this.state = {
-            isAdmin: false
+            isAdmin: false,
+            activeRoles: []
         }
     }
 
@@ -24,6 +25,8 @@ export default class CaretakerRolesMenu extends Component {
         } else {
             this.setState({isAdmin: false});
         }
+        var roles = UserGateway.getRoles();
+        this.setState({activeRoles: roles})
     }
 
     static navigationOptions = {
@@ -42,7 +45,9 @@ export default class CaretakerRolesMenu extends Component {
                             title="+"
                         />
                     )}
-                <CaretakerRolesContainer />
+                <CaretakerRolesContainer
+                    activeRoles={this.state.activeRoles}
+                />
             </View>
         );
     }
