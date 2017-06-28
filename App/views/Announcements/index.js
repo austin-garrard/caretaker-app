@@ -5,7 +5,7 @@ import {
   View
 } from 'react-native';
 
-export default class CaretakerRolesMenu extends Component {
+export default class Announcements extends Component {
     constructor() {
         super();
         this.state = {
@@ -18,7 +18,7 @@ export default class CaretakerRolesMenu extends Component {
     }
 
     static navigationOptions = {
-        title: 'Caretaker Role Screen'
+        title: 'Announcements Screen'
     };
 
     render() {
@@ -29,7 +29,7 @@ export default class CaretakerRolesMenu extends Component {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-                <Text>Insert Caretaker Menu Here</Text>
+                <Text>Insert Announcements Here</Text>
             </View>
         );
     }
