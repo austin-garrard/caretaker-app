@@ -6,9 +6,26 @@ import {
   View
 } from 'react-native';
 import CaretakerRolesContainer from '../../components/CaretakerRolesList/';
+import UserGateway, { Permissions } from '../../gateway/user.js';
 import renderif from '../../utils/renderif.js';
 
 export default class CaretakerRolesMenu extends Component {
+    constructor() {
+        super();
+        this.state = {
+            isAdmin: false
+        }
+    }
+
+    componentDidMount() {
+        const permissions = UserGateway.getCurrentPermissions();
+        if( permissions == Permissions.FOCUS || permissions == Permissions.ADMIN ) {
+            this.setState({isAdmin: true});
+        } else {
+            this.setState({isAdmin: false});
+        }
+    }
+
     static navigationOptions = {
         title: 'Caretaker Role Screen'
     };
@@ -19,10 +36,12 @@ export default class CaretakerRolesMenu extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Caretaker Roles</Text>
-                    <Button
-                        onPress = {this.createNewCaretakerRole}
-                        title="+"
-                    />
+                    {renderif(this.state.isAdmin,
+                        <Button
+                            onPress = {this.createNewCaretakerRole}
+                            title="+"
+                        />
+                    )}
                 <CaretakerRolesContainer />
             </View>
         );
