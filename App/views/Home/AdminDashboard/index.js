@@ -5,17 +5,17 @@ import {
   Text,
   View
 } from 'react-native';
-import EventListContainer from '../../components/EventList/';
+import UnassignedEventListContainer from '../../../components/UnassignedEventList/';
 
-export default class PatientDashboard extends Component {
+export default class AdminDashboard extends Component {
   static navigationOptions = {
-    title: 'Patient Screen'
+    title: 'Admin Screen'
   };
 
   render() {
     return (
         <View style={styles.container}>
-            <EventListContainer />
+            <UnassignedEventListContainer />
         </View>
     );
   }
