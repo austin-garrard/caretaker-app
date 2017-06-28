@@ -37,6 +37,8 @@ describe('Login Screen', () => {
     });
 
     it('should navigate to the home screen when the button is clicked', () => {
+        jest.spyOn(UserGateway, 'signIn')
+            .mockReturnValue(true);
         const login = renderer
             .create(<Login navigation={navigation}/>)
             .getInstance();
@@ -44,6 +46,31 @@ describe('Login Screen', () => {
         login._onLogin();
 
         expect(navigation.navigate).toHaveBeenCalledWith('Home');
+    });
+
+    it('should stay on this screen when the sign in fails', () => {
+        jest.spyOn(UserGateway, 'signIn')
+            .mockReturnValue(false);
+        const login = renderer
+            .create(<Login navigation={navigation}/>)
+            .getInstance();
+
+        login._onLogin();
+
+        expect(navigation.navigate).not.toHaveBeenCalled();
+    })
+
+    it('should show an alert when the sign in fails', () => {
+        const spy = jest.spyOn(window, 'alert');
+        jest.spyOn(UserGateway, 'signIn')
+            .mockReturnValue(false);
+        const login = renderer
+            .create(<Login navigation={navigation}/>)
+            .getInstance();
+
+        login._onLogin();
+
+        expect(spy).toHaveBeenCalledWith('Not an approved user.');
     });
 
     it('should match the snapshot', () => {

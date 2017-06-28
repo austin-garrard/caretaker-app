@@ -3,8 +3,7 @@
 export class Permissions {
     static FOCUS = 'focus';
     static ADMIN = 'admin';
-    static HELPER = 'helper;';
-    static NONE = 'none;'
+    static HELPER = 'helper';
 }
 
 export default class UserGateway {
@@ -19,19 +18,15 @@ export default class UserGateway {
                 {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS},
                 {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN},
                 {name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER},
-                {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER},
-                {name: 'TBD', identifier: 'TBD', permission: Permissions.NONE}
+                {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER}
             ]
         }
         return this.allUsers;
     }
 
     static getName(identifier) {
-        return this.allUsers.find((user) => user.identifier === identifier).name;
-    }
-
-    static isSignedIn() {
-        return this.currentUser !== null;
+        const user = this.allUsers.find((user) => user.identifier === identifier)
+        return user ? user.name : 'TBD';
     }
 
     static signIn(email) {
@@ -40,7 +35,11 @@ export default class UserGateway {
             email: email
         };
         let userFromBackend = this.getAll().find((user) => user.identifier === results.email);
-        this.currentUser = userFromBackend;
+        if(typeof userFromBackend !== 'undefined') {
+            this.currentUser = userFromBackend;
+            return true;
+        }
+        return false;
     }
 
     static isSelf(identifier) {
