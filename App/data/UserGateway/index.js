@@ -13,10 +13,10 @@ export default class UserGateway {
         if(this.allUsers === null) {
             //api call goes here
             this.allUsers = [
-                {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: []},
-                {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN, roles: ['driver', 'coordinator']},
+                {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890'},
+                {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN, roles: ['driver', 'coordinator'], phone:'123-456-7890'},
                 {name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER, roles: ['active friend']},
-                {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER, roles: []}
+                {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER, roles: [], phone:'123-456-7890'}
             ]
         }
         return this.allUsers;
@@ -55,5 +55,10 @@ export default class UserGateway {
 
     static getCurrentPermissions() {
         return this.currentUser.permission;
+    }
+
+    static inviteUser(email) {
+        //api call to invite the user
+        alert('invited ' + email + '!');
     }
 }
