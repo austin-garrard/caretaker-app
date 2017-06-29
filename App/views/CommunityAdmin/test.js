@@ -14,6 +14,13 @@ describe('Community Admin', () => {
             .mockReturnValue(users);
     });
 
+    it('snapshot', () => {
+        const screen = renderer
+            .create(<CommunityAdmin />)
+
+        expect(screen).toMatchSnapshot();
+    })
+
     it('should query the user gateway for all users', () => {
         const screen = renderer
             .create(<CommunityAdmin />)
