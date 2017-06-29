@@ -9,11 +9,15 @@ import {
 import ContainerFor from './container.js';
 
 const ListItem = (props) => (
+    <View style={styles.person}>
     <View style={styles.item}>
         <Text>{props.name}</Text>
         <Text>{props.email}</Text>
         <Text>{props.phone}</Text>
-        <Text>{props.roles.join(', ')}</Text>
+    </View>
+    <View>
+        <Text style={styles.roles}>{props.roles.join(', ')}</Text>
+    </View>
     </View>
 )
 
@@ -60,9 +64,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 15,
   },
+  person: {
+    padding: 8,
+  },
   item: {
     flexDirection: 'row',
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+  },
+  roles: {
+    flexDirection: 'row',
+    textAlign: 'center',
+    flex: 1,
+    justifyContent: 'space-between',
   }
 });
