@@ -1,39 +1,44 @@
-import React, { Component } from 'react';
+import React, {Component, PureComponent} from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList
 } from 'react-native';
+import ContainerFor from './container.js';
 
-export default class CommunityAdmin extends Component {
-    constructor() {
-        super();
-        this.state = {
-            screen: null
-        }
-    }
+const ListItem = (props) => (
+    <View style={styles.item}>
+        <Text>{props.name}</Text>
+        <Text>{props.email}</Text>
+        <Text>{props.phone}</Text>
+        <Text>{props.roles.join(', ')}</Text>
+    </View>
+)
 
-    componentDidMount() {
 
-    }
+const CommunityAdmin = (props) => {
+    _renderItem = ({item}) => (
+        <ListItem
+            name={item.name}
+            email={item.identifier}
+            phone={item.phone}
+            roles={item.roles}
+        />
+    )
 
-    static navigationOptions = {
-        title: 'Community Admin Screen'
-    };
-
-    render() {
-        return (
-            <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-                <Text>Insert Community Administration Here</Text>
-            </View>
-        );
-    }
+    return (
+        <View style={styles.container}>
+            <FlatList
+               data={props.users}
+               renderItem={_renderItem}
+               keyExtractor={(item) => item.identifier}
+            />
+        </View>
+    );
 }
+
+export default ContainerFor(CommunityAdmin);
 
 const styles = StyleSheet.create({
   button: {
@@ -49,4 +54,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 15,
   },
+  item: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'space-between'
+  }
 });
