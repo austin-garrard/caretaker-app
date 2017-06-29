@@ -56,4 +56,9 @@ export default class UserGateway {
     static getCurrentPermissions() {
         return this.currentUser.permission;
     }
+
+    static inviteUser(email) {
+        //api call to invite the user
+        alert('invited ' + email + '!');
+    }
 }

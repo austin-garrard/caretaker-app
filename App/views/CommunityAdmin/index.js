@@ -3,7 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  FlatList
+  FlatList,
+  Button
 } from 'react-native';
 import ContainerFor from './container.js';
 
@@ -15,7 +16,6 @@ const ListItem = (props) => (
         <Text>{props.roles.join(', ')}</Text>
     </View>
 )
-
 
 const CommunityAdmin = (props) => {
     _renderItem = ({item}) => (
@@ -29,10 +29,16 @@ const CommunityAdmin = (props) => {
 
     return (
         <View style={styles.container}>
+            {props.modal}
             <FlatList
                data={props.users}
                renderItem={_renderItem}
                keyExtractor={(item) => item.identifier}
+            />
+            <Button
+                style={styles.button}
+                title='Invite'
+                onPress={props.onShowModal}
             />
         </View>
     );
@@ -46,7 +52,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   container: {
-    flex: 1,
+    justifyContent: 'flex-start',
     backgroundColor: '#F5FCFF',
   },
   title: {
