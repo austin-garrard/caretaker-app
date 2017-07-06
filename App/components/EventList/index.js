@@ -48,6 +48,10 @@ class EventList extends Component {
         />
     );
 
+    _onCreateEvent = () => {
+      this.props.onCreateEvent({some: 'data'});
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -63,7 +67,7 @@ class EventList extends Component {
                    renderItem={this._renderItem}
                    keyExtractor={(item) => item.id}
                 />
-                <ActionButton onPress={() => alert('hi')} />
+                <ActionButton onPress={this._onCreateEvent} />
             </View>
         );
     }

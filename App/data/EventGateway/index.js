@@ -38,6 +38,14 @@ export default class EventGateway {
         this.notifySubscribers();
     }
 
+    static createNewEvent(data) {
+      //api call to create event
+      const result = {id: 7, startDate: 1499699700000, endDate: 1499706900000, location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'New Event 1', volunteerId: 'austin@yeehaw.com', role: 'driver', description: ''}
+      this.allEvents.push(result);
+      alert('created event with data ' + JSON.stringify(data));
+      this.notifySubscribers();
+    }
+
     static subscribeToUpdates(callback) {
         this.subscribers.push(callback);
     }
