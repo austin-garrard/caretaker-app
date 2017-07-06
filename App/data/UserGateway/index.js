@@ -13,7 +13,7 @@ export default class UserGateway {
         if(this.allUsers === null) {
             //api call goes here
             this.allUsers = [
-              {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890'},
+                {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890'},
                 {name: 'Sarah', identifier: 's', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890'},
                 {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN, roles: ['driver', 'coordinator'], phone:'123-456-7890'},
                 {name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER, roles: ['active friend']},

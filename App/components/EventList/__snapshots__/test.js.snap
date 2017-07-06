@@ -162,8 +162,10 @@ exports[`EventList should render correctly 1`] = `
                 Object {
                   "flex": 1,
                   "flexDirection": "row",
-                  "margin": 4,
                   "marginBottom": 0,
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                  "marginTop": 4,
                 },
               ]
             }
@@ -186,7 +188,7 @@ exports[`EventList should render correctly 1`] = `
                   }
                 }
               >
-                27
+                1
               </Text>
               <Text
                 accessible={true}
@@ -194,7 +196,7 @@ exports[`EventList should render correctly 1`] = `
                 ellipsizeMode="tail"
                 style={undefined}
               >
-                Mon
+                Sat
               </Text>
             </View>
             <View
@@ -265,8 +267,10 @@ exports[`EventList should render correctly 1`] = `
                 Object {
                   "flex": 1,
                   "flexDirection": "row",
-                  "margin": 4,
                   "marginBottom": 0,
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                  "marginTop": 4,
                 },
               ]
             }
@@ -289,7 +293,7 @@ exports[`EventList should render correctly 1`] = `
                   }
                 }
               >
-                27
+                3
               </Text>
               <Text
                 accessible={true}
@@ -368,8 +372,10 @@ exports[`EventList should render correctly 1`] = `
                 Object {
                   "flex": 1,
                   "flexDirection": "row",
-                  "margin": 4,
                   "marginBottom": 0,
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                  "marginTop": 4,
                 },
               ]
             }
@@ -392,7 +398,7 @@ exports[`EventList should render correctly 1`] = `
                   }
                 }
               >
-                27
+                5
               </Text>
               <Text
                 accessible={true}
@@ -400,7 +406,7 @@ exports[`EventList should render correctly 1`] = `
                 ellipsizeMode="tail"
                 style={undefined}
               >
-                Mon
+                Wed
               </Text>
             </View>
             <View
@@ -471,8 +477,10 @@ exports[`EventList should render correctly 1`] = `
                 Object {
                   "flex": 1,
                   "flexDirection": "row",
-                  "margin": 4,
                   "marginBottom": 0,
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                  "marginTop": 4,
                 },
               ]
             }
@@ -495,7 +503,7 @@ exports[`EventList should render correctly 1`] = `
                   }
                 }
               >
-                27
+                7
               </Text>
               <Text
                 accessible={true}
@@ -503,7 +511,7 @@ exports[`EventList should render correctly 1`] = `
                 ellipsizeMode="tail"
                 style={undefined}
               >
-                Mon
+                Fri
               </Text>
             </View>
             <View
@@ -574,8 +582,10 @@ exports[`EventList should render correctly 1`] = `
                 Object {
                   "flex": 1,
                   "flexDirection": "row",
-                  "margin": 4,
                   "marginBottom": 0,
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                  "marginTop": 4,
                 },
               ]
             }
@@ -598,7 +608,7 @@ exports[`EventList should render correctly 1`] = `
                   }
                 }
               >
-                27
+                9
               </Text>
               <Text
                 accessible={true}
@@ -606,7 +616,7 @@ exports[`EventList should render correctly 1`] = `
                 ellipsizeMode="tail"
                 style={undefined}
               >
-                Mon
+                Sun
               </Text>
             </View>
             <View
@@ -677,8 +687,10 @@ exports[`EventList should render correctly 1`] = `
                 Object {
                   "flex": 1,
                   "flexDirection": "row",
-                  "margin": 4,
                   "marginBottom": 0,
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                  "marginTop": 4,
                 },
               ]
             }
@@ -701,7 +713,7 @@ exports[`EventList should render correctly 1`] = `
                   }
                 }
               >
-                27
+                10
               </Text>
               <Text
                 accessible={true}

@@ -20,8 +20,8 @@ class MyListItem extends PureComponent {
             <TouchableOpacity onPress={this._onPress}>
                 <View style={[styles.button, styles.eventBox]}>
                   <View style={styles.eventDateWrap}>
-                    <Text style={styles.eventDateDay}>27</Text>
-                    <Text style={styles.eventDateDayName}>Mon</Text>
+                    <Text style={styles.eventDateDay}>{this.props.startDate.getDate()}</Text>
+                    <Text style={styles.eventDateDayName}>{['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][this.props.startDate.getDay()]}</Text>
                   </View>
                   <View style={styles.eventDetailsWrap}>
                     <Text style={styles.eventName}>{this.props.name}</Text>
@@ -40,6 +40,8 @@ class EventList extends Component {
             id={item.id}
             onPressItem={this.props.onPressItem}
             title={item.title}
+            startDate={new Date(item.startDate)}
+            endDate={new Date(item.startDate)}
             date={item.date}
             name={item.name}
             volunteer={item.volunteer}
@@ -98,8 +100,10 @@ const styles = StyleSheet.create({
   eventBox: {
     flex: 1,
     flexDirection: 'row',
-    margin: 4,
-    marginBottom: 0
+    marginTop: 4,
+    marginBottom: 0,
+    marginLeft: 8,
+    marginRight: 8
   },
   eventDateWrap: {
     width: 56,
