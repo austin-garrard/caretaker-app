@@ -61,7 +61,6 @@ class EventList extends Component {
                    renderItem={this._renderItem}
                    keyExtractor={(item) => item.id}
                 />
-                <ActionButton />
             </View>
         );
     }

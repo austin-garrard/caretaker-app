@@ -43,7 +43,6 @@ export class UnassignedEventList extends Component {
                    keyExtractor={(item) => item.id}
                    renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
                 />
-                <ActionButton />
             </View>
         );
     }
