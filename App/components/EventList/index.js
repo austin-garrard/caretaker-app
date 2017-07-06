@@ -6,9 +6,9 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
+import { ActionButton } from 'react-native-material-ui';
 import {ContainerFor} from './container.js';
 import EventModal from '../shared/EventModal/';
-import { ActionButton } from 'react-native-material-ui';
 
 class MyListItem extends PureComponent {
     _onPress = () => {
@@ -61,6 +61,7 @@ class EventList extends Component {
                    renderItem={this._renderItem}
                    keyExtractor={(item) => item.id}
                 />
+                <ActionButton onPress={() => alert('hi')} />
             </View>
         );
     }

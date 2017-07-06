@@ -757,5 +757,8 @@ exports[`EventList should render correctly 1`] = `
       />
     </View>
   </RCTScrollView>
+  <ActionButton
+    onPress={[Function]}
+  />
 </View>
 `;

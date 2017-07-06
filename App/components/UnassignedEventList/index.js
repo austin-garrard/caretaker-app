@@ -6,7 +6,6 @@ import {
     View
 } from 'react-native';
 import EventGateway from '../../data/EventGateway';
-import { ActionButton } from 'react-native-material-ui';
 
 export default class UnassignedEventListContainer extends Component {
   constructor() {
