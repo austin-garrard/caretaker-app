@@ -32,7 +32,7 @@ export default class HomeScreen extends Component {
                 flex: 1,
                 flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center',
+                alignItems: 'stretch',
               }}>
                 {this.state.screen}
             </View>

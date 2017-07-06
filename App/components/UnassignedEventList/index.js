@@ -5,7 +5,8 @@ import {
     Text,
     View
 } from 'react-native';
-import EventGateway from '../../data/EventGateway'
+import EventGateway from '../../data/EventGateway';
+import { ActionButton } from 'react-native-material-ui';
 
 export default class UnassignedEventListContainer extends Component {
   constructor() {
@@ -36,12 +37,13 @@ export class UnassignedEventList extends Component {
     render() {
         return (
             <View style={styles.container}>
-            <Text style={styles.title}>Events Still Looking for People</Text>
-            <FlatList
-               data={this.props.events}
-               keyExtractor={(item) => item.id}
-               renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
-            />
+                <Text style={styles.title}>Events Still Looking for People</Text>
+                <FlatList
+                   data={this.props.events}
+                   keyExtractor={(item) => item.id}
+                   renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
+                />
+                <ActionButton />
             </View>
         );
     }
