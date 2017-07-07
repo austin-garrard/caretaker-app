@@ -38,6 +38,11 @@ export var ContainerFor = (EventList) => class extends Component {
         this.setState(newState);
     }
 
+    _onCreateEvent = (data) => {
+      alert('hi');
+      EventGateway.createNewEvent(data);
+    }
+
     render() {
         return <EventList
             events={this.state.events}
@@ -45,6 +50,7 @@ export var ContainerFor = (EventList) => class extends Component {
             selectedEvent={this.state.selectedEvent}
             onPressItem={this._onPressItem}
             onCloseModal={this._onCloseModal}
+            onCreateEvent={this._onCreateEvent}
         />;
     }
 }

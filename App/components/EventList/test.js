@@ -82,4 +82,17 @@ describe('EventList', () => {
             expect(list.state.visibleModal).toBe(false);
         });
     });
+
+    describe('_onCreateEvent', () => {
+      it('should create an event through the gateway', () => {
+        const spy = jest.spyOn(EventGateway, 'createNewEvent');
+        const list = renderer
+            .create(<EventList />)
+            .getInstance();
+
+          list._onCreateEvent({some: 'data'});
+
+          expect(spy).toHaveBeenCalledWith({some: 'data'});
+      })
+    })
 });
