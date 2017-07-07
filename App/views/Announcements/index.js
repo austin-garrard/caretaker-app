@@ -2,38 +2,41 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList
 } from 'react-native';
+import ContainerFor from './container.js';
 
-export default class Announcements extends Component {
-    constructor() {
-        super();
-        this.state = {
-            screen: null
-        }
-    }
+const ListItem = (props) => (
+    <View>
+        <Text style={styles.title}>{props.title}</Text>
+        <Text>{new Date(props.date).toDateString()}</Text>
+        <Text>{props.description}</Text>
+    </View>
+)
 
-    componentDidMount() {
+const Announcements = (props) => {
 
-    }
+    const _renderItem = ({item}) => (
+        <ListItem
+            title={item.title}
+            date={item.date}
+            description={item.description}
+        />
+    )
 
-    static navigationOptions = {
-        title: 'Announcements Screen'
-    };
-
-    render() {
-        return (
-            <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-                <Text>Insert Announcements Here</Text>
-            </View>
-        );
-    }
+    return (
+        <View style={styles.container}>
+            <FlatList
+               data={props.announcements}
+               renderItem={_renderItem}
+               keyExtractor={(item) => item.id}
+            />
+        </View>
+    );
 }
+
+export default ContainerFor(Announcements);
 
 const styles = StyleSheet.create({
   button: {
