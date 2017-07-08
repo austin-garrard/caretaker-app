@@ -39,7 +39,6 @@ export var ContainerFor = (EventList) => class extends Component {
     }
 
     _onCreateEvent = (data) => {
-      alert('hi');
       EventGateway.createNewEvent(data);
     }
 

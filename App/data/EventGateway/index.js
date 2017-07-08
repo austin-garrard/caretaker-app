@@ -40,9 +40,9 @@ export default class EventGateway {
 
     static createNewEvent(data) {
       //api call to create event
-      const result = {id: 7, startDate: 1499699700000, endDate: 1499706900000, location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'New Event 1', volunteerId: 'austin@yeehaw.com', role: 'driver', description: ''}
+      const newId = this.allEvents[this.allEvents.length - 1].id + 1;
+      const result = {id: newId, startDate: 1499699700000, endDate: 1499706900000, location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'New Event ' + newId, volunteerId: 'austin@yeehaw.com', role: 'driver', description: ''}
       this.allEvents.push(result);
-      alert('created event with data ' + JSON.stringify(data));
       this.notifySubscribers();
     }
 
