@@ -3,16 +3,20 @@ import {
   StyleSheet,
   Text,
   View,
-  FlatList
+  FlatList,
+  TouchableOpacity
 } from 'react-native';
 import ContainerFor from './container.js';
+import renderIf from '../../utils/renderif.js';
+import { ActionButton } from 'react-native-material-ui';
+
 
 const ListItem = (props) => (
-    <View>
-        <Text style={styles.title}>{props.title}</Text>
+    <TouchableOpacity style={styles.announcementContainer} onPress={props.onEditAnnouncement}>
+        <Text style={styles.announcementTitle}>{props.title}</Text>
         <Text>{new Date(props.date).toDateString()}</Text>
         <Text>{props.description}</Text>
-    </View>
+    </TouchableOpacity>
 )
 
 const Announcements = (props) => {
@@ -22,16 +26,23 @@ const Announcements = (props) => {
             title={item.title}
             date={item.date}
             description={item.description}
+            onEditAnnouncement={props.onEditAnnouncement}
         />
     )
 
+    const addAnnouncementButton = renderIf(props.isUserAdmin,
+        <ActionButton onPress={props.onAddAnnouncement} />
+    );
+
     return (
         <View style={styles.container}>
+            <Text style={styles.title}>Announcements</Text>
             <FlatList
                data={props.announcements}
                renderItem={_renderItem}
                keyExtractor={(item) => item.id}
             />
+            {addAnnouncementButton}
         </View>
     );
 }
@@ -52,4 +63,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 15,
   },
+  announcementContainer: {
+      margin: 10
+  },
+  announcementTitle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      marginTop: 10,
+  }
 });
