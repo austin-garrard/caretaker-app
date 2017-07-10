@@ -1,4 +1,4 @@
-export default Subject = (target) => {
+export default UpdateNotifier = (target) => {
     const subscribers = [];
 
     return Object.assign(target, {

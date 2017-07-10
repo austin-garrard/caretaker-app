@@ -4,7 +4,7 @@
   However, until there is an API to call, it returns canned data.
 */
 
-import Subject from '../Subject.js';
+import UpdateNotifier from '../UpdateNotifier/';
 
 const EventGateway = (target) => {
     var allEvents = null;
@@ -49,5 +49,5 @@ const EventGateway = (target) => {
     })
 }
 
-
-export default Subject(EventGateway({}));
+const base = UpdateNotifier({});
+export default EventGateway(base);
