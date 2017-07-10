@@ -10,6 +10,7 @@ import { ActionButton } from 'react-native-material-ui';
 import {ContainerFor} from './container.js';
 import EventModal from '../shared/EventModal/';
 import DateDisplay from '../shared/DateDisplay';
+import EventSummaryBox from '../shared/EventSummaryBox';
 
 class MyListItem extends PureComponent {
     _onPress = () => {
@@ -21,10 +22,7 @@ class MyListItem extends PureComponent {
             <TouchableOpacity onPress={this._onPress}>
                 <View style={[styles.button, styles.eventBox]}>
                   <DateDisplay date={this.props.startDate} />
-                  <View style={styles.eventDetailsWrap}>
-                    <Text style={styles.eventName}>{this.props.name}</Text>
-                    <Text style={styles.eventVolunteer}>{this.props.volunteer}</Text>
-                  </View>
+                  <EventSummaryBox name={this.props.name} volunteer={this.props.volunteer} />
                 </View>
             </TouchableOpacity>
         );
@@ -107,18 +105,6 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     marginRight: 8
   },
-  eventDetailsWrap: {
-    flex: 1,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#FF0000',
-    borderRadius: 2,
-    padding: 4
-  },
-  eventName: {
-    fontWeight: 'bold'
-  },
-  eventVolunteer: {},
   eventList: {
     backgroundColor: '#FFF'
   }
