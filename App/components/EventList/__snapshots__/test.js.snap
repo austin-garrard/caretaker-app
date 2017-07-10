@@ -194,7 +194,7 @@ exports[`EventList should render correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
-                style={undefined}
+                style={Object {}}
               >
                 Sat
               </Text>
@@ -299,7 +299,7 @@ exports[`EventList should render correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
-                style={undefined}
+                style={Object {}}
               >
                 Mon
               </Text>
@@ -404,7 +404,7 @@ exports[`EventList should render correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
-                style={undefined}
+                style={Object {}}
               >
                 Wed
               </Text>
@@ -509,7 +509,7 @@ exports[`EventList should render correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
-                style={undefined}
+                style={Object {}}
               >
                 Fri
               </Text>
@@ -614,7 +614,7 @@ exports[`EventList should render correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
-                style={undefined}
+                style={Object {}}
               >
                 Sun
               </Text>
@@ -719,7 +719,7 @@ exports[`EventList should render correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
-                style={undefined}
+                style={Object {}}
               >
                 Mon
               </Text>

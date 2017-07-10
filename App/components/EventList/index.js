@@ -9,6 +9,7 @@ import {
 import { ActionButton } from 'react-native-material-ui';
 import {ContainerFor} from './container.js';
 import EventModal from '../shared/EventModal/';
+import DateDisplay from '../shared/DateDisplay';
 
 class MyListItem extends PureComponent {
     _onPress = () => {
@@ -19,10 +20,7 @@ class MyListItem extends PureComponent {
         return (
             <TouchableOpacity onPress={this._onPress}>
                 <View style={[styles.button, styles.eventBox]}>
-                  <View style={styles.eventDateWrap}>
-                    <Text style={styles.eventDateDay}>{this.props.startDate.getDate()}</Text>
-                    <Text style={styles.eventDateDayName}>{['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][this.props.startDate.getDay()]}</Text>
-                  </View>
+                  <DateDisplay date={this.props.startDate} />
                   <View style={styles.eventDetailsWrap}>
                     <Text style={styles.eventName}>{this.props.name}</Text>
                     <Text style={styles.eventVolunteer}>{this.props.volunteer}</Text>
@@ -108,13 +106,6 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 8,
     marginRight: 8
-  },
-  eventDateWrap: {
-    width: 56,
-    padding: 4
-  },
-  eventDateDay: {
-    fontSize: 24
   },
   eventDetailsWrap: {
     flex: 1,
