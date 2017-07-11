@@ -27,28 +27,28 @@ exports[`Announcements Screen snapshot 1`] = `
     data={
       Array [
         Object {
-          "date": 1493596800000,
+          "date": "2017-04-30T19:00:00-05:00",
           "description": "Woo, go us",
           "id": 1,
           "title": "1st Treatment Success",
         },
         Object {
-          "date": 1493942400000,
+          "date": "2017-05-04T19:00:00-05:00",
           "description": "Boo",
           "id": 2,
           "title": "2nd Treatment Delayed",
         },
         Object {
-          "date": 1494115200000,
+          "date": "2017-05-06T19:00:00-05:00",
           "description": "Send lemons",
           "id": 3,
           "title": "Need Help",
         },
         Object {
-          "date": 1494115200000,
+          "date": "2017-05-06T19:00:00-05:00",
           "description": "It's very complicated, and I'm not sure exactly how to put it into words, but if I had to approximate it, I would probably first request a piping cup of tea and some crackers, as it would take some time and I would be loath to do my description a disservice by unduly interrupting it with breaks for necessaries.
       
-      Then, with the implements of storytelling in hand, I would proceed to warm up with an oh-so-brief description of the setting, of that hot summer day on which my conundrum began. It's very important for you, or anyone else who listens to my tale, to understand the environment in which these events took place, otherwise true understanding will evade you. I would say that in order to accurately transfer the feelings and emotions that I have built up around these happenings, the listener themselves must prepare to embark on a journey, and thus procure for themselves their own tea.",
+      Then, with the implements of storytelling in hand, I would proceed to warm up with an oh-so-brief description of the setting, of that hot summer day on which my conundrum began. It's very important for you, or anyone else who listens to my tale, to understand the environment in which these events took place, otherwise true understanding will evade you. I would say that in order to transfer the feelings and emotions that I have built up around these happenings, the listener themselves must prepare to embark on a journey, and thus procure for themselves their own tea.",
           "id": 4,
           "title": "I have a need",
         },
@@ -300,7 +300,7 @@ exports[`Announcements Screen snapshot 1`] = `
           >
             It's very complicated, and I'm not sure exactly how to put it into words, but if I had to approximate it, I would probably first request a piping cup of tea and some crackers, as it would take some time and I would be loath to do my description a disservice by unduly interrupting it with breaks for necessaries.
             
-            Then, with the implements of storytelling in hand, I would proceed to warm up with an oh-so-brief description of the setting, of that hot summer day on which my conundrum began. It's very important for you, or anyone else who listens to my tale, to understand the environment in which these events took place, otherwise true understanding will evade you. I would say that in order to accurately transfer the feelings and emotions that I have built up around these happenings, the listener themselves must prepare to embark on a journey, and thus procure for themselves their own tea.
+            Then, with the implements of storytelling in hand, I would proceed to warm up with an oh-so-brief description of the setting, of that hot summer day on which my conundrum began. It's very important for you, or anyone else who listens to my tale, to understand the environment in which these events took place, otherwise true understanding will evade you. I would say that in order to transfer the feelings and emotions that I have built up around these happenings, the listener themselves must prepare to embark on a journey, and thus procure for themselves their own tea.
           </Text>
         </View>
       </View>
