@@ -10,7 +10,7 @@ const createEventGateway = (subscribers) => {
     let allEvents = null;
 
     return {
-        getAll: () => {
+        getAll: function() {
             if(allEvents === null) {
                 //api call to get all events
                 allEvents = [
@@ -25,21 +25,21 @@ const createEventGateway = (subscribers) => {
             return allEvents;
         },
 
-        pickUpEvent: (eventId, volunteerId) => {
+        pickUpEvent: function(eventId, volunteerId) {
             let event = allEvents.find((event) => event.id === eventId)
             event.volunteerId = volunteerId;
             //api call to update event by id
             subscribers.notify();
         },
 
-        dropEvent: (eventId) => {
+        dropEvent: function(eventId) {
             let event = allEvents.find((event) => event.id === eventId)
             event.volunteerId = 'TBD';
             //api call to update event by id
             subscribers.notify();
         },
 
-        createNewEvent: (data) => {
+        createNewEvent: function(data) {
             //api call to create event
             const newId = allEvents[allEvents.length - 1].id + 1;
             const result = {id: newId, startDate: 1499699700000, endDate: 1499706900000, location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'New Event ' + newId, volunteerId: 'austin@yeehaw.com', role: 'driver', description: ''}

@@ -10,7 +10,7 @@ const createAnnouncementsGateway = (subscribers) => {
     let allAnnouncements = null;
 
     return {
-        getAll: () => {
+        getAll: function() {
             if(allAnnouncements === null) {
                 //api call to get roles
                 allAnnouncements = [
@@ -23,7 +23,7 @@ const createAnnouncementsGateway = (subscribers) => {
             return allAnnouncements;
         },
 
-        create: (data) => {
+        create: function(data) {
             //api call to create announcement
             const newId = allAnnouncements[allAnnouncements.length - 1].id + 1;
             const result = {id: newId, date: '2017-05-07T19:00:00-05:00', title: 'New Announcement ' + newId, description: 'Send lemons'}

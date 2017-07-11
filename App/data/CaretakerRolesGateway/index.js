@@ -9,7 +9,7 @@ const createCaretakerRolesGateway = () => {
     let allRoles = null;
 
     return {
-        getAll: () => {
+        getAll: function() {
             if(allRoles === null) {
                 //api call to get roles
                 allRoles = [
