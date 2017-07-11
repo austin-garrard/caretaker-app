@@ -5,6 +5,12 @@ export const createSubscribers = () => {
         add: (callback) => {
             subscribers.push(callback);
         },
+        remove: (callback) => {
+            const index = array.indexOf(callback);
+            if(index != -1) {
+            	subscribers.splice(index, 1);
+            }
+        },
         notify: () => {
             subscribers.forEach((subscriber) => subscriber());
         }
@@ -16,8 +22,11 @@ export const withSubscribers = (factory) => {
     const target = factory(subscribers);
 
     return Object.assign(target, {
-        subscribeToUpdates: (callback) => {
+        subscribe: (callback) => {
             subscribers.add(callback);
+        },
+        unsubscribe: (callback) => {
+            subscribers.remove(callback);
         }
     });
 }

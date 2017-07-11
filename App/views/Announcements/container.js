@@ -16,7 +16,11 @@ export default ContainerFor = (Announcements) => class extends Component {
             announcements: AnnouncementsGateway.getAll(),
             isUserAdmin: UserGateway.isAdmin()
         });
-        AnnouncementsGateway.subscribeToUpdates(this.updateAnnouncements);
+        AnnouncementsGateway.subscribe(this.updateAnnouncements);
+    }
+
+    componentWillUnmount() {
+        AnnouncementsGateway.unsubscribe(this.updateAnnouncements);
     }
 
     updateAnnouncements = () => {

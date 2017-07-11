@@ -26,7 +26,7 @@ describe('Announcements Screen', () => {
     });
 
     it('should subscribe to the announcements gateway', () => {
-        const spy = jest.spyOn(AnnouncementsGateway, 'subscribeToUpdates');
+        const spy = jest.spyOn(AnnouncementsGateway, 'subscribe');
 
         const announcements = renderer.create(<Announcements />).getInstance();
 
