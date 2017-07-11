@@ -16,10 +16,18 @@ export default ContainerFor = (Announcements) => class extends Component {
             announcements: AnnouncementsGateway.getAll(),
             isUserAdmin: UserGateway.isAdmin()
         });
+        AnnouncementsGateway.subscribeToUpdates(this.updateAnnouncements);
+    }
+
+    updateAnnouncements = () => {
+        const announcements = AnnouncementsGateway.getAll()
+        let newState = this.state;
+        newState.announcements = announcements;
+        this.setState(newState);
     }
 
     _onAddAnnouncement = () => {
-        alert('announcement added!');
+        AnnouncementsGateway.create({some: 'data'})
     }
 
     _onEditAnnouncement = () => {
