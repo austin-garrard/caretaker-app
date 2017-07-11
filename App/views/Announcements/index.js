@@ -41,6 +41,7 @@ const Announcements = (props) => {
                data={props.announcements}
                renderItem={_renderItem}
                keyExtractor={(item) => item.id}
+               removeClippedSubviews={true}
             />
             {addAnnouncementButton}
         </View>
