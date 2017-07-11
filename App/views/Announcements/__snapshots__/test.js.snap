@@ -123,7 +123,7 @@ exports[`Announcements Screen snapshot 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
           >
-            Sun Apr 30 2017
+            fake date
           </Text>
           <Text
             accessible={true}
@@ -179,7 +179,7 @@ exports[`Announcements Screen snapshot 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
           >
-            Thu May 04 2017
+            fake date
           </Text>
           <Text
             accessible={true}
@@ -235,7 +235,7 @@ exports[`Announcements Screen snapshot 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
           >
-            Sat May 06 2017
+            fake date
           </Text>
           <Text
             accessible={true}
@@ -291,7 +291,7 @@ exports[`Announcements Screen snapshot 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
           >
-            Sat May 06 2017
+            fake date
           </Text>
           <Text
             accessible={true}
