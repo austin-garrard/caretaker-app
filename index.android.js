@@ -5,17 +5,8 @@ import {
 
 import {LoginStack} from './App/config/MainNavigator';
 
-import { COLOR, ThemeProvider } from 'react-native-material-ui';
-const uiTheme = {
-    palette: {
-        primaryColor: COLOR.green500,
-    },
-    toolbar: {
-        container: {
-            height: 50,
-        },
-    },
-};
+import { ThemeProvider } from 'react-native-material-ui';
+import theme from './theme';
 
 class App extends Component {
     render() {
@@ -27,7 +18,7 @@ export default App;
 
 class Main extends Component {
   render() {
-    return <ThemeProvider uiTheme={uiTheme}>
+    return <ThemeProvider uiTheme={theme}>
       <App />
     </ThemeProvider>;
   }

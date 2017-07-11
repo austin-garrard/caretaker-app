@@ -165,7 +165,7 @@ exports[`EventList should render correctly 1`] = `
                   "marginBottom": 0,
                   "marginLeft": 8,
                   "marginRight": 8,
-                  "marginTop": 4,
+                  "marginTop": 8,
                 },
               ]
             }
@@ -270,7 +270,7 @@ exports[`EventList should render correctly 1`] = `
                   "marginBottom": 0,
                   "marginLeft": 8,
                   "marginRight": 8,
-                  "marginTop": 4,
+                  "marginTop": 8,
                 },
               ]
             }
@@ -375,7 +375,7 @@ exports[`EventList should render correctly 1`] = `
                   "marginBottom": 0,
                   "marginLeft": 8,
                   "marginRight": 8,
-                  "marginTop": 4,
+                  "marginTop": 8,
                 },
               ]
             }
@@ -480,7 +480,7 @@ exports[`EventList should render correctly 1`] = `
                   "marginBottom": 0,
                   "marginLeft": 8,
                   "marginRight": 8,
-                  "marginTop": 4,
+                  "marginTop": 8,
                 },
               ]
             }
@@ -585,7 +585,7 @@ exports[`EventList should render correctly 1`] = `
                   "marginBottom": 0,
                   "marginLeft": 8,
                   "marginRight": 8,
-                  "marginTop": 4,
+                  "marginTop": 8,
                 },
               ]
             }
@@ -690,7 +690,7 @@ exports[`EventList should render correctly 1`] = `
                   "marginBottom": 0,
                   "marginLeft": 8,
                   "marginRight": 8,
-                  "marginTop": 4,
+                  "marginTop": 8,
                 },
               ]
             }

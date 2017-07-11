@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   eventBox: {
     flex: 1,
     flexDirection: 'row',
-    marginTop: 4,
+    marginTop: 8,
     marginBottom: 0,
     marginLeft: 8,
     marginRight: 8
