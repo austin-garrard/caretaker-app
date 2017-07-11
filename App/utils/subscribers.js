@@ -6,7 +6,7 @@ export const createSubscribers = () => {
             subscribers.push(callback);
         },
         remove: (callback) => {
-            const index = array.indexOf(callback);
+            const index = subscribers.indexOf(callback);
             if(index != -1) {
             	subscribers.splice(index, 1);
             }
