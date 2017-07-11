@@ -4,7 +4,7 @@
   However, until there is an API to call, it returns canned data.
 */
 
-import createSubscribers from '../../utils/subscribers.js';
+import {withSubscribers} from '../../utils/subscribers.js';
 
 const createEventGateway = (subscribers) => {
     let allEvents = null;
@@ -45,13 +45,8 @@ const createEventGateway = (subscribers) => {
             const result = {id: newId, startDate: 1499699700000, endDate: 1499706900000, location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'New Event ' + newId, volunteerId: 'austin@yeehaw.com', role: 'driver', description: ''}
             allEvents.push(result);
             subscribers.notify();
-        },
-
-        subscribeToUpdates: (callback) => {
-            subscribers.add(callback);
         }
     };
 }
 
-const subscribers = createSubscribers();
-export default createEventGateway(subscribers);
+export default withSubscribers(createEventGateway);
