@@ -9,7 +9,7 @@ import {
 import ContainerFor from './container.js';
 import renderIf from '../../utils/renderif.js';
 import ActionButton from '../../components/material-ui/ActionButton';
-
+import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 
 const ListItem = (props) => (
     <TouchableOpacity style={styles.announcementContainer} onPress={props.onEditAnnouncement}>
@@ -34,7 +34,7 @@ const Announcements = (props) => {
         <ActionButton onPress={props.onAddAnnouncement} />
     );
 
-    return (
+    return <ScreenWithToolbar title='Announcements' navigation={props.navigation}>
         <View style={styles.container}>
             <Text style={styles.title}>Announcements</Text>
             <FlatList
@@ -45,7 +45,7 @@ const Announcements = (props) => {
             />
             {addAnnouncementButton}
         </View>
-    );
+    </ScreenWithToolbar>;
 }
 
 export default ContainerFor(Announcements);

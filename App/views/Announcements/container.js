@@ -47,6 +47,7 @@ export default ContainerFor = (Announcements) => class extends Component {
                 isUserAdmin={this.state.isUserAdmin}
                 onAddAnnouncement={this._onAddAnnouncement}
                 onEditAnnouncement={this._onEditAnnouncement}
+                navigation={this.props.navigation}
             />
         )
     }

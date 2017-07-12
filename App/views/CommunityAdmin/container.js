@@ -55,6 +55,7 @@ export default ContainerFor = (CommunityAdmin) => class extends Component {
                 users={this.state.users}
                 onShowModal={this._onShowModal}
                 modal={modal}
+                navigation={this.props.navigation}
             />
         )
     }
