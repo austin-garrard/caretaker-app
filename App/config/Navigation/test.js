@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import renderer from 'react-test-renderer';
-import {TabNavigator} from 'react-navigation';
+import {DrawerNavigator} from 'react-navigation';
 
 import UserGateway, {Permissions} from '../../data/UserGateway/';
 import Navigation from './index.js';
@@ -9,8 +9,8 @@ import {adminRoutes, helperRoutes, config} from './config.js';
 describe('Navigation', () => {
 
     beforeEach(() => {
-        TabNavigator.mockReset();
-        TabNavigator.mockReturnValue(MockTabNavigator)
+        DrawerNavigator.mockReset();
+        DrawerNavigator.mockReturnValue(MockDrawerNavigator)
     })
 
     it('snapshot', () => {
@@ -36,7 +36,7 @@ describe('Navigation', () => {
             .create(<Navigation />)
             .getInstance();
 
-        expect(TabNavigator).toHaveBeenCalledWith(adminRoutes, config);
+        expect(DrawerNavigator).toHaveBeenCalledWith(adminRoutes, config);
     })
 
     it('should use the admin routes when the user is a focus', () => {
@@ -46,7 +46,7 @@ describe('Navigation', () => {
             .create(<Navigation />)
             .getInstance();
 
-        expect(TabNavigator).toHaveBeenCalledWith(adminRoutes, config);
+        expect(DrawerNavigator).toHaveBeenCalledWith(adminRoutes, config);
     })
 
     it('should use the helper routes when the user is a helper', () => {
@@ -56,7 +56,7 @@ describe('Navigation', () => {
                 .create(<Navigation />)
                 .getInstance();
 
-        expect(TabNavigator).toHaveBeenCalledWith(helperRoutes, config);
+        expect(DrawerNavigator).toHaveBeenCalledWith(helperRoutes, config);
     })
 
     it('should render null when the state is not set', () => {
@@ -71,10 +71,10 @@ describe('Navigation', () => {
 })
 
 
-class MockTabNavigator extends Component {
+class MockDrawerNavigator extends Component {
     render(){
         return (
-            <div>Mock Tab Navigator</div>
+            <div>Mock Drawer Navigator</div>
         );
     }
 }

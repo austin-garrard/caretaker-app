@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 import UserGateway, { Permissions } from '../../data/UserGateway';
 import PatientDashboard from './PatientDashboard/';
@@ -34,6 +35,7 @@ export default class HomeScreen extends Component {
                 justifyContent: 'center',
                 alignItems: 'stretch',
               }}>
+                <Button onPress={() => this.props.navigation.navigate('DrawerOpen')} title='Click me'/>
                 {this.state.screen}
             </View>
         );

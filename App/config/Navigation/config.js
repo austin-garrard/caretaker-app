@@ -5,17 +5,42 @@ import UserProfile from '../../views/UserProfile/';
 import CommunityAdmin from '../../views/CommunityAdmin/';
 
 export const config = {
-    mode: 'modal'
+    initialRouteName: 'Home'
 }
 
 export const helperRoutes = {
-    Home: { screen: HomeScreen },
-    Announcements: { screen: Announcements },
-    CaretakerRolesMenu: { screen: CaretakerRolesMenu },
-    UserProfile: { screen: UserProfile }
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        drawerLabel: 'Schedule'
+      }
+    },
+    Announcements: {
+      screen: Announcements,
+      navigationOptions: {
+        drawerLabel: 'Announcements'
+      }
+    },
+    CaretakerRolesMenu: {
+      screen: CaretakerRolesMenu,
+      navigationOptions: {
+        drawerLabel: 'Roles'
+      }
+    },
+    UserProfile: {
+      screen: UserProfile,
+      navigationOptions: {
+        drawerLabel: 'Profile'
+      }
+    }
 }
 
 export const adminRoutes = {
     ...helperRoutes,
-    CommunityAdmin: { screen: CommunityAdmin }
+    CommunityAdmin: {
+      screen: CommunityAdmin,
+      navigationOptions: {
+        drawerLabel: 'Admin'
+      }
+    }
 }
