@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScreenWithToolbar /> should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <ThemeProvider
+    uiTheme={
+      Object {
+        "palette": Object {
+          "primaryColor": "#FF7575",
+          "secondaryColor": "#E66969",
+        },
+        "toolbar": Object {
+          "container": Object {
+            "height": 50,
+          },
+        },
+      }
+    }
+  />
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      hi
+    </Text>
+  </View>
+</View>
+`;

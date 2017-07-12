@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 import UserGateway, { Permissions } from '../../data/UserGateway';
+import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 import PatientDashboard from './PatientDashboard/';
 import AdminDashboard from './AdminDashboard/';
 import HelperDashboard from './HelperDashboard/';
@@ -27,16 +29,16 @@ export default class HomeScreen extends Component {
     };
 
     render() {
-        return (
+        return <ScreenWithToolbar title='Schedule' navigation={this.props.navigation}>
             <View style={{
                 flex: 1,
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'stretch',
               }}>
-                {this.state.screen}
+              {this.state.screen}
             </View>
-        );
+        </ScreenWithToolbar>;
     }
 }
 

@@ -2,38 +2,53 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList,
+  TouchableOpacity
 } from 'react-native';
+import ContainerFor from './container.js';
+import renderIf from '../../utils/renderif.js';
+import ActionButton from '../../components/material-ui/ActionButton';
+import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 
-export default class Announcements extends Component {
-    constructor() {
-        super();
-        this.state = {
-            screen: null
-        }
-    }
+const ListItem = (props) => (
+    <TouchableOpacity style={styles.announcementContainer} onPress={props.onEditAnnouncement}>
+        <Text style={styles.announcementTitle}>{props.title}</Text>
+        <Text>{new Date(props.date).toDateString()}</Text>
+        <Text>{props.description}</Text>
+    </TouchableOpacity>
+)
 
-    componentDidMount() {
+const Announcements = (props) => {
 
-    }
+    const _renderItem = ({item}) => (
+        <ListItem
+            title={item.title}
+            date={item.date}
+            description={item.description}
+            onEditAnnouncement={props.onEditAnnouncement}
+        />
+    )
 
-    static navigationOptions = {
-        title: 'Announcements Screen'
-    };
+    const addAnnouncementButton = renderIf(props.isUserAdmin,
+        <ActionButton onPress={props.onAddAnnouncement} />
+    );
 
-    render() {
-        return (
-            <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-                <Text>Insert Announcements Here</Text>
-            </View>
-        );
-    }
+    return <ScreenWithToolbar title='Announcements' navigation={props.navigation}>
+        <View style={styles.container}>
+            <Text style={styles.title}>Announcements</Text>
+            <FlatList
+               data={props.announcements}
+               renderItem={_renderItem}
+               keyExtractor={(item) => item.id}
+               removeClippedSubviews={true}
+            />
+            {addAnnouncementButton}
+        </View>
+    </ScreenWithToolbar>;
 }
+
+export default ContainerFor(Announcements);
 
 const styles = StyleSheet.create({
   button: {
@@ -49,4 +64,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 15,
   },
+  announcementContainer: {
+      margin: 10
+  },
+  announcementTitle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      marginTop: 10,
+  }
 });

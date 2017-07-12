@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EventSummaryBox /> should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "#E66969",
+      "borderRadius": 2,
+      "borderStyle": "solid",
+      "borderWidth": 1,
+      "flex": 1,
+      "padding": 4,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#E66969",
+        },
+        Object {
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    Chemotherapy
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#E66969",
+        },
+        Object {},
+      ]
+    }
+  >
+    Adept Wilkenson
+  </Text>
+</View>
+`;

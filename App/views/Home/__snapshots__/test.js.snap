@@ -4,18 +4,32 @@ exports[`Home Screen should render the correct screen 1`] = `
 <View
   style={
     Object {
-      "alignItems": "stretch",
       "flex": 1,
-      "flexDirection": "column",
-      "justifyContent": "center",
     }
   }
 >
+  <ThemeProvider
+    uiTheme={
+      Object {
+        "palette": Object {
+          "primaryColor": "#FF7575",
+          "secondaryColor": "#E66969",
+        },
+        "toolbar": Object {
+          "container": Object {
+            "height": 50,
+          },
+        },
+      }
+    }
+  />
   <View
     style={
       Object {
-        "backgroundColor": "#F5FCFF",
+        "alignItems": "stretch",
         "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
       }
     }
   >
@@ -27,254 +41,263 @@ exports[`Home Screen should render the correct screen 1`] = `
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <View
         style={
           Object {
-            "fontSize": 24,
-            "margin": 15,
-            "textAlign": "center",
+            "backgroundColor": "#F5FCFF",
+            "flex": 1,
           }
         }
       >
-        Assigned Upcoming Events
-      </Text>
-      <RCTScrollView
-        data={
-          Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
             Object {
-              "date": "July 3rd",
-              "description": "Quick check",
-              "endDate": 1499101200000,
-              "id": 2,
-              "location": "6818 Austin Center Blvd, Austin, TX 78731",
-              "name": "Toxicity Check",
-              "role": "driver",
-              "startDate": 1499097600000,
-              "time": "11:00-12:00",
-              "volunteer": "Sarah",
-              "volunteerId": "sarah@emailprovider.com",
-            },
-            Object {
-              "date": "July 7th",
-              "description": "Need to keep busy",
-              "id": 4,
-              "location": "1100 Congress Ave, Austin, TX 78701",
-              "name": "Weekend",
-              "role": "active friend",
-              "startDate": 1499403600000,
-              "time": "All Day",
-              "volunteer": "Sarah",
-              "volunteerId": "sarah@emailprovider.com",
-            },
-          ]
-        }
-        disableVirtualization={false}
-        getItem={[Function]}
-        getItemCount={[Function]}
-        horizontal={false}
-        initialNumToRender={10}
-        keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onContentSizeChange={[Function]}
-        onEndReached={[Function]}
-        onEndReachedThreshold={2}
-        onLayout={[Function]}
-        onScroll={[Function]}
-        onScrollBeginDrag={[Function]}
-        onViewableItemsChanged={undefined}
-        removeClippedSubviews={true}
-        renderItem={[Function]}
-        renderScrollComponent={[Function]}
-        scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        updateCellsBatchingPeriod={50}
-        windowSize={21}
-      >
-        <View>
-          <View
-            onLayout={[Function]}
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "fontSize": 20,
-                  "margin": 13,
-                  "textAlign": "left",
-                }
-              }
-            >
-              July 3rd
-              : 
-              Toxicity Check
-            </Text>
-          </View>
-          <View
-            onLayout={[Function]}
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "fontSize": 20,
-                  "margin": 13,
-                  "textAlign": "left",
-                }
-              }
-            >
-              July 7th
-              : 
-              Weekend
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "height": 0,
-              }
+              "fontSize": 24,
+              "margin": 15,
+              "textAlign": "center",
             }
-          />
-        </View>
-      </RCTScrollView>
-    </View>
-    <View
-      style={
-        Object {
-          "backgroundColor": "#F5FCFF",
-          "flex": 1,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+          }
+        >
+          Assigned Upcoming Events
+        </Text>
+        <RCTScrollView
+          data={
+            Array [
+              Object {
+                "date": "July 3rd",
+                "description": "Quick check",
+                "endDate": 1499101200000,
+                "id": 2,
+                "location": "6818 Austin Center Blvd, Austin, TX 78731",
+                "name": "Toxicity Check",
+                "role": "driver",
+                "startDate": 1499097600000,
+                "time": "11:00-12:00",
+                "volunteer": "Sarah",
+                "volunteerId": "sarah@emailprovider.com",
+              },
+              Object {
+                "date": "July 7th",
+                "description": "Need to keep busy",
+                "id": 4,
+                "location": "1100 Congress Ave, Austin, TX 78701",
+                "name": "Weekend",
+                "role": "active friend",
+                "startDate": 1499403600000,
+                "time": "All Day",
+                "volunteer": "Sarah",
+                "volunteerId": "sarah@emailprovider.com",
+              },
+            ]
+          }
+          disableVirtualization={false}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          numColumns={1}
+          onContentSizeChange={[Function]}
+          onEndReached={[Function]}
+          onEndReachedThreshold={2}
+          onLayout={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onViewableItemsChanged={undefined}
+          removeClippedSubviews={true}
+          renderItem={[Function]}
+          renderScrollComponent={[Function]}
+          scrollEventThrottle={50}
+          stickyHeaderIndices={Array []}
+          updateCellsBatchingPeriod={50}
+          windowSize={21}
+        >
+          <View>
+            <View
+              onLayout={[Function]}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "margin": 13,
+                    "textAlign": "left",
+                  }
+                }
+              >
+                July 3rd
+                : 
+                Toxicity Check
+              </Text>
+            </View>
+            <View
+              onLayout={[Function]}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "margin": 13,
+                    "textAlign": "left",
+                  }
+                }
+              >
+                July 7th
+                : 
+                Weekend
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "height": 0,
+                }
+              }
+            />
+          </View>
+        </RCTScrollView>
+      </View>
+      <View
         style={
           Object {
-            "fontSize": 24,
-            "margin": 15,
-            "textAlign": "center",
+            "backgroundColor": "#F5FCFF",
+            "flex": 1,
           }
         }
       >
-        Events Still Looking for People
-      </Text>
-      <RCTScrollView
-        data={
-          Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
             Object {
-              "date": "July 5th",
-              "description": "",
-              "endDate": 1499265000000,
-              "id": 3,
-              "location": "1120 S Lamar Blvd, Austin, TX 78704",
-              "name": "Checkin",
-              "role": "active friend",
-              "startDate": 1499261400000,
-              "time": "08:30-09:30",
-              "volunteer": "TBD",
-              "volunteerId": "TBD",
-            },
-            Object {
-              "date": "July 9th",
-              "description": "",
-              "endDate": 1499620500000,
-              "id": 5,
-              "location": "6818 Austin Center Blvd, Austin, TX 78731",
-              "name": "Chemotherapy",
-              "role": "driver",
-              "startDate": 1499613300000,
-              "time": "10:15-12:15",
-              "volunteer": "TBD",
-              "volunteerId": "TBD",
-            },
-          ]
-        }
-        disableVirtualization={false}
-        getItem={[Function]}
-        getItemCount={[Function]}
-        horizontal={false}
-        initialNumToRender={10}
-        keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onContentSizeChange={[Function]}
-        onEndReached={[Function]}
-        onEndReachedThreshold={2}
-        onLayout={[Function]}
-        onScroll={[Function]}
-        onScrollBeginDrag={[Function]}
-        onViewableItemsChanged={undefined}
-        removeClippedSubviews={true}
-        renderItem={[Function]}
-        renderScrollComponent={[Function]}
-        scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        updateCellsBatchingPeriod={50}
-        windowSize={21}
-      >
-        <View>
-          <View
-            onLayout={[Function]}
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "fontSize": 20,
-                  "margin": 13,
-                  "textAlign": "left",
-                }
-              }
-            >
-              July 5th
-              : 
-              Checkin
-               - 
-              active friend
-            </Text>
-          </View>
-          <View
-            onLayout={[Function]}
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "fontSize": 20,
-                  "margin": 13,
-                  "textAlign": "left",
-                }
-              }
-            >
-              July 9th
-              : 
-              Chemotherapy
-               - 
-              driver
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "height": 0,
-              }
+              "fontSize": 24,
+              "margin": 15,
+              "textAlign": "center",
             }
-          />
-        </View>
-      </RCTScrollView>
+          }
+        >
+          Events Still Looking for People
+        </Text>
+        <RCTScrollView
+          data={
+            Array [
+              Object {
+                "date": "July 5th",
+                "description": "",
+                "endDate": 1499265000000,
+                "id": 3,
+                "location": "1120 S Lamar Blvd, Austin, TX 78704",
+                "name": "Checkin",
+                "role": "active friend",
+                "startDate": 1499261400000,
+                "time": "08:30-09:30",
+                "volunteer": "TBD",
+                "volunteerId": "TBD",
+              },
+              Object {
+                "date": "July 9th",
+                "description": "",
+                "endDate": 1499620500000,
+                "id": 5,
+                "location": "6818 Austin Center Blvd, Austin, TX 78731",
+                "name": "Chemotherapy",
+                "role": "driver",
+                "startDate": 1499613300000,
+                "time": "10:15-12:15",
+                "volunteer": "TBD",
+                "volunteerId": "TBD",
+              },
+            ]
+          }
+          disableVirtualization={false}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          numColumns={1}
+          onContentSizeChange={[Function]}
+          onEndReached={[Function]}
+          onEndReachedThreshold={2}
+          onLayout={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onViewableItemsChanged={undefined}
+          removeClippedSubviews={true}
+          renderItem={[Function]}
+          renderScrollComponent={[Function]}
+          scrollEventThrottle={50}
+          stickyHeaderIndices={Array []}
+          updateCellsBatchingPeriod={50}
+          windowSize={21}
+        >
+          <View>
+            <View
+              onLayout={[Function]}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "margin": 13,
+                    "textAlign": "left",
+                  }
+                }
+              >
+                July 5th
+                : 
+                Checkin
+                 - 
+                active friend
+              </Text>
+            </View>
+            <View
+              onLayout={[Function]}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "margin": 13,
+                    "textAlign": "left",
+                  }
+                }
+              >
+                July 9th
+                : 
+                Chemotherapy
+                 - 
+                driver
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "height": 0,
+                }
+              }
+            />
+          </View>
+        </RCTScrollView>
+      </View>
     </View>
   </View>
 </View>

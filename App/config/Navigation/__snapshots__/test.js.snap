@@ -2,6 +2,6 @@
 
 exports[`Navigation snapshot 1`] = `
 <div>
-  Mock Tab Navigator
+  Mock Drawer Navigator
 </div>
 `;

@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import CaretakerRolesContainer from '../../components/CaretakerRolesList/';
 import UserGateway, { Permissions } from '../../data/UserGateway';
+import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 import renderif from '../../utils/renderif.js';
 
 export default class CaretakerRolesMenu extends Component {
@@ -36,7 +37,7 @@ export default class CaretakerRolesMenu extends Component {
     createNewCaretakerRole = () => alert('Insert Caretaker Role Creation Screen Here!');
 
     render() {
-        return (
+        return <ScreenWithToolbar title='Roles' navigation={this.props.navigation}>
             <View style={styles.container}>
                 <Text style={styles.title}>Caretaker Roles</Text>
                     {renderif(this.state.isAdmin,
@@ -49,7 +50,7 @@ export default class CaretakerRolesMenu extends Component {
                     activeRoles={this.state.activeRoles}
                 />
             </View>
-        );
+        </ScreenWithToolbar>;
     }
 }
 

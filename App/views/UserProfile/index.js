@@ -4,6 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
+import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 
 export default class UserProfile extends Component {
     constructor() {
@@ -22,7 +23,7 @@ export default class UserProfile extends Component {
     };
 
     render() {
-        return (
+        return <ScreenWithToolbar title='Profile' navigation={this.props.navigation}>
             <View style={{
                 flex: 1,
                 flexDirection: 'column',
@@ -31,7 +32,7 @@ export default class UserProfile extends Component {
               }}>
                 <Text>Insert User Profile Here</Text>
             </View>
-        );
+        </ScreenWithToolbar>;
     }
 }
 

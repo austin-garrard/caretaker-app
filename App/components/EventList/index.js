@@ -6,9 +6,11 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
-import { ActionButton } from 'react-native-material-ui';
 import {ContainerFor} from './container.js';
 import EventModal from '../shared/EventModal/';
+import DateDisplay from '../shared/DateDisplay';
+import EventSummaryBox from '../shared/EventSummaryBox';
+import ActionButton from '../material-ui/ActionButton';
 
 class MyListItem extends PureComponent {
     _onPress = () => {
@@ -19,14 +21,8 @@ class MyListItem extends PureComponent {
         return (
             <TouchableOpacity onPress={this._onPress}>
                 <View style={[styles.button, styles.eventBox]}>
-                  <View style={styles.eventDateWrap}>
-                    <Text style={styles.eventDateDay}>{this.props.startDate.getDate()}</Text>
-                    <Text style={styles.eventDateDayName}>{['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][this.props.startDate.getDay()]}</Text>
-                  </View>
-                  <View style={styles.eventDetailsWrap}>
-                    <Text style={styles.eventName}>{this.props.name}</Text>
-                    <Text style={styles.eventVolunteer}>{this.props.volunteer}</Text>
-                  </View>
+                  <DateDisplay date={this.props.startDate} />
+                  <EventSummaryBox name={this.props.name} volunteer={this.props.volunteer} />
                 </View>
             </TouchableOpacity>
         );
@@ -66,6 +62,7 @@ class EventList extends Component {
                    dataWhichCouldChange={this.props.events.map((event) => event.volunteer)}
                    renderItem={this._renderItem}
                    keyExtractor={(item) => item.id}
+                   removeClippedSubviews={true}
                 />
                 <ActionButton onPress={this._onCreateEvent} />
             </View>
@@ -104,30 +101,11 @@ const styles = StyleSheet.create({
   eventBox: {
     flex: 1,
     flexDirection: 'row',
-    marginTop: 4,
+    marginTop: 8,
     marginBottom: 0,
     marginLeft: 8,
     marginRight: 8
   },
-  eventDateWrap: {
-    width: 56,
-    padding: 4
-  },
-  eventDateDay: {
-    fontSize: 24
-  },
-  eventDetailsWrap: {
-    flex: 1,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#FF0000',
-    borderRadius: 2,
-    padding: 4
-  },
-  eventName: {
-    fontWeight: 'bold'
-  },
-  eventVolunteer: {},
   eventList: {
     backgroundColor: '#FFF'
   }

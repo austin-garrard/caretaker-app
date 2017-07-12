@@ -7,6 +7,7 @@ import {
   Button
 } from 'react-native';
 import ContainerFor from './container.js';
+import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 
 const ListItem = (props) => (
     <View style={styles.person}>
@@ -31,7 +32,7 @@ const CommunityAdmin = (props) => {
         />
     )
 
-    return (
+    return <ScreenWithToolbar title='Admin' navigation={props.navigation}>
         <View style={styles.container}>
             {props.modal}
             <FlatList
@@ -45,7 +46,7 @@ const CommunityAdmin = (props) => {
                 onPress={props.onShowModal}
             />
         </View>
-    );
+    </ScreenWithToolbar>;
 }
 
 export default ContainerFor(CommunityAdmin);

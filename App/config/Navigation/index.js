@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {TabNavigator} from 'react-navigation';
+import {DrawerNavigator} from 'react-navigation';
 import UserGateway, { Permissions } from '../../data/UserGateway/';
 import {adminRoutes, helperRoutes, config} from './config.js';
 
@@ -20,7 +20,7 @@ export default class Navigation extends Component {
         const userType = this.state.userType;
         let result = null;
         if(userType) {
-            const Navigator = TabNavigator(routesFor[userType], config);
+            const Navigator = DrawerNavigator(routesFor[userType], config);
             result = <Navigator />;
         }
         return result;
