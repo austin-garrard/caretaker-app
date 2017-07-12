@@ -4,7 +4,7 @@ exports[`<EventSummaryBox /> should render correctly 1`] = `
 <View
   style={
     Object {
-      "borderColor": "#FF0000",
+      "borderColor": "#E66969",
       "borderRadius": 2,
       "borderStyle": "solid",
       "borderWidth": 1,
@@ -18,9 +18,14 @@ exports[`<EventSummaryBox /> should render correctly 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     style={
-      Object {
-        "fontWeight": "bold",
-      }
+      Array [
+        Object {
+          "color": "#E66969",
+        },
+        Object {
+          "fontWeight": "bold",
+        },
+      ]
     }
   >
     Chemotherapy
@@ -29,7 +34,14 @@ exports[`<EventSummaryBox /> should render correctly 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={Object {}}
+    style={
+      Array [
+        Object {
+          "color": "#E66969",
+        },
+        Object {},
+      ]
+    }
   >
     Adept Wilkenson
   </Text>
