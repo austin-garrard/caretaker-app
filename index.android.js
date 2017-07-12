@@ -5,9 +5,6 @@ import {
 
 import {LoginStack} from './App/config/MainNavigator';
 
-import { ThemeProvider } from 'react-native-material-ui';
-import theme from './theme';
-
 class App extends Component {
     render() {
         return <LoginStack />;
@@ -16,12 +13,4 @@ class App extends Component {
 
 export default App;
 
-class Main extends Component {
-  render() {
-    return <ThemeProvider uiTheme={theme}>
-      <App />
-    </ThemeProvider>;
-  }
-}
-
-AppRegistry.registerComponent('caretaker', () => Main);
+AppRegistry.registerComponent('caretaker', () => App);

@@ -6,11 +6,11 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
-import { ActionButton } from 'react-native-material-ui';
 import {ContainerFor} from './container.js';
 import EventModal from '../shared/EventModal/';
 import DateDisplay from '../shared/DateDisplay';
 import EventSummaryBox from '../shared/EventSummaryBox';
+import ActionButton from '../material-ui/ActionButton';
 
 class MyListItem extends PureComponent {
     _onPress = () => {

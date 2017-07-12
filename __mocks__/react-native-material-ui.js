@@ -7,4 +7,10 @@ materialUi.ActionButton = (props) => React.createElement(
   props.children
 );
 
+materialUi.ThemeProvider = (props) => React.createElement(
+  'ThemeProvider',
+  props,
+  props.children
+);
+
 module.exports = materialUi;
