@@ -313,8 +313,24 @@ exports[`Announcements Screen snapshot 1`] = `
       />
     </View>
   </RCTScrollView>
-  <ActionButton
-    onPress={[Function]}
-  />
+  <ThemeProvider
+    uiTheme={
+      Object {
+        "palette": Object {
+          "primaryColor": "#FF7575",
+          "secondaryColor": "#E66969",
+        },
+        "toolbar": Object {
+          "container": Object {
+            "height": 50,
+          },
+        },
+      }
+    }
+  >
+    <ActionButton
+      onPress={[Function]}
+    />
+  </ThemeProvider>
 </View>
 `;
