@@ -10,7 +10,7 @@ const createUserGateway = function() {
     return {
         currentUser: null,
 
-        getAll: function() {
+        getAll() {
             if(allUsers === null) {
                 //api call goes here
                 allUsers = [
@@ -24,16 +24,16 @@ const createUserGateway = function() {
             return allUsers;
         },
 
-        getName: function(identifier) {
+        getName(identifier) {
             const user = allUsers.find((user) => user.identifier === identifier)
             return user ? user.name : 'TBD';
         },
 
-        getRoles: function() {
+        getRoles() {
             return this.currentUser.roles
         },
 
-        signIn: function(email) {
+        signIn(email) {
             //make call to google oauth and store the results
             let results = {
                 email: email
@@ -46,20 +46,20 @@ const createUserGateway = function() {
             return false;
         },
 
-        isSelf: function(identifier) {
+        isSelf(identifier) {
             return this.currentUser.identifier === identifier;
         },
 
-        isAdmin: function() {
+        isAdmin() {
             return this.currentUser.permission === Permissions.ADMIN
                 || this.currentUser.permission === Permissions.FOCUS;
         },
 
-        getCurrentPermissions: function() {
+        getCurrentPermissions() {
             return this.currentUser.permission;
         },
 
-        inviteUser: function(email) {
+        inviteUser(email) {
             //api call to invite the user
             alert('invited ' + email + '!');
         }
