@@ -11,186 +11,266 @@ exports[`EventModal should render correctly 1`] = `
   <View
     style={
       Object {
-        "justifyContent": "center",
-        "margin": 13,
+        "flex": 1,
       }
     }
   >
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
+    <ThemeProvider
+      uiTheme={
         Object {
-          "opacity": 1,
+          "palette": Object {
+            "accentColor": "#FF7575",
+            "alternateTextColor": "white",
+            "primaryColor": "#FF7575",
+            "primaryTextColor": "black",
+            "secondaryColor": "#CC5D5D",
+          },
+          "spacing": Object {
+            "miniActionButtonSize": 42,
+          },
+          "toolbar": Object {
+            "container": Object {
+              "height": 50,
+            },
+          },
+          "typography": Object {
+            "fontSize": Object {
+              "display": 25,
+            },
+            "subheading": Object {
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "lineHeight": 24,
+            },
+          },
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
+    />
+    <RCTScrollView
+      style={
+        Object {
+          "paddingTop": 22,
+        }
+      }
     >
-      <View
-        style={undefined}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
         >
-          [edit event]
-        </Text>
+          <ThemeProvider
+            uiTheme={
+              Object {
+                "palette": Object {
+                  "accentColor": "#FF7575",
+                  "alternateTextColor": "white",
+                  "primaryColor": "#FF7575",
+                  "primaryTextColor": "black",
+                  "secondaryColor": "#CC5D5D",
+                },
+                "spacing": Object {
+                  "miniActionButtonSize": 42,
+                },
+                "toolbar": Object {
+                  "container": Object {
+                    "height": 50,
+                  },
+                },
+                "typography": Object {
+                  "fontSize": Object {
+                    "display": 25,
+                  },
+                  "subheading": Object {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                    "lineHeight": 24,
+                  },
+                },
+              }
+            }
+          />
+          <ThemeProvider
+            uiTheme={
+              Object {
+                "palette": Object {
+                  "accentColor": "#FF7575",
+                  "alternateTextColor": "white",
+                  "primaryColor": "#FF7575",
+                  "primaryTextColor": "black",
+                  "secondaryColor": "#CC5D5D",
+                },
+                "spacing": Object {
+                  "miniActionButtonSize": 42,
+                },
+                "toolbar": Object {
+                  "container": Object {
+                    "height": 50,
+                  },
+                },
+                "typography": Object {
+                  "fontSize": Object {
+                    "display": 25,
+                  },
+                  "subheading": Object {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                    "lineHeight": 24,
+                  },
+                },
+              }
+            }
+          />
+          <ThemeProvider
+            uiTheme={
+              Object {
+                "palette": Object {
+                  "accentColor": "#FF7575",
+                  "alternateTextColor": "white",
+                  "primaryColor": "#FF7575",
+                  "primaryTextColor": "black",
+                  "secondaryColor": "#CC5D5D",
+                },
+                "spacing": Object {
+                  "miniActionButtonSize": 42,
+                },
+                "toolbar": Object {
+                  "container": Object {
+                    "height": 50,
+                  },
+                },
+                "typography": Object {
+                  "fontSize": Object {
+                    "display": 25,
+                  },
+                  "subheading": Object {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                    "lineHeight": 24,
+                  },
+                },
+              }
+            }
+          />
+          <ThemeProvider
+            uiTheme={
+              Object {
+                "palette": Object {
+                  "accentColor": "#FF7575",
+                  "alternateTextColor": "white",
+                  "primaryColor": "#FF7575",
+                  "primaryTextColor": "black",
+                  "secondaryColor": "#CC5D5D",
+                },
+                "spacing": Object {
+                  "miniActionButtonSize": 42,
+                },
+                "toolbar": Object {
+                  "container": Object {
+                    "height": 50,
+                  },
+                },
+                "typography": Object {
+                  "fontSize": Object {
+                    "display": 25,
+                  },
+                  "subheading": Object {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                    "lineHeight": 24,
+                  },
+                },
+              }
+            }
+          />
+        </View>
+        <ThemeProvider
+          uiTheme={
+            Object {
+              "palette": Object {
+                "accentColor": "#FF7575",
+                "alternateTextColor": "white",
+                "primaryColor": "#FF7575",
+                "primaryTextColor": "black",
+                "secondaryColor": "#CC5D5D",
+              },
+              "spacing": Object {
+                "miniActionButtonSize": 42,
+              },
+              "toolbar": Object {
+                "container": Object {
+                  "height": 50,
+                },
+              },
+              "typography": Object {
+                "fontSize": Object {
+                  "display": 25,
+                },
+                "subheading": Object {
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "lineHeight": 24,
+                },
+              },
+            }
+          }
+        />
       </View>
-    </View>
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
+    </RCTScrollView>
+    <ThemeProvider
+      uiTheme={
         Object {
-          "opacity": 1,
-        }
-      }
-      testID={undefined}
-      tvParallaxProperties={undefined}
-    >
-      <View
-        style={undefined}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          [Export to Calendar]
-        </Text>
-      </View>
-    </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 24,
-          "margin": 15,
-          "textAlign": "center",
+          "palette": Object {
+            "accentColor": "#FF7575",
+            "alternateTextColor": "white",
+            "primaryColor": "#FF7575",
+            "primaryTextColor": "black",
+            "secondaryColor": "#CC5D5D",
+          },
+          "spacing": Object {
+            "miniActionButtonSize": 42,
+          },
+          "toolbar": Object {
+            "container": Object {
+              "height": 50,
+            },
+          },
+          "typography": Object {
+            "fontSize": Object {
+              "display": 25,
+            },
+            "subheading": Object {
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "lineHeight": 24,
+            },
+          },
         }
       }
     >
-      Chemotherapy
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 20,
-          "margin": 10,
-          "textAlign": "left",
+      <ActionButton
+        icon="mode-edit"
+        onPress={[Function]}
+        style={
+          Object {
+            "container": Object {
+              "backgroundColor": "#CC5D5D",
+              "borderRadius": 21,
+              "elevation": 4,
+              "height": 42,
+              "width": 42,
+            },
+            "positionContainer": Object {
+              "left": 7,
+              "position": "absolute",
+              "top": 99,
+            },
+          }
         }
-      }
-    >
-      July 1
-       
-      13:00-14:00
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 20,
-          "margin": 10,
-          "textAlign": "left",
-        }
-      }
-    >
-      6818 Austin Center Blvd, Austin, TX 78731
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 20,
-          "margin": 10,
-          "textAlign": "left",
-        }
-      }
-    >
-      driver
-      :
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 20,
-          "margin": 10,
-          "textAlign": "left",
-        }
-      }
-    >
-      
-    </Text>
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-      testID={undefined}
-      tvParallaxProperties={undefined}
-    >
-      <View
-        style={undefined}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          Close
-        </Text>
-      </View>
-    </View>
+      />
+    </ThemeProvider>
   </View>
 </Modal>
 `;

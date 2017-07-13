@@ -78,7 +78,7 @@ exports[`EventList should render correctly 1`] = `
         },
         Object {
           "date": "July 10th",
-          "description": "",
+          "description": "This is a very long description.  Chemotherapy (often abbreviated to chemo and sometimes CTX or CTx) is a category of cancer treatment that uses one or more anti-cancer drugs (chemotherapeutic agents) as part of a standardized chemotherapy regimen.",
           "endDate": 1499706900000,
           "id": 6,
           "location": "6818 Austin Center Blvd, Austin, TX 78731",
@@ -846,12 +846,27 @@ exports[`EventList should render correctly 1`] = `
       Object {
         "palette": Object {
           "accentColor": "#FF7575",
+          "alternateTextColor": "white",
           "primaryColor": "#FF7575",
+          "primaryTextColor": "black",
           "secondaryColor": "#CC5D5D",
+        },
+        "spacing": Object {
+          "miniActionButtonSize": 42,
         },
         "toolbar": Object {
           "container": Object {
             "height": 50,
+          },
+        },
+        "typography": Object {
+          "fontSize": Object {
+            "display": 25,
+          },
+          "subheading": Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "lineHeight": 24,
           },
         },
       }

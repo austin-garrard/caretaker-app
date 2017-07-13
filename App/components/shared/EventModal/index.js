@@ -9,61 +9,20 @@ import {
     View
 } from 'react-native';
 import {ContainerFor} from './container.js';
+import EventPage from '../EventPage';
 
 class EventModal extends Component {
-    _renderButton = (text, onPress) => (
-        <TouchableOpacity onPress={onPress}>
-            <View style={styles.button}>
-                <Text>{text}</Text>
-            </View>
-        </TouchableOpacity>
-    );
-
-    _renderPickUpEventbutton = () => {
-        if(this.props.isVolunteerNeeded) {
-            return this._renderButton('[pick up event]', this.props.onPickUpEvent);
-        } else {
-            return null;
-        }
-    }
-
-    _renderDropEventButton = () => {
-        if(this.props.isVolunteerSelf) {
-            return this._renderButton('[drop event]', this.props.onDropEvent);
-        } else {
-            return null;
-        }
-    }
-
-    _renderEditEventButton = () => {
-        if(this.props.isVolunteerAdmin) {
-            return this._renderButton('[edit event]', this.props.onEditEvent);
-        } else {
-            return null;
-        }
-    }
 
     _renderModalContent = () => {
-        const props = this.props;
-        const event = props.event;
-        return (
-            <View style={styles.modalContent}>
-                {this._renderEditEventButton(event.volunteer)}
-                {this._renderButton('[Export to Calendar]', this.props.onExportToCalendar)}
-
-                <Text style={styles.modalTitle}>{event.name}</Text>
-                <Text style={styles.modalInfo}>{event.date} {event.time}</Text>
-                <Text style={styles.modalInfo}>{event.location}</Text>
-                <Text style={styles.modalInfo}>{event.role}:{event.volunteer}</Text>
-
-                {this._renderPickUpEventbutton()}
-                {this._renderDropEventButton()}
-
-                <Text style={styles.modalInfo}>{event.description}</Text>
-
-                {this._renderButton('Close', props.onClose)}
-            </View>
-        );
+      const props = this.props;
+      const event = props.event;
+      return <EventPage
+        event={event}
+        onClose={props.onClose}
+        onAccept={props.onPickUpEvent}
+        onDrop={props.onDropEvent}
+        onEdit={props.onEditEvent}
+      />;
     };
 
     render() {

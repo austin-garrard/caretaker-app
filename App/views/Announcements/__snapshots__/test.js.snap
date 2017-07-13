@@ -13,12 +13,27 @@ exports[`Announcements Screen snapshot 1`] = `
       Object {
         "palette": Object {
           "accentColor": "#FF7575",
+          "alternateTextColor": "white",
           "primaryColor": "#FF7575",
+          "primaryTextColor": "black",
           "secondaryColor": "#CC5D5D",
+        },
+        "spacing": Object {
+          "miniActionButtonSize": 42,
         },
         "toolbar": Object {
           "container": Object {
             "height": 50,
+          },
+        },
+        "typography": Object {
+          "fontSize": Object {
+            "display": 25,
+          },
+          "subheading": Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "lineHeight": 24,
           },
         },
       }
@@ -341,12 +356,27 @@ exports[`Announcements Screen snapshot 1`] = `
         Object {
           "palette": Object {
             "accentColor": "#FF7575",
+            "alternateTextColor": "white",
             "primaryColor": "#FF7575",
+            "primaryTextColor": "black",
             "secondaryColor": "#CC5D5D",
+          },
+          "spacing": Object {
+            "miniActionButtonSize": 42,
           },
           "toolbar": Object {
             "container": Object {
               "height": 50,
+            },
+          },
+          "typography": Object {
+            "fontSize": Object {
+              "display": 25,
+            },
+            "subheading": Object {
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "lineHeight": 24,
             },
           },
         }
