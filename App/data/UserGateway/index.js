@@ -1,3 +1,5 @@
+import { Record } from 'immutable';
+
 export class Permissions {
     static FOCUS = 'focus';
     static ADMIN = 'admin';
@@ -41,15 +43,10 @@ export const createAdminUser = () => ({
     roles: [],
     phone:'123-456-7890',
     notificationTypes: [NotificationTypes.PUSH],
-    notificationTriggers: [NotificationTriggers.ANNOUNCEMENT, NotificationTriggers.EVENT_BY_ROLE],
-    settings: {
-        notificationTypes: [{
-            [NotificationTypes.PUSH]: {
-                name: 'Push'
-            }
-        }]
-    }
+    notificationTriggers: [NotificationTriggers.ANNOUNCEMENT, NotificationTriggers.EVENT_BY_ROLE]
 })
+
+export const User = Record(createAdminUser());
 
 
 const createUserGateway = function() {
@@ -58,7 +55,7 @@ const createUserGateway = function() {
 
     return {
         getCurrentUser(){
-            return currentUser;
+            return new User(currentUser);
         },
 
         getAll() {

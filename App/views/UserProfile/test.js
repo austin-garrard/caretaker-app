@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
 import UserGateway, { NotificationTypes, createAdminUser } from '../../data/UserGateway/';
 import UserProfile from './index.js';
+import { Record } from 'immutable';
 
 describe('User Profile', () => {
 
     beforeEach(() => {
-        jest.spyOn(UserGateway, 'getCurrentUser')
-            .mockReturnValue(createAdminUser());
+        UserGateway.signIn('s');
     });
 
     it('should process the raw notification types', () => {

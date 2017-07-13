@@ -10,17 +10,18 @@ import { NotificationTypes, NotificationTriggers } from '../../data/UserGateway'
 
 const UserProfile = (props) => {
 
-    _renderCheckbox = (setting, key, label) => {
-        const currentValue = setting.indexOf(key) > -1;
+    _renderCheckbox = (type) => {
+        const currentValue = props.notificationTypes[type].value;
 
         return <Checkbox
-            label={label}
-            value={key}
+            label={props.notificationTypes[type].name}
+            value={type}
             checked={currentValue}
-            onCheck={props.toggle(key, !currentValue)}
+            onCheck={props.toggle(type)}
         />
     }
 
+    //todo remove this
     _renderNotificationTypes = () => {
         return Object.values(props.notificationTypes)
             .filter(type => type.value === true)
@@ -41,7 +42,12 @@ const UserProfile = (props) => {
             <Text>Receive Notifications via: {_renderNotificationTypes()}</Text>
             <Text>Receive Notifications for: {props.notificationTriggers.join(', ')}</Text>
         </View>
-
+        <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Receive Notifications via:</Text>
+            {_renderCheckbox(NotificationTypes.PUSH)}
+            {_renderCheckbox(NotificationTypes.EMAIL)}
+            {_renderCheckbox(NotificationTypes.SMS)}
+        </View>
     </View>
 };
 

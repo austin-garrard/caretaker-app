@@ -65,7 +65,7 @@ describe('EventModal', () => {
 
             modalInstance._onPickUpEvent();
 
-            expect(spy).toHaveBeenCalledWith(event.id, UserGateway.getCurrentUser().identifier);
+            expect(spy).toHaveBeenCalledWith(event.id, 'sarah@emailprovider.com');
         })
     });
 
