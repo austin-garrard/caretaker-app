@@ -4,7 +4,7 @@ exports[`<EventSummaryBox /> should render correctly 1`] = `
 <View
   style={
     Object {
-      "borderColor": "#E66969",
+      "borderColor": "#CC5D5D",
       "borderRadius": 2,
       "borderStyle": "solid",
       "borderWidth": 1,
@@ -20,7 +20,7 @@ exports[`<EventSummaryBox /> should render correctly 1`] = `
     style={
       Array [
         Object {
-          "color": "#E66969",
+          "color": "#CC5D5D",
         },
         Object {
           "fontWeight": "bold",
@@ -37,7 +37,7 @@ exports[`<EventSummaryBox /> should render correctly 1`] = `
     style={
       Array [
         Object {
-          "color": "#E66969",
+          "color": "#CC5D5D",
         },
         Object {},
       ]

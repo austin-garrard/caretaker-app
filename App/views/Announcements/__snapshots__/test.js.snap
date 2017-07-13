@@ -12,8 +12,9 @@ exports[`Announcements Screen snapshot 1`] = `
     uiTheme={
       Object {
         "palette": Object {
+          "accentColor": "#FF7575",
           "primaryColor": "#FF7575",
-          "secondaryColor": "#E66969",
+          "secondaryColor": "#CC5D5D",
         },
         "toolbar": Object {
           "container": Object {
@@ -339,8 +340,9 @@ exports[`Announcements Screen snapshot 1`] = `
       uiTheme={
         Object {
           "palette": Object {
+            "accentColor": "#FF7575",
             "primaryColor": "#FF7575",
-            "secondaryColor": "#E66969",
+            "secondaryColor": "#CC5D5D",
           },
           "toolbar": Object {
             "container": Object {
