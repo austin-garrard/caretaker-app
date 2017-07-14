@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
-import UserGateway, { NotificationTypes, createAdminUser } from '../../data/UserGateway/';
+import UserGateway, { NotificationTypes, NotificationTriggers } from '../../data/UserGateway/';
 import UserProfile from './index.js';
 import { Record } from 'immutable';
 
@@ -10,9 +10,9 @@ describe('User Profile', () => {
         UserGateway.signIn('s');
     });
 
-    it('should process the raw notification types', () => {
+    it('should process the raw user settings', () => {
         const profile = renderer.create(<UserProfile />).getInstance();
-        expect(profile.state.currentUser.notificationTypes).toEqual({
+        expect(profile.state.currentUser.settings).toEqual({
             [NotificationTypes.PUSH]: {
                 name: 'Push',
                 value: true
@@ -24,6 +24,18 @@ describe('User Profile', () => {
             [NotificationTypes.SMS]: {
                 name: 'SMS',
                 value: false
+            },
+            [NotificationTriggers.ANNOUNCEMENT]: {
+                name: 'Announcements',
+                value: true
+            },
+            [NotificationTriggers.EVENT]: {
+                name: 'Events',
+                value: false
+            },
+            [NotificationTriggers.EVENT_BY_ROLE]: {
+                name: 'Events specific to your role',
+                value: true
             }
         });
     })
@@ -33,7 +45,7 @@ describe('User Profile', () => {
 
         profile.toggle(NotificationTypes.EMAIL)();
 
-        expect(profile.state.currentUser.notificationTypes).toEqual({
+        expect(profile.state.currentUser.settings).toEqual({
             [NotificationTypes.PUSH]: {
                 name: 'Push',
                 value: true
@@ -45,21 +57,19 @@ describe('User Profile', () => {
             [NotificationTypes.SMS]: {
                 name: 'SMS',
                 value: false
+            },
+            [NotificationTriggers.ANNOUNCEMENT]: {
+                name: 'Announcements',
+                value: true
+            },
+            [NotificationTriggers.EVENT]: {
+                name: 'Events',
+                value: false
+            },
+            [NotificationTriggers.EVENT_BY_ROLE]: {
+                name: 'Events specific to your role',
+                value: true
             }
         });
-    })
-
-    xit('should process the raw notification triggers', () => {
-        const profile = renderer.create(<UserProfile />).getInstance();
-        expect(profile.state.currentUser.notificationTriggers).toEqual([{
-            name: 'push',
-            value: true
-        }, {
-            name: 'email',
-            value: false
-        }, {
-            name: 'sms',
-            value: false
-        }]);
     })
 })

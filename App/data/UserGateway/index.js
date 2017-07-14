@@ -12,7 +12,13 @@ export const NotificationTypes = {
     SMS: 'sms'
 }
 
-export const createNotificationTypes = () => {
+export const NotificationTriggers = {
+    ANNOUNCEMENT: 'announcement',
+    EVENT: 'event',
+    EVENT_BY_ROLE: 'event by role'
+}
+
+export const createUserSettings = () => {
     return {
         [NotificationTypes.PUSH]: {
             name: 'Push',
@@ -25,17 +31,22 @@ export const createNotificationTypes = () => {
         [NotificationTypes.SMS]: {
             name: 'SMS',
             value: null
+        },
+        [NotificationTriggers.ANNOUNCEMENT]: {
+            name: 'Announcements',
+            value: null
+        },
+        [NotificationTriggers.EVENT]: {
+            name: 'Events',
+            value: null
+        },
+        [NotificationTriggers.EVENT_BY_ROLE]: {
+            name: 'Events specific to your role',
+            value: null
         }
     }
 }
 
-export const NotificationTriggers = {
-    ANNOUNCEMENT: 'announcements',
-    EVENT: 'event',
-    EVENT_BY_ROLE: 'event by role'
-}
-
-// this is used as a stub in some tests(UserProfile), instead of removing it, move it to those tests
 export const createAdminUser = () => ({
     name: 'Sarah',
     identifier: 's',
@@ -43,7 +54,8 @@ export const createAdminUser = () => ({
     roles: [],
     phone:'123-456-7890',
     notificationTypes: [NotificationTypes.PUSH],
-    notificationTriggers: [NotificationTriggers.ANNOUNCEMENT, NotificationTriggers.EVENT_BY_ROLE]
+    notificationTriggers: [NotificationTriggers.ANNOUNCEMENT, NotificationTriggers.EVENT_BY_ROLE],
+    settings: {}
 })
 
 export const User = Record(createAdminUser());

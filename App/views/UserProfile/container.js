@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserGateway, { NotificationTypes } from '../../data/UserGateway/';
 import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
-import { createNotificationTypes, User } from '../../data/UserGateway';
+import { createUserSettings, User } from '../../data/UserGateway';
 
 export default ContainerFor = (UserProfile) => class extends Component {
     constructor() {
@@ -18,17 +18,17 @@ export default ContainerFor = (UserProfile) => class extends Component {
     }
 
     process(user) {
-        let notificationTypes = createNotificationTypes();
-        Object.keys(notificationTypes).forEach(key => {
-            notificationTypes[key].value = user.notificationTypes.includes(key);
+        let settings = createUserSettings();
+        Object.keys(settings).forEach(key => {
+            settings[key].value = user.notificationTypes.includes(key) || user.notificationTriggers.includes(key);
         })
-        return user.set('notificationTypes', notificationTypes);
+        return user.set('settings', settings);
     }
 
     toggle = (key) => () => {
         let user = this.state.currentUser;
-        const currentValue = user.notificationTypes[key].value
-        user.notificationTypes[key].value = !currentValue;
+        const currentValue = user.settings[key].value
+        user.settings[key].value = !currentValue;
         this.setState({currentUser: user});
     }
 
@@ -39,8 +39,7 @@ export default ContainerFor = (UserProfile) => class extends Component {
                 name={user.name}
                 email={user.identifier}
                 phone={user.phone}
-                notificationTypes={user.notificationTypes}
-                notificationTriggers={user.notificationTriggers}
+                settings={user.settings}
                 toggle={this.toggle}
             />
         </ScreenWithToolbar>
