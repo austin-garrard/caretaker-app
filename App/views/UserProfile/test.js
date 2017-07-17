@@ -10,6 +10,10 @@ describe('User Profile', () => {
         UserGateway.signIn('s');
     });
 
+    it('snapshot', () => {
+        expect(renderer.create(<UserProfile />)).toMatchSnapshot();
+    })
+
     it('should process the raw user settings', () => {
         const profile = renderer.create(<UserProfile />).getInstance();
         expect(profile.state.settings).toEqual({
@@ -71,5 +75,14 @@ describe('User Profile', () => {
                 value: true
             }
         });
+    })
+
+    it('should update the user settings through the gateway', () => {
+        const spy = jest.spyOn(UserGateway, 'updateSettings');
+        const profile = renderer.create(<UserProfile />).getInstance();
+
+        profile.toggle(NotificationTypes.EMAIL)();
+
+        expect(spy).toHaveBeenCalledWith(NotificationTypes.EMAIL, true);
     })
 })

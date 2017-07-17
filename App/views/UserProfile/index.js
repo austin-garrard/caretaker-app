@@ -21,14 +21,6 @@ const UserProfile = (props) => {
         />
     }
 
-    //todo remove this
-    _renderNotificationTypes = () => {
-        return Object.values(props.settings)
-            .filter(type => type.value === true)
-            .map(type => type.name)
-            .join(', ')
-    }
-
     return <View style={styles.container}>
         <Text style={styles.title}>User Profile</Text>
         <View style={styles.sectionContainer}>
@@ -36,10 +28,6 @@ const UserProfile = (props) => {
             <Text>Name: {props.name}</Text>
             <Text>Email: {props.email}</Text>
             <Text>Phone: {props.phone}</Text>
-        </View>
-        <View style={styles.sectionContainer}>
-            <Text style={styles.sectionTitle}>Settings</Text>
-            <Text>Receive Notifications via: {_renderNotificationTypes()}</Text>
         </View>
         <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Receive Notifications via:</Text>

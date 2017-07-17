@@ -33,6 +33,7 @@ export default ContainerFor = (UserProfile) => class extends Component {
         let settings = this.state.settings;
         const currentValue = settings[key].value
         settings[key].value = !currentValue;
+        UserGateway.updateSettings(key, !currentValue);
         this.setState({
             currentUser: this.state.currentUser,
             settings: settings

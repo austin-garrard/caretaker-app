@@ -125,6 +125,10 @@ const createUserGateway = function() {
         inviteUser(email) {
             //api call to invite the user
             alert('invited ' + email + '!');
+        },
+
+        updateSettings(key, value) {
+            //api call to update the user settings
         }
     }
 }
