@@ -54,12 +54,10 @@ export const createAdminUser = () => ({
     roles: [],
     phone:'123-456-7890',
     notificationTypes: [NotificationTypes.PUSH],
-    notificationTriggers: [NotificationTriggers.ANNOUNCEMENT, NotificationTriggers.EVENT_BY_ROLE],
-    settings: {}
+    notificationTriggers: [NotificationTriggers.ANNOUNCEMENT, NotificationTriggers.EVENT_BY_ROLE]
 })
 
 export const User = Record(createAdminUser());
-
 
 const createUserGateway = function() {
     let allUsers = null;

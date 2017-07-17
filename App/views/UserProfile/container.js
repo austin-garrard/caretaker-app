@@ -6,30 +6,37 @@ import { createUserSettings, User } from '../../data/UserGateway';
 export default ContainerFor = (UserProfile) => class extends Component {
     constructor() {
         super();
+        const defaultUser = new User();
         this.state = {
-            currentUser: this.process(new User())
+            currentUser: defaultUser,
+            settings: this.settingsFor(defaultUser)
         }
     }
 
     componentDidMount() {
+        const user = UserGateway.getCurrentUser()
         this.setState({
-            currentUser: this.process(UserGateway.getCurrentUser())
+            currentUser: user,
+            settings: this.settingsFor(user)
         });
     }
 
-    process(user) {
+    settingsFor(user) {
         let settings = createUserSettings();
         Object.keys(settings).forEach(key => {
             settings[key].value = user.notificationTypes.includes(key) || user.notificationTriggers.includes(key);
         })
-        return user.set('settings', settings);
+        return settings;
     }
 
     toggle = (key) => () => {
-        let user = this.state.currentUser;
-        const currentValue = user.settings[key].value
-        user.settings[key].value = !currentValue;
-        this.setState({currentUser: user});
+        let settings = this.state.settings;
+        const currentValue = settings[key].value
+        settings[key].value = !currentValue;
+        this.setState({
+            currentUser: this.state.currentUser,
+            settings: settings
+        });
     }
 
     render() {
@@ -39,7 +46,7 @@ export default ContainerFor = (UserProfile) => class extends Component {
                 name={user.name}
                 email={user.identifier}
                 phone={user.phone}
-                settings={user.settings}
+                settings={this.state.settings}
                 toggle={this.toggle}
             />
         </ScreenWithToolbar>

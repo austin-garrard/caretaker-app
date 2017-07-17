@@ -12,7 +12,7 @@ describe('User Profile', () => {
 
     it('should process the raw user settings', () => {
         const profile = renderer.create(<UserProfile />).getInstance();
-        expect(profile.state.currentUser.settings).toEqual({
+        expect(profile.state.settings).toEqual({
             [NotificationTypes.PUSH]: {
                 name: 'Push',
                 value: true
@@ -45,7 +45,7 @@ describe('User Profile', () => {
 
         profile.toggle(NotificationTypes.EMAIL)();
 
-        expect(profile.state.currentUser.settings).toEqual({
+        expect(profile.state.settings).toEqual({
             [NotificationTypes.PUSH]: {
                 name: 'Push',
                 value: true
