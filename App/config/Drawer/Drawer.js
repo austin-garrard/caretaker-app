@@ -6,18 +6,25 @@ import theme from '../theme';
 export default function Drawer( { navigation, items, screenProps } ) {
   const drawerItems = items.map((item) => {
     return {
-      icon: screenProps[item.key].navigationOptions.drawerIcon,
-      value: screenProps[item.key].navigationOptions.drawerLabel,
+      icon: screenProps.routes[item.key].navigationOptions.drawerIcon,
+      value: screenProps.routes[item.key].navigationOptions.drawerLabel,
       onPress: () => navigation.navigate(item.routeName)
     };
   });
 
   drawerItems[navigation.state.index].active = true;
 
+  const logoutItems = [{
+      icon: 'keyboard-arrow-left',
+      value: 'Logout',
+      onPress: screenProps.logout
+  }];
+
   return <ThemeProvider uiTheme={theme}>
     <MuiDrawer>
       <MuiDrawer.Section divider title='Caretaker' />
-      <MuiDrawer.Section items={drawerItems} />
+      <MuiDrawer.Section divider items={drawerItems} />
+      <MuiDrawer.Section items={logoutItems} />
     </MuiDrawer>
   </ThemeProvider>;
 }

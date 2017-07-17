@@ -46,6 +46,11 @@ const createUserGateway = function() {
             return false;
         },
 
+        logout() {
+            // make call to oauth and/or invalidate current session
+            this.currentUser = null;
+        },
+
         isSelf(identifier) {
             return this.currentUser.identifier === identifier;
         },

@@ -13,4 +13,16 @@ materialUi.ThemeProvider = (props) => React.createElement(
   props.children
 );
 
+materialUi.Drawer = (props) => React.createElement(
+  'MuiDrawer',
+  props,
+  props.children
+);
+
+materialUi.Drawer.Section = (props) => React.createElement(
+  'MuiDrawer.Section',
+  props,
+  props.children
+);
+
 module.exports = materialUi;
