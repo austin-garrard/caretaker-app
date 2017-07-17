@@ -39,7 +39,7 @@ export default class Login extends Component {
 
     _renderDebugButtons() {
         let result = null;
-        if(__DEV__) {
+        if(!this.props.withoutDebugButtons) {
             result = (
                 <View>
                     <Button title="Focus" onPress={() => this.login('sarah@emailprovider.com')} />

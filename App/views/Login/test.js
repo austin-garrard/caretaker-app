@@ -74,7 +74,7 @@ describe('Login Screen', () => {
     });
 
     it('should match the snapshot', () => {
-        const login = renderer.create(<Login navigation={navigation} />);
+        const login = renderer.create(<Login withoutDebugButtons navigation={navigation} />);
 
         expect(login).toMatchSnapshot();
     });
