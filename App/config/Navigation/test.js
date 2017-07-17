@@ -7,6 +7,15 @@ import Navigation from './index.js';
 import {adminRoutes, helperRoutes, config} from './config.js';
 
 describe('Navigation', () => {
+    const FOCUS = 'sarah@emailprovider.com';
+    const HELPER = 'austin@yeehaw.com';
+    const ADMIN = 'caroline@woahdude.com';
+
+    const login = {
+      as(user) {
+        UserGateway.login(user);
+      }
+    };
 
     beforeEach(() => {
         DrawerNavigator.mockReset();
@@ -14,14 +23,13 @@ describe('Navigation', () => {
     })
 
     it('snapshot', () => {
-        jest.spyOn(UserGateway, 'getCurrentPermissions')
-            .mockReturnValue(Permissions.HELPER);
+        login.as(HELPER);
         expect(renderer.create(<Navigation />)).toMatchSnapshot();
     })
 
     it('should get the permissions from the user gateway', () => {
-        jest.spyOn(UserGateway, 'getCurrentPermissions')
-            .mockReturnValue(Permissions.HELPER);
+        login.as(HELPER);
+
         const navigation = renderer
             .create(<Navigation />)
             .getInstance();
@@ -30,8 +38,7 @@ describe('Navigation', () => {
     })
 
     it('should use the admin routes when the user is an admin', () => {
-        jest.spyOn(UserGateway, 'getCurrentPermissions')
-            .mockReturnValue(Permissions.ADMIN);
+        login.as(ADMIN)
         const navigation = renderer
             .create(<Navigation />)
             .getInstance();
@@ -40,8 +47,7 @@ describe('Navigation', () => {
     })
 
     it('should use the admin routes when the user is a focus', () => {
-        jest.spyOn(UserGateway, 'getCurrentPermissions')
-            .mockReturnValue(Permissions.FOCUS);
+        login.as(FOCUS);
         const navigation = renderer
             .create(<Navigation />)
             .getInstance();
@@ -50,13 +56,12 @@ describe('Navigation', () => {
     })
 
     it('should use the helper routes when the user is a helper', () => {
-        jest.spyOn(UserGateway, 'getCurrentPermissions')
-            .mockReturnValue(Permissions.HELPER);
-            const navigation = renderer
-                .create(<Navigation />)
-                .getInstance();
+      login.as(HELPER);
+      const navigation = renderer
+          .create(<Navigation />)
+          .getInstance();
 
-        expect(DrawerNavigator).toHaveBeenCalledWith(helperRoutes, config);
+      expect(DrawerNavigator).toHaveBeenCalledWith(helperRoutes, config);
     })
 
     it('should render null when the state is not set', () => {

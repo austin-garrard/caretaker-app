@@ -7,13 +7,19 @@ export default class Navigation extends Component {
     constructor() {
         super();
         this.state = {
-            userType: null
+            userType: null,
+            userName: null,
+            userEmail: null
         }
     }
 
     componentDidMount() {
-        const permissions = UserGateway.getCurrentPermissions();
-        this.setState({userType: permissions});
+        const user = UserGateway.currentUser;
+        this.setState({
+          userType: user.permission,
+          userName: user.name,
+          userEmail: user.identifier
+        });
     }
 
     _onLogout = () => {
@@ -30,7 +36,9 @@ export default class Navigation extends Component {
         let result = null;
         const screenProps = {
             routes: routesFor[userType],
-            logout: this._onLogout
+            logout: this._onLogout,
+            userName: this.state.userName,
+            userEmail: this.state.userEmail
         }
         if(userType) {
             const Navigator = DrawerNavigator(routesFor[userType], config);

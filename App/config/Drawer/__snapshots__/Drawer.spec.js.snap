@@ -17,10 +17,32 @@ exports[`<Drawer /> should render correctly 1`] = `
   }
 >
   <MuiDrawer>
-    <MuiDrawer.Section
-      divider={true}
-      title="Caretaker"
-    />
+    <MuiDrawer.Header
+      style={
+        Object {
+          "contentContainer": Object {
+            "backgroundColor": "#EEEEEE",
+          },
+        }
+      }
+    >
+      <MuiDrawer.Header.Account
+        avatar={
+          <Unknown
+            text="U"
+          />
+        }
+        footer={
+          Object {
+            "centerElement": Object {
+              "primaryText": "user name",
+              "secondaryText": "user@domain.com",
+            },
+            "dense": true,
+          }
+        }
+      />
+    </MuiDrawer.Header>
     <MuiDrawer.Section
       divider={true}
       items={

@@ -25,4 +25,25 @@ materialUi.Drawer.Section = (props) => React.createElement(
   props.children
 );
 
+materialUi.Drawer.Header = (props) => React.createElement(
+  'MuiDrawer.Header',
+  props,
+  props.children
+);
+
+materialUi.Drawer.Header.Account = (props) => React.createElement(
+  'MuiDrawer.Header.Account',
+  props,
+  props.children
+);
+
+materialUi.Avatar = (props) => React.createElement(
+  'Avatar',
+  props,
+  props.children
+);
+
+
+
+
 module.exports = materialUi;

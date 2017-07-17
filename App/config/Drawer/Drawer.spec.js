@@ -43,7 +43,9 @@ describe('<Drawer />', () => {
           }
         }
       },
-      logout: jest.fn()
+      logout: jest.fn(),
+      userName: 'user name',
+      userEmail: 'user@domain.com'
     };
 
     expect(drawer()).toMatchSnapshot();
