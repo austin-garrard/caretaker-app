@@ -21,7 +21,7 @@ export default class Navigation extends Component {
         let result = null;
         if(userType) {
             const Navigator = DrawerNavigator(routesFor[userType], config);
-            result = <Navigator />;
+            result = <Navigator screenProps={routesFor[userType]} />;
         }
         return result;
     }
