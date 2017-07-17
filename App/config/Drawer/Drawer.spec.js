@@ -29,18 +29,23 @@ describe('<Drawer />', () => {
     } ];
 
     props.screenProps = {
-      Hello: {
-        navigationOptions: {
-          drawerIcon: 'hey-there',
-          drawerLabel: 'Greetings and Salutations'
+      routes: {
+        Hello: {
+          navigationOptions: {
+            drawerIcon: 'hey-there',
+            drawerLabel: 'Greetings and Salutations'
+          }
+        },
+        Goodbye: {
+          navigationOptions: {
+            drawerIcon: 'so-long',
+            drawerLabel: 'See Ya Later'
+          }
         }
       },
-      Goodbye: {
-        navigationOptions: {
-          drawerIcon: 'so-long',
-          drawerLabel: 'See Ya Later'
-        }
-      }
+      logout: jest.fn(),
+      userName: 'user name',
+      userEmail: 'user@domain.com'
     };
 
     expect(drawer()).toMatchSnapshot();
