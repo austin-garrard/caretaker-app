@@ -26,11 +26,29 @@ export default class Login extends Component {
     }
 
     _onLogin = () => {
-        if(UserGateway.login(this.state.email)) {
-            this.props.navigation.navigate('Home');
-        } else {
-            alert('Not an approved user.')
+        this.login(this.state.email);
+    }
+
+    login = (id) => {
+      if(UserGateway.login(id)) {
+          this.props.navigation.navigate('Home');
+      } else {
+          alert('Not an approved user.')
+      }
+    }
+
+    _renderDebugButtons() {
+        let result = null;
+        if(__DEV__) {
+            result = (
+                <View>
+                    <Button title="Focus" onPress={() => this.login('sarah@emailprovider.com')} />
+                    <Button title="Admin" onPress={() => this.login('caroline@woahdude.com')} />
+                    <Button title="Helper" onPress={() => this.login('austin@yeehaw.com')} />
+                </View>
+            )
         }
+        return result;
     }
 
     render() {
@@ -41,11 +59,12 @@ export default class Login extends Component {
                     <View style={styles.inputSpacer}></View>
                     <TextInput
                         style={styles.input}
-                        onChangeText={this._onUpdateEmail.bind(this)}
+                        onChangeText={this._onUpdateEmail}
                         placeholder='Enter email'/>
                     <View style={styles.inputSpacer}></View>
                 </View>
-                <Button title="Login" onPress={this._onLogin.bind(this)} />
+                <Button title="Login" onPress={this._onLogin} />
+                {this._renderDebugButtons()}
             </View>
         );
     }
