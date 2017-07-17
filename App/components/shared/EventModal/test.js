@@ -12,7 +12,7 @@ describe('EventModal', () => {
     let _onClose;
 
     beforeEach(() => {
-        UserGateway.signIn('sarah@emailprovider.com'); //todo: mock/stub gateways
+        UserGateway.login('sarah@emailprovider.com'); //todo: mock/stub gateways
         EventGateway.getAll();//todo: mock/stub gateways
 
         intiallyVisible = false;

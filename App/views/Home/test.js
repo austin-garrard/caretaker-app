@@ -9,7 +9,7 @@ import HelperDashboard from './HelperDashboard/';
 describe('Home Screen', () => {
 
     beforeEach(() => {
-        UserGateway.signIn('sarah@emailprovider.com');
+        UserGateway.login('sarah@emailprovider.com');
     });
 
     it('should use the patient dashboard when the user is the focus', () => {

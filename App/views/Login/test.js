@@ -25,7 +25,7 @@ describe('Login Screen', () => {
     });
 
     it('should sign into the user gateway when the button is clicked', () => {
-        const spy = jest.spyOn(UserGateway, 'signIn');
+        const spy = jest.spyOn(UserGateway, 'login');
         const login = renderer
             .create(<Login navigation={navigation}/>)
             .getInstance();
@@ -37,7 +37,7 @@ describe('Login Screen', () => {
     });
 
     it('should navigate to the home screen when the button is clicked', () => {
-        jest.spyOn(UserGateway, 'signIn')
+        jest.spyOn(UserGateway, 'login')
             .mockReturnValue(true);
         const login = renderer
             .create(<Login navigation={navigation}/>)
@@ -49,7 +49,7 @@ describe('Login Screen', () => {
     });
 
     it('should stay on this screen when the sign in fails', () => {
-        jest.spyOn(UserGateway, 'signIn')
+        jest.spyOn(UserGateway, 'login')
             .mockReturnValue(false);
         const login = renderer
             .create(<Login navigation={navigation}/>)
@@ -62,7 +62,7 @@ describe('Login Screen', () => {
 
     it('should show an alert when the sign in fails', () => {
         const spy = jest.spyOn(window, 'alert');
-        jest.spyOn(UserGateway, 'signIn')
+        jest.spyOn(UserGateway, 'login')
             .mockReturnValue(false);
         const login = renderer
             .create(<Login navigation={navigation}/>)

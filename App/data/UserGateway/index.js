@@ -33,7 +33,7 @@ const createUserGateway = function() {
             return this.currentUser.roles
         },
 
-        signIn(email) {
+        login(email) {
             //make call to google oauth and store the results
             let results = {
                 email: email
