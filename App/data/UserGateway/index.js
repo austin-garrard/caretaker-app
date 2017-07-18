@@ -33,7 +33,7 @@ const createUserGateway = function() {
             return this.currentUser.roles
         },
 
-        signIn(email) {
+        login(email) {
             //make call to google oauth and store the results
             let results = {
                 email: email
@@ -44,6 +44,11 @@ const createUserGateway = function() {
                 return true;
             }
             return false;
+        },
+
+        logout() {
+            // make call to oauth and/or invalidate current session
+            this.currentUser = null;
         },
 
         isSelf(identifier) {

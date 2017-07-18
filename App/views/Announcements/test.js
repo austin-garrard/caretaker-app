@@ -8,7 +8,7 @@ describe('Announcements Screen', () => {
 
     beforeEach(() => {
         jest.resetAllMocks();
-        UserGateway.signIn('sarah@emailprovider.com');
+        UserGateway.login('sarah@emailprovider.com');
 
         Date.prototype.toDateString = jest.fn(() => 'fake date');
     });

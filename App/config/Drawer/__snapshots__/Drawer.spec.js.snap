@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Drawer /> should render correctly 1`] = `
+<ThemeProvider
+  uiTheme={
+    Object {
+      "palette": Object {
+        "primaryColor": "#FF7575",
+        "secondaryColor": "#E66969",
+      },
+      "toolbar": Object {
+        "container": Object {
+          "height": 50,
+        },
+      },
+    }
+  }
+>
+  <MuiDrawer>
+    <MuiDrawer.Header
+      style={
+        Object {
+          "contentContainer": Object {
+            "backgroundColor": "#EEEEEE",
+          },
+        }
+      }
+    >
+      <MuiDrawer.Header.Account
+        avatar={
+          <Unknown
+            text="U"
+          />
+        }
+        footer={
+          Object {
+            "centerElement": Object {
+              "primaryText": "user name",
+              "secondaryText": "user@domain.com",
+            },
+            "dense": true,
+          }
+        }
+      />
+    </MuiDrawer.Header>
+    <MuiDrawer.Section
+      divider={true}
+      items={
+        Array [
+          Object {
+            "active": true,
+            "icon": "hey-there",
+            "onPress": [Function],
+            "value": "Greetings and Salutations",
+          },
+          Object {
+            "icon": "so-long",
+            "onPress": [Function],
+            "value": "See Ya Later",
+          },
+        ]
+      }
+    />
+    <MuiDrawer.Section
+      items={
+        Array [
+          Object {
+            "icon": "keyboard-arrow-left",
+            "onPress": [Function],
+            "value": "Logout",
+          },
+        ]
+      }
+    />
+  </MuiDrawer>
+</ThemeProvider>
+`;
