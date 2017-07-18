@@ -16,7 +16,7 @@ describe('UserGateway', () => {
     });
 
     it('should get the current user as an immutable record', () => {
-        UserGateway.signIn('s');
+        UserGateway.login('s');
 
         const user =  UserGateway.getCurrentUser();
 

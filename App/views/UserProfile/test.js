@@ -7,7 +7,7 @@ import { Record } from 'immutable';
 describe('User Profile', () => {
 
     beforeEach(() => {
-        UserGateway.signIn('s');
+        UserGateway.login('s');
     });
 
     it('snapshot', () => {
