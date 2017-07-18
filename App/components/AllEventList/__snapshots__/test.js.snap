@@ -204,14 +204,16 @@ exports[`AllEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                  ]
                 }
               >
                 <Text
@@ -318,14 +320,16 @@ exports[`AllEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                  ]
                 }
               >
                 <Text
@@ -432,14 +436,19 @@ exports[`AllEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                    Object {
+                      "backgroundColor": "#CC5D5D",
+                    },
+                  ]
                 }
               >
                 <Text
@@ -453,6 +462,9 @@ exports[`AllEventList should render correctly 1`] = `
                       },
                       Object {
                         "fontWeight": "bold",
+                      },
+                      Object {
+                        "color": "white",
                       },
                     ]
                   }
@@ -469,6 +481,12 @@ exports[`AllEventList should render correctly 1`] = `
                         "color": "#CC5D5D",
                       },
                       Object {},
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontStyle": "italic",
+                      },
                     ]
                   }
                 >
@@ -546,14 +564,16 @@ exports[`AllEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                  ]
                 }
               >
                 <Text
@@ -660,14 +680,19 @@ exports[`AllEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                    Object {
+                      "backgroundColor": "#CC5D5D",
+                    },
+                  ]
                 }
               >
                 <Text
@@ -681,6 +706,9 @@ exports[`AllEventList should render correctly 1`] = `
                       },
                       Object {
                         "fontWeight": "bold",
+                      },
+                      Object {
+                        "color": "white",
                       },
                     ]
                   }
@@ -697,6 +725,12 @@ exports[`AllEventList should render correctly 1`] = `
                         "color": "#CC5D5D",
                       },
                       Object {},
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontStyle": "italic",
+                      },
                     ]
                   }
                 >
@@ -774,14 +808,16 @@ exports[`AllEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                  ]
                 }
               >
                 <Text

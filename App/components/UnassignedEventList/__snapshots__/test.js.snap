@@ -147,14 +147,16 @@ exports[`UnassignedEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                  ]
                 }
               >
                 <Text
@@ -259,14 +261,16 @@ exports[`UnassignedEventList should render correctly 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "borderColor": "#CC5D5D",
-                    "borderRadius": 2,
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "flex": 1,
-                    "padding": 4,
-                  }
+                  Array [
+                    Object {
+                      "borderColor": "#CC5D5D",
+                      "borderRadius": 2,
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 4,
+                    },
+                  ]
                 }
               >
                 <Text
