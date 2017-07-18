@@ -6,6 +6,7 @@ import {
     View
 } from 'react-native';
 import EventGateway from '../../data/EventGateway';
+import EventList from '../shared/EventList';
 
 export default class UnassignedEventListContainer extends Component {
   constructor() {
@@ -15,17 +16,17 @@ export default class UnassignedEventListContainer extends Component {
     };
   }
 
-    componentDidMount() {
-        const events = EventGateway
-            .getAll()
-            .filter((event) => event.volunteerId == 'TBD');
-        this.setState({events: events});
-    }
+  componentDidMount() {
+    const events = EventGateway
+        .getAll()
+        .filter((event) => event.volunteerId == 'TBD');
+    this.setState({events: events});
+  }
 
   getUnassigned() {
-      var groupedEvents = this.state.events.filter(function(event){ return event.volunteerId === 'TBD' });
-      return groupedEvents;
-    }
+    var groupedEvents = this.state.events.filter(function(event){ return event.volunteerId === 'TBD' });
+    return groupedEvents;
+  }
 
   render() {
     return <UnassignedEventList events={this.getUnassigned()} />;
@@ -33,18 +34,11 @@ export default class UnassignedEventListContainer extends Component {
 }
 
 export class UnassignedEventList extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title}>Events Still Looking for People</Text>
-                <FlatList
-                   data={this.props.events}
-                   keyExtractor={(item) => item.id}
-                   renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name} - {item.role}</Text>}
-                />
-            </View>
-        );
-    }
+  render() {
+    return <View style={styles.container}>
+      <EventList events={this.props.events} />
+    </View>;
+  }
 }
 
 const styles = StyleSheet.create({
