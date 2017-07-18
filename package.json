@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "configureMb": "node configureMountebank.js"
   },
   "dependencies": {
     "immutable": "^3.8.1",
@@ -18,7 +19,8 @@
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "1.9.2",
     "jest": "20.0.4",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "react-test-renderer": "16.0.0-alpha.6",
+    "unirest": "^0.5.1"
   },
   "jest": {
     "preset": "react-native"
