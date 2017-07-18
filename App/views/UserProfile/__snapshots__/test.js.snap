@@ -12,12 +12,28 @@ exports[`User Profile snapshot 1`] = `
     uiTheme={
       Object {
         "palette": Object {
+          "accentColor": "#FF7575",
+          "alternateTextColor": "white",
           "primaryColor": "#FF7575",
-          "secondaryColor": "#E66969",
+          "primaryTextColor": "black",
+          "secondaryColor": "#CC5D5D",
+        },
+        "spacing": Object {
+          "miniActionButtonSize": 42,
         },
         "toolbar": Object {
           "container": Object {
             "height": 50,
+          },
+        },
+        "typography": Object {
+          "fontSize": Object {
+            "display": 25,
+          },
+          "subheading": Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "lineHeight": 24,
           },
         },
       }
@@ -119,12 +135,28 @@ exports[`User Profile snapshot 1`] = `
         uiTheme={
           Object {
             "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
               "primaryColor": "#FF7575",
-              "secondaryColor": "#E66969",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
             },
             "toolbar": Object {
               "container": Object {
                 "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
               },
             },
           }
@@ -134,12 +166,28 @@ exports[`User Profile snapshot 1`] = `
         uiTheme={
           Object {
             "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
               "primaryColor": "#FF7575",
-              "secondaryColor": "#E66969",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
             },
             "toolbar": Object {
               "container": Object {
                 "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
               },
             },
           }
@@ -149,12 +197,28 @@ exports[`User Profile snapshot 1`] = `
         uiTheme={
           Object {
             "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
               "primaryColor": "#FF7575",
-              "secondaryColor": "#E66969",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
             },
             "toolbar": Object {
               "container": Object {
                 "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
               },
             },
           }
@@ -187,12 +251,28 @@ exports[`User Profile snapshot 1`] = `
         uiTheme={
           Object {
             "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
               "primaryColor": "#FF7575",
-              "secondaryColor": "#E66969",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
             },
             "toolbar": Object {
               "container": Object {
                 "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
               },
             },
           }
@@ -202,12 +282,28 @@ exports[`User Profile snapshot 1`] = `
         uiTheme={
           Object {
             "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
               "primaryColor": "#FF7575",
-              "secondaryColor": "#E66969",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
             },
             "toolbar": Object {
               "container": Object {
                 "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
               },
             },
           }
@@ -217,12 +313,28 @@ exports[`User Profile snapshot 1`] = `
         uiTheme={
           Object {
             "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
               "primaryColor": "#FF7575",
-              "secondaryColor": "#E66969",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
             },
             "toolbar": Object {
               "container": Object {
                 "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
               },
             },
           }
