@@ -10,6 +10,8 @@ import UserGateway, { Permissions } from '../../data/UserGateway';
 import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 import renderif from '../../utils/renderif.js';
 
+import styles from './styles';
+
 export default class CaretakerRolesMenu extends Component {
     constructor() {
         super();
@@ -53,19 +55,3 @@ export default class CaretakerRolesMenu extends Component {
         </ScreenWithToolbar>;
     }
 }
-
-const styles = StyleSheet.create({
-  button: {
-    margin: 10,
-    padding: 10
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-  },
-  title: {
-    fontSize: 24,
-    textAlign: 'center',
-    margin: 15,
-  },
-});
