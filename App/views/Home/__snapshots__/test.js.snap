@@ -379,7 +379,6 @@ exports[`Home Screen should render the correct screen 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#F5FCFF",
             "flex": 1,
           }
         }

@@ -4,7 +4,6 @@ exports[`UnassignedEventList should render correctly 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#F5FCFF",
       "flex": 1,
     }
   }
