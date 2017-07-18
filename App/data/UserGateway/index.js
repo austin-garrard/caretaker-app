@@ -1,22 +1,9 @@
 import { Record } from 'immutable';
+import UserModels from './models.js'
 
-export class Permissions {
-    static FOCUS = 'focus';
-    static ADMIN = 'admin';
-    static HELPER = 'helper';
-}
-
-export const NotificationTypes = {
-    PUSH: 'push',
-    EMAIL: 'email',
-    SMS: 'sms'
-}
-
-export const NotificationTriggers = {
-    ANNOUNCEMENT: 'announcement',
-    EVENT: 'event',
-    EVENT_BY_ROLE: 'event by role'
-}
+export const Permissions = UserModels.Permissions
+export const NotificationTypes = UserModels.NotificationTypes
+export const NotificationTriggers = UserModels.NotificationTriggers
 
 const createUserSettings = () => ({
     [NotificationTypes.PUSH]: {
