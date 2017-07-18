@@ -90,7 +90,7 @@ exports[`User Profile snapshot 1`] = `
         ellipsizeMode="tail"
       >
         Name: 
-        Sarah
+        S
       </Text>
       <Text
         accessible={true}

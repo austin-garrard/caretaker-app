@@ -45,16 +45,14 @@ const createUserSettings = () => ({
     }
 })
 
-const createAdminUser = () => ({
-    name: 'Sarah',
-    identifier: 's',
-    permission: Permissions.FOCUS,
+export const User = Record({
+    name: 'Defaul User',
+    identifier: 'default@domain.com',
+    permission: Permissions.HELPER,
     roles: [],
     phone:'123-456-7890',
     settings: createUserSettings()
-})
-
-export const User = Record(createAdminUser());
+});
 
 const createUserGateway = function() {
     let allUsers = null;
@@ -62,18 +60,18 @@ const createUserGateway = function() {
 
     return {
         getCurrentUser(){
-            return new User(currentUser);
+            return currentUser;
         },
 
         getAll() {
             if(allUsers === null) {
                 //api call goes here
                 allUsers = [
-                    createAdminUser(),
-                    {name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890', settings: createUserSettings()},
-                    {name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN, roles: ['driver', 'coordinator'], phone:'123-456-7890', settings: createUserSettings()},
-                    {name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER, roles: ['active friend'], settings: createUserSettings()},
-                    {name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER, roles: [], phone:'123-456-7890', settings: createUserSettings()}
+                    new User({name: 'S', identifier: 's', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890', settings: createUserSettings()}),
+                    new User({name: 'Sarah', identifier: 'sarah@emailprovider.com', permission: Permissions.FOCUS, roles: [], phone:'123-456-7890', settings: createUserSettings()}),
+                    new User({name: 'Caroline', identifier: 'caroline@woahdude.com', permission: Permissions.ADMIN, roles: ['driver', 'coordinator'], phone:'123-456-7890', settings: createUserSettings()}),
+                    new User({name: 'Jack', identifier: 'jack@coolwebsite.com', permission: Permissions.HELPER, roles: ['active friend'], settings: createUserSettings()}),
+                    new User({name: 'Austin', identifier: 'austin@yeehaw.com', permission: Permissions.HELPER, roles: [], phone:'123-456-7890', settings: createUserSettings()})
                 ]
             }
             return allUsers;
