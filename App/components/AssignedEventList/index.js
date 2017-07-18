@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import EventGateway from '../../data/EventGateway';
 import UserGateway from '../../data/UserGateway';
+import EventList from '../shared/EventList';
 
 export default class AssignedEventListContainer extends Component {
     constructor() {
@@ -32,16 +33,9 @@ export default class AssignedEventListContainer extends Component {
 
 export class AssignedEventList extends Component {
     render() {
-        return (
-            <View style={styles.container}>
-            <Text style={styles.title}>Assigned Upcoming Events</Text>
-            <FlatList
-               data={this.props.events}
-               keyExtractor={(item) => item.id}
-               renderItem={({item}) => <Text style={styles.item}>{item.date}: {item.name}</Text>}
-            />
-            </View>
-        );
+        return <View style={styles.container}>
+            <EventList events={this.props.events} />
+        </View>;
     }
 }
 
