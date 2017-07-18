@@ -19,7 +19,7 @@ const createEventGateway = (subscribers) => {
                     {id: 3, startDate: 1499261400000, endDate: 1499265000000, date: 'July 5th', time: '08:30-09:30', location: '1120 S Lamar Blvd, Austin, TX 78704', name: 'Checkin', volunteerId: 'TBD', role: 'active friend', description: ''},
                     {id: 4, startDate: 1499403600000, date: 'July 7th', time: 'All Day', location: '1100 Congress Ave, Austin, TX 78701', name: 'Weekend', volunteerId: 'sarah@emailprovider.com', role: 'active friend', description: 'Need to keep busy'},
                     {id: 5, startDate: 1499613300000, endDate: 1499620500000, date: 'July 9th', time: '10:15-12:15', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteerId: 'TBD', role: 'driver', description: ''},
-                    {id: 6, startDate: 1499699700000, endDate: 1499706900000, date: 'July 10th', time: '10:15-12:15', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteerId: 'austin@yeehaw.com', role: 'driver', description: ''}
+                    {id: 6, startDate: 1499699700000, endDate: 1499706900000, date: 'July 10th', time: '10:15-12:15', location: '6818 Austin Center Blvd, Austin, TX 78731', name: 'Chemotherapy', volunteerId: 'austin@yeehaw.com', role: 'driver', description: 'This is a very long description.  Chemotherapy (often abbreviated to chemo and sometimes CTX or CTx) is a category of cancer treatment that uses one or more anti-cancer drugs (chemotherapeutic agents) as part of a standardized chemotherapy regimen.'}
                 ]
             }
             return allEvents;

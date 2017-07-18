@@ -1,16 +1,32 @@
 const PINK = '#FF7575';
-const DARK_PINK = '#E66969';
+const DARK_PINK = '#CC5D5D';
 
 const theme = {
   palette: {
     primaryColor: PINK,
-    secondaryColor: DARK_PINK
+    accentColor: PINK,
+    secondaryColor: DARK_PINK,
+    primaryTextColor: 'black',
+    alternateTextColor: 'white'
+  },
+  typography: {
+    fontSize: {
+      display: 25
+    },
+    subheading: {
+      fontWeight: 'normal',
+      fontSize: 16,
+      lineHeight: 24
+    }
+  },
+  spacing: {
+    miniActionButtonSize: 42
   },
   toolbar: {
     container: {
-      height: 50,
+      height: 50
     },
-  },
+  }
 };
 
 export default theme;

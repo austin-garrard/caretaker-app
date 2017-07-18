@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EventPage /> should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <ThemeProvider
+    uiTheme={
+      Object {
+        "palette": Object {
+          "accentColor": "#FF7575",
+          "alternateTextColor": "white",
+          "primaryColor": "#FF7575",
+          "primaryTextColor": "black",
+          "secondaryColor": "#CC5D5D",
+        },
+        "spacing": Object {
+          "miniActionButtonSize": 42,
+        },
+        "toolbar": Object {
+          "container": Object {
+            "height": 50,
+          },
+        },
+        "typography": Object {
+          "fontSize": Object {
+            "display": 25,
+          },
+          "subheading": Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "lineHeight": 24,
+          },
+        },
+      }
+    }
+  />
+  <RCTScrollView
+    style={
+      Object {
+        "paddingTop": 22,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <ThemeProvider
+          uiTheme={
+            Object {
+              "palette": Object {
+                "accentColor": "#FF7575",
+                "alternateTextColor": "white",
+                "primaryColor": "#FF7575",
+                "primaryTextColor": "black",
+                "secondaryColor": "#CC5D5D",
+              },
+              "spacing": Object {
+                "miniActionButtonSize": 42,
+              },
+              "toolbar": Object {
+                "container": Object {
+                  "height": 50,
+                },
+              },
+              "typography": Object {
+                "fontSize": Object {
+                  "display": 25,
+                },
+                "subheading": Object {
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "lineHeight": 24,
+                },
+              },
+            }
+          }
+        />
+        <ThemeProvider
+          uiTheme={
+            Object {
+              "palette": Object {
+                "accentColor": "#FF7575",
+                "alternateTextColor": "white",
+                "primaryColor": "#FF7575",
+                "primaryTextColor": "black",
+                "secondaryColor": "#CC5D5D",
+              },
+              "spacing": Object {
+                "miniActionButtonSize": 42,
+              },
+              "toolbar": Object {
+                "container": Object {
+                  "height": 50,
+                },
+              },
+              "typography": Object {
+                "fontSize": Object {
+                  "display": 25,
+                },
+                "subheading": Object {
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "lineHeight": 24,
+                },
+              },
+            }
+          }
+        />
+        <ThemeProvider
+          uiTheme={
+            Object {
+              "palette": Object {
+                "accentColor": "#FF7575",
+                "alternateTextColor": "white",
+                "primaryColor": "#FF7575",
+                "primaryTextColor": "black",
+                "secondaryColor": "#CC5D5D",
+              },
+              "spacing": Object {
+                "miniActionButtonSize": 42,
+              },
+              "toolbar": Object {
+                "container": Object {
+                  "height": 50,
+                },
+              },
+              "typography": Object {
+                "fontSize": Object {
+                  "display": 25,
+                },
+                "subheading": Object {
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "lineHeight": 24,
+                },
+              },
+            }
+          }
+        />
+        <ThemeProvider
+          uiTheme={
+            Object {
+              "palette": Object {
+                "accentColor": "#FF7575",
+                "alternateTextColor": "white",
+                "primaryColor": "#FF7575",
+                "primaryTextColor": "black",
+                "secondaryColor": "#CC5D5D",
+              },
+              "spacing": Object {
+                "miniActionButtonSize": 42,
+              },
+              "toolbar": Object {
+                "container": Object {
+                  "height": 50,
+                },
+              },
+              "typography": Object {
+                "fontSize": Object {
+                  "display": 25,
+                },
+                "subheading": Object {
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "lineHeight": 24,
+                },
+              },
+            }
+          }
+        />
+      </View>
+      <ThemeProvider
+        uiTheme={
+          Object {
+            "palette": Object {
+              "accentColor": "#FF7575",
+              "alternateTextColor": "white",
+              "primaryColor": "#FF7575",
+              "primaryTextColor": "black",
+              "secondaryColor": "#CC5D5D",
+            },
+            "spacing": Object {
+              "miniActionButtonSize": 42,
+            },
+            "toolbar": Object {
+              "container": Object {
+                "height": 50,
+              },
+            },
+            "typography": Object {
+              "fontSize": Object {
+                "display": 25,
+              },
+              "subheading": Object {
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "lineHeight": 24,
+              },
+            },
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+  <ThemeProvider
+    uiTheme={
+      Object {
+        "palette": Object {
+          "accentColor": "#FF7575",
+          "alternateTextColor": "white",
+          "primaryColor": "#FF7575",
+          "primaryTextColor": "black",
+          "secondaryColor": "#CC5D5D",
+        },
+        "spacing": Object {
+          "miniActionButtonSize": 42,
+        },
+        "toolbar": Object {
+          "container": Object {
+            "height": 50,
+          },
+        },
+        "typography": Object {
+          "fontSize": Object {
+            "display": 25,
+          },
+          "subheading": Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "lineHeight": 24,
+          },
+        },
+      }
+    }
+  >
+    <ActionButton
+      icon="mode-edit"
+      onPress={[Function]}
+      style={
+        Object {
+          "container": Object {
+            "backgroundColor": "#CC5D5D",
+            "borderRadius": 21,
+            "elevation": 4,
+            "height": 42,
+            "width": 42,
+          },
+          "positionContainer": Object {
+            "left": 7,
+            "position": "absolute",
+            "top": 99,
+          },
+        }
+      }
+    />
+  </ThemeProvider>
+</View>
+`;
