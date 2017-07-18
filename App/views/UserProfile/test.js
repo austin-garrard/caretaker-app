@@ -14,9 +14,9 @@ describe('User Profile', () => {
         expect(renderer.create(<UserProfile />)).toMatchSnapshot();
     })
 
-    it('should process the raw user settings', () => {
+    it('should get the user settings from the gateway', () => {
         const profile = renderer.create(<UserProfile />).getInstance();
-        expect(profile.state.settings).toEqual({
+        expect(profile.state.currentUser.settings).toEqual({
             [NotificationTypes.PUSH]: {
                 name: 'Push',
                 value: true
@@ -49,7 +49,7 @@ describe('User Profile', () => {
 
         profile.toggle(NotificationTypes.EMAIL)();
 
-        expect(profile.state.settings).toEqual({
+        expect(profile.state.currentUser.settings).toEqual({
             [NotificationTypes.PUSH]: {
                 name: 'Push',
                 value: true
@@ -83,6 +83,6 @@ describe('User Profile', () => {
 
         profile.toggle(NotificationTypes.EMAIL)();
 
-        expect(spy).toHaveBeenCalledWith(NotificationTypes.EMAIL, true);
+        expect(spy).toHaveBeenCalledWith(profile.state.currentUser.settings);
     })
 })
