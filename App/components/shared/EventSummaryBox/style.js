@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   volunteer: {},
-  needVolunteerContainer: {
+  needVolunteer: {
     backgroundColor: theme.palette.secondaryColor
   },
   needVolunteerText: {

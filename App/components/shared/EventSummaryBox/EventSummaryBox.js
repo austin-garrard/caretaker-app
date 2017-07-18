@@ -2,21 +2,26 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import styles from './style';
 
-const needsVolunteer = (volunteer) => volunteer === 'TBD';
+const _needsVolunteer = (volunteer) => volunteer === 'TBD';
 
 export default function EventSummaryBox( { name, volunteer } ) {
-  const containerStyles = [styles.container];
-  const nameStyles = [styles.text, styles.name];
-  const volunteerStyles = [styles.text, styles.volunteer];
+  const needsVolunteer = _needsVolunteer(volunteer);
 
-  if(needsVolunteer(volunteer)) {
-    containerStyles.push(styles.needVolunteerContainer);
-    nameStyles.push(styles.needVolunteerText);
-    volunteerStyles.push(styles.needVolunteerText);
-    volunteerStyles.push(styles.italic);
-  }
-  return <View style={containerStyles}>
-    <Text style={nameStyles}>{name}</Text>
-    <Text style={volunteerStyles}>{volunteer}</Text>
+  return <View style={[styles.container, needsVolunteer && styles.needVolunteer]}>
+    <Text style={ [
+      styles.text,
+      styles.name,
+      needsVolunteer && styles.needVolunteerText
+    ] }>
+      {name}
+    </Text>
+    <Text style={ [
+      styles.text,
+      styles.volunteer,
+      needsVolunteer && styles.needVolunteerText,
+      needsVolunteer && styles.italic
+    ] }>
+      {volunteer}
+    </Text>
   </View>;
 }

@@ -141,6 +141,7 @@ exports[`<EventList /> should render correctly 1`] = `
                     "flex": 1,
                     "padding": 4,
                   },
+                  false,
                 ]
               }
             >
@@ -156,6 +157,7 @@ exports[`<EventList /> should render correctly 1`] = `
                     Object {
                       "fontWeight": "bold",
                     },
+                    false,
                   ]
                 }
               >
@@ -171,6 +173,8 @@ exports[`<EventList /> should render correctly 1`] = `
                       "color": "#CC5D5D",
                     },
                     Object {},
+                    false,
+                    false,
                   ]
                 }
               >
@@ -257,6 +261,7 @@ exports[`<EventList /> should render correctly 1`] = `
                     "flex": 1,
                     "padding": 4,
                   },
+                  false,
                 ]
               }
             >
@@ -272,6 +277,7 @@ exports[`<EventList /> should render correctly 1`] = `
                     Object {
                       "fontWeight": "bold",
                     },
+                    false,
                   ]
                 }
               >
@@ -287,6 +293,8 @@ exports[`<EventList /> should render correctly 1`] = `
                       "color": "#CC5D5D",
                     },
                     Object {},
+                    false,
+                    false,
                   ]
                 }
               >
