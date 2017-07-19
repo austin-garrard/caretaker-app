@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import renderif from '../../utils/renderif';
+import theme from '../../config/theme';
 
 import container from './RoleItem.container';
 import ListItem from '../material-ui/ListItem';
@@ -26,7 +27,12 @@ export class RoleItem extends React.PureComponent {
           primaryText: name,
           secondaryText: description
         } }
-        rightElement={renderif(isHelper, <Switch value={hasRole} onValueChange={onToggleSwitch} />)}
+        rightElement={renderif(isHelper, <Switch
+          value={hasRole}
+          onValueChange={onToggleSwitch}
+          onTintColor={theme.palette.lightColor}
+          thumbTintColor={hasRole ? theme.palette.secondaryColor : null}
+        />)}
       />
     </TouchableOpacity>;
   }
