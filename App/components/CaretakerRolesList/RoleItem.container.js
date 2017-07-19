@@ -32,13 +32,15 @@ export default container = (Component) => class extends React.Component {
     const {
       name,
       description,
-      isHelper
+      isHelper,
+      isLast
     } = this.props;
 
     return <Component
       name={name}
       description={description}
       isHelper={isHelper}
+      isLast={isLast}
       onLongPress={this._onLongPress}
       onToggleSwitch={this._onToggleSwitch}
       hasRole={this.state.hasRole}

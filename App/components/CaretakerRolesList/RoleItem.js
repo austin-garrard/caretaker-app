@@ -18,11 +18,13 @@ export class RoleItem extends React.PureComponent {
       hasRole,
       isHelper,
       onLongPress,
-      onToggleSwitch
+      onToggleSwitch,
+      isLast
     } = this.props;
 
     return <TouchableOpacity onLongPress={onLongPress}>
       <ListItem
+        divider={isLast}
         centerElement={ {
           primaryText: name,
           secondaryText: description
@@ -43,6 +45,7 @@ RoleItem.propTypes = {
   description: PropTypes.string,
   hasRole: PropTypes.bool,
   isHelper: PropTypes.bool,
+  isLast: PropTypes.bool,
 
 //From Container
   onLongPress: PropTypes.func,

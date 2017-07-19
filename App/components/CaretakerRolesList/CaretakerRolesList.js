@@ -10,11 +10,12 @@ import container from './CaretakerRolesList.container';
 import styles from './CaretakerRolesList.styles';
 
 class CaretakerRolesList extends React.Component {
-  _renderItem = ({item}) => <RoleItem
+  _renderItem = ({item, index}) => <RoleItem
     name={item.name}
     description={item.description}
     isHelper={this.props.isHelper}
     hasRole={this.props.userHasRole(item.name)}
+    isLast={index === this.props.caretakerRoles.length - 1}
   />;
 
   render() {
