@@ -22,7 +22,7 @@ export default container = (List) => class extends React.Component {
 
   isHelper = () => this.state.permissions !== Permissions.FOCUS;
 
-  isAdmin = () => this.state.permissions === Permissions.FOCUS || Permissions.ADMIN;
+  isAdmin = () => this.state.permissions === Permissions.FOCUS || this.state.permissions === Permissions.ADMIN;
 
   createNewCaretakerRole = () => alert('Insert Caretaker Role Creation Screen Here!');
 
