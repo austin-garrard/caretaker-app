@@ -7,7 +7,6 @@ export default container = (List) => class extends React.Component {
     super();
     this.state = {
       caretakerRoles: [],
-      permissions: null,
       userRoles: []
     };
   }
@@ -15,11 +14,6 @@ export default container = (List) => class extends React.Component {
   updateRoles = () => {
     const caretakerRoles = CaretakerRolesGateway.getAll();
     return { caretakerRoles };
-  }
-
-  updatePermissions = () => {
-    const permissions = UserGateway.getCurrentPermissions();
-    return { permissions };
   }
 
   updateUserRoles = () => {
@@ -30,12 +24,9 @@ export default container = (List) => class extends React.Component {
   componentDidMount() {
     let newState = Object.assign({}, this.state);
     Object.assign(newState, this.updateRoles());
-    Object.assign(newState, this.updatePermissions());
     Object.assign(newState, this.updateUserRoles());
     this.setState(newState);
   }
-
-  isHelper = () => this.state.permissions !== Permissions.FOCUS;
 
   userHasRole = (role) => {
     const words = this.state.userRoles.map(v => v.toLowerCase());
@@ -44,8 +35,8 @@ export default container = (List) => class extends React.Component {
 
   render() {
     return <List
+      isHelper={this.props.isHelper}
       caretakerRoles={this.state.caretakerRoles}
-      isHelper={this.isHelper()}
       userHasRole={this.userHasRole}
     />;
   }
