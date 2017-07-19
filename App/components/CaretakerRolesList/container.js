@@ -8,14 +8,15 @@ export var ContainerFor = (CaretakerRoleList) => class extends Component {
             caretakerRoles: [],
             visibleModal: false,
             selectedRole: null,
-        };        
+        };
     }
 
     updateRoles = () => {
-        let caretakerRoles = CaretakerRolesGateway.getAll();
-        let newState = Object.assign({}, this.state);
-        newState.caretakerRoles = caretakerRoles;
-        this.setState(newState);
+        CaretakerRolesGateway.getAll().then(caretakerRoles => {
+          let newState = Object.assign({}, this.state);
+          newState.caretakerRoles = caretakerRoles;
+          this.setState(newState);
+        });
     }
 
     componentDidMount() {
