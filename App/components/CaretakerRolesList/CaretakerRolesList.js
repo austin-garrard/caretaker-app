@@ -18,7 +18,7 @@ class CaretakerRolesList extends React.Component {
   />;
 
   render() {
-    return <View>
+    return <View style={styles.container}>
       <FlatList
         data={this.props.caretakerRoles}
         dataWhichCouldChange={this.props.caretakerRoles.map(role => role.volunteer)}
