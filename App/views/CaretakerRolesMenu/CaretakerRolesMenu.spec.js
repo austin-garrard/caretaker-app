@@ -35,7 +35,7 @@ describe('<CaretakerRolesMenu />', () => {
   });
 
   describe('isAdmin', () => {
-    it.only('should return true when user is Focus', () => {
+    it('should return true when user is Focus', () => {
       getCurrentPermissions.mockReturnValue(Permissions.FOCUS);
       expect(caretakerRolesMenu().getInstance().isAdmin()).toBe(true);
     });
