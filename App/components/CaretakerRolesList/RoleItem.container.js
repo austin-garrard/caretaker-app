@@ -29,13 +29,19 @@ export default container = (Component) => class extends React.Component {
   _onLongPress = () => alert('Long Pressed');
 
   render() {
+    const {
+      name,
+      description,
+      isHelper
+    } = this.props;
+
     return <Component
+      name={name}
+      description={description}
+      isHelper={isHelper}
       onLongPress={this._onLongPress}
       onToggleSwitch={this._onToggleSwitch}
       hasRole={this.state.hasRole}
-      name={this.props.name}
-      description={this.props.description}
-      isHelper={this.props.isHelper}
     />;
   }
 

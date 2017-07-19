@@ -1,15 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-    FlatList,
-    StyleSheet,
-    Switch,
-    Text,
-    TouchableOpacity,
-    View
+  Switch,
+  TouchableOpacity,
 } from 'react-native';
-import UserGateway, { Permissions } from '../../data/UserGateway';
-import renderif from '../../utils/renderif.js';
+import renderif from '../../utils/renderif';
 
 import container from './RoleItem.container';
 import ListItem from '../material-ui/ListItem';
@@ -42,6 +37,8 @@ RoleItem.propTypes = {
   description: PropTypes.string,
   hasRole: PropTypes.bool,
   isHelper: PropTypes.bool,
+
+//From Container
   onLongPress: PropTypes.func,
   onToggleSwitch: PropTypes.func
 };
