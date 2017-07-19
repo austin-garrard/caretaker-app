@@ -1,5 +1,5 @@
 import React from 'react';
-import CaretakerRolesGateway from '../../data/CaretakerRolesGateway';
+import CaretakerRolesGateway from '../../data/CaretakerRoles/CaretakerRoles.gateway';
 import UserGateway from '../../data/UserGateway';
 
 export default container = (List) => class extends React.Component {

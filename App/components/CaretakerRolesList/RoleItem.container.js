@@ -1,14 +1,4 @@
 import React from 'react';
-import {
-    FlatList,
-    StyleSheet,
-    Switch,
-    Text,
-    TouchableOpacity,
-    View
-} from 'react-native';
-import UserGateway, { Permissions } from '../../data/UserGateway';
-import renderif from '../../utils/renderif.js';
 
 export default container = (Component) => class extends React.Component {
   constructor() {

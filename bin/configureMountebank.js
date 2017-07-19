@@ -1,5 +1,6 @@
 const unirest = require('unirest');
-const User = require('./../App/data/UserGateway/models');
+const User = require('../App/data/UserGateway/models');
+const CaretakerRolesFixture = require('../App/data/CaretakerRoles/CaretakerRoles.fixture');
 
 const MB = 'http://localhost:2525';
 const IMPOSTERS = MB + '/imposters';
@@ -49,27 +50,7 @@ const testFixtures = [{
 }, {
   path: '/roles',
   body: {
-    roles: [{
-      id: 1,
-      name: 'Driver',
-      description: 'Gives rides to things'
-    }, {
-      id: 2,
-      name: 'Coordinator',
-      description: 'Helps coordinate people sign ups'
-    }, {
-      id: 3,
-      name: 'Groceries',
-      description: 'Picks up groceries'
-    }, {
-      id: 4,
-      name: 'Active Friend',
-      description: 'Gets focus out and active (eg, walks) during vulnerable times'
-    }, {
-      id: 5,
-      name: 'Chef',
-      description: 'Cooks food cause yum!!!!'
-    }]
+    roles: CaretakerRolesFixture.allRoles
   }
 }];
 
