@@ -8,14 +8,11 @@ import "isomorphic-fetch";
 
 const createCaretakerRolesGateway = () => {
 
-  let allRoles = null;
-
   return {
     getAll() {
       return fetch(API_URL + '/roles')
         .then(response => response.json())
         .then(json => {
-          allRoles = json.roles;
           return json.roles;
         })
     }

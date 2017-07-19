@@ -68,7 +68,7 @@ const testFixtures = [{
     }, {
       id: 5,
       name: 'Chef',
-      description: 'Cooks food cause yum'
+      description: 'Cooks food cause yum!!!!'
     }]
   }
 }];
