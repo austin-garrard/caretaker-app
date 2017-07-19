@@ -4,7 +4,7 @@
   However, until there is an API to call, it returns canned data.
 */
 import { API_URL } from '../../config/ApiConfig';
-import "isomorphic-fetch";
+import '../../utils/fetch';
 
 const createCaretakerRolesGateway = () => {
 
