@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   FlatList
@@ -27,5 +28,12 @@ class CaretakerRolesList extends React.Component {
     </View>;
   }
 }
+
+CaretakerRolesList.propTypes = {
+//From container
+  caretakerRoles: PropTypes.array,
+  isHelper: PropTypes.bool,
+  userHasRole: PropTypes.func
+};
 
 export default container(CaretakerRolesList);
