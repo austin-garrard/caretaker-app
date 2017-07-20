@@ -10,6 +10,7 @@
     "android": "npm run mb && react-native run-android"
   },
   "dependencies": {
+    "dateformat": "^2.0.0",
     "immutable": "^3.8.1",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.2",
