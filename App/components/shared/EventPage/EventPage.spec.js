@@ -11,6 +11,8 @@ describe('<EventPage />', () => {
     event = {
       name: 'Chemotherapy',
       volunteer: 'East Jones',
+      startDate: 1499613300000,
+      endDate: 1499620500000,
       date: '01 Jul',
       location: '800 Rocky Rd, Citytown TX',
       description: 'The description is mighty.'

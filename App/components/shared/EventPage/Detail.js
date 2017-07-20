@@ -9,7 +9,7 @@ const renderText = (text, index) => <Text key={index} style={styles.detailText}>
 export default function Detail( { text, icon, center } ) {
   let textsToRender;
   if(text.map)
-    textsToRender = text.map(t => renderText(t));
+    textsToRender = text.map((t, index) => renderText(t, index));
   else
     textsToRender = renderText(text);
 
