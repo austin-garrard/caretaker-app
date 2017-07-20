@@ -3,14 +3,18 @@
 
   However, until there is an API to call, it returns canned data.
 */
-import { API_URL, defaultRequestHeaders } from '../../config/ApiConfig';
+import { getApiUrl } from '../../config/ApiConfig';
 import '../../utils/fetch';
 
 const createCaretakerRolesGateway = () => {
 
   const config = {
-    headers: defaultRequestHeaders
+    headers: {
+      'Accept': 'application/json'
+    }
   };
+
+  const API_URL = getApiUrl();
 
   return {
     getAll() {
