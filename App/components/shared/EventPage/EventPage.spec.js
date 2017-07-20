@@ -46,6 +46,11 @@ describe('<EventPage />', () => {
     expect(eventPage()).toMatchSnapshot();
   });
 
+  it('should render the accept button when the event needs a volunteer', () => {
+    event.volunteer = 'TBD';
+    expect(eventPage()).toMatchSnapshot();
+  });
+
   it('should not render the location when the event has no location', () => {
     event.location = undefined;
     expect(eventPage()).toMatchSnapshot();

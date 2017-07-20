@@ -24,6 +24,8 @@ const getDateTexts = (startDate, endDate) => {
   return texts;
 };
 
+const eventAccepted = (event) => event.volunteer !== 'TBD';
+
 export default function EventPage( { event, onClose, onAccept, onDrop, onEdit } ) {
   const startDate = fieldPresent(event.startDate) ? new Date(event.startDate) : null;
   const endDate = fieldPresent(event.endDate) ? new Date(event.endDate) : null;
@@ -49,7 +51,10 @@ export default function EventPage( { event, onClose, onAccept, onDrop, onEdit } 
           <Detail icon='subject' text={event.description} />
         )}
       </View>
-      <Button raised primary icon='done' text='Accept' onPress={onAccept} style={{container: styles.acceptBtn}} />
+      {renderIf(
+        !eventAccepted(event), () =>
+        <Button raised primary icon='done' text='Accept' onPress={onAccept} style={{container: styles.acceptBtn}} />
+      )}
     </ScrollView>
     <ActionButton icon='mode-edit' onPress={onEdit} style={ {
       positionContainer: styles.editBtnPosition,
