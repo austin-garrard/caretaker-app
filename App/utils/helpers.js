@@ -1,3 +1,6 @@
+/**
+  renderIf(isHelper, () => <Button />);
+*/
 export function renderIf(condition, componentCallback) {
   return condition ? componentCallback() : null;
 }

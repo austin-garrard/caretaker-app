@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native';
 import CaretakerRolesList from '../../components/CaretakerRolesList';
 import ScreenWithToolbar from '../../components/shared/ScreenWithToolbar';
 import ListItem from '../../components/material-ui/ListItem';
-import renderif from '../../utils/renderif';
+import { renderIf } from '../../utils/helpers';
 
 import container from './container';
 import styles from './styles';
@@ -18,7 +18,7 @@ function CaretakerRolesMenu( {
   return <ScreenWithToolbar title='Roles' navigation={navigation}>
     <ScrollView style={styles.container}>
       <CaretakerRolesList isHelper={isHelper} />
-      {renderif(isAdmin,
+      {renderIf(isAdmin, () =>
         <ListItem divider centerElement='Add Role' onPress={createNewCaretakerRole} />
       )}
     </ScrollView>

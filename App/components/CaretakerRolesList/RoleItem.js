@@ -4,7 +4,7 @@ import {
   Switch,
   TouchableOpacity,
 } from 'react-native';
-import renderif from '../../utils/renderif';
+import { renderIf } from '../../utils/helpers';
 import theme from '../../config/theme';
 
 import container from './RoleItem.container';
@@ -29,7 +29,7 @@ export class RoleItem extends React.PureComponent {
           primaryText: name,
           secondaryText: description
         } }
-        rightElement={renderif(isHelper, <Switch
+        rightElement={renderIf(isHelper, () => <Switch
           value={hasRole}
           onValueChange={onToggleSwitch}
           onTintColor={theme.palette.lightColor}
