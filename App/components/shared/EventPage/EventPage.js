@@ -14,7 +14,11 @@ import Button from '../../material-ui/Button';
 const getDateTexts = (startDate, endDate) => {
   const texts = [dateFormat(startDate, 'dddd, mmmm d')];
   if(startDate && endDate) {
-    texts.push(`${dateFormat(startDate, 'h:MM')} - ${dateFormat(endDate, 'h:MM TT')}`);
+    const startDateTT = dateFormat(startDate, 'TT');
+    const endDateTT = dateFormat(endDate, 'TT');
+    if(startDateTT === endDateTT)
+      startDateTT = '';
+    texts.push(`${dateFormat(startDate, 'h:MM')} ${startDateTT} - ${dateFormat(endDate, 'h:MM TT')}`);
   }
 
   return texts;
