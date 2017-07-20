@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableHighlight, Text, ScrollView } from 'react-native';
+import { renderIf, fieldPresent } from '../../../utils/helpers';
+
 import styles from './styles';
 
 import Header from './Header';
@@ -13,10 +15,22 @@ export default function EventPage( { event, onClose, onAccept, onDrop, onEdit } 
     <Header title={event.name} onClose={onClose} />
     <ScrollView style={styles.scrollbox}>
       <View style={styles.details}>
-        <Detail center icon='schedule' text={event.date} />
-        <Detail center icon='place' text={event.location} />
-        <Detail center icon='person' text={event.volunteer} />
-        <Detail icon='subject' text={event.description} />
+        {renderIf(
+          fieldPresent(event.startDate),
+          <Detail center icon='schedule' text={event.date} />
+        )}
+        {renderIf(
+          fieldPresent(event.location),
+          <Detail center icon='place' text={event.location} />
+        )}
+        {renderIf(
+          fieldPresent(event.volunteer),
+          <Detail center icon='person' text={event.volunteer} />
+        )}
+        {renderIf(
+          fieldPresent(event.description) && event.description.length > 0,
+          <Detail icon='subject' text={event.description} />
+        )}
       </View>
       <Button raised primary icon='done' text='Accept' onPress={onAccept} style={{container: styles.acceptBtn}} />
     </ScrollView>
