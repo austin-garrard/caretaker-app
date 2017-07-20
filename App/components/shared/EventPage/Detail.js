@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import styles from './styles';
 import ListItem from '../../material-ui/ListItem';
 
-const renderText = text => <Text style={styles.detailText}>{text}</Text>;
+const renderText = (text, index) => <Text key={index} style={styles.detailText}>{text}</Text>;
 
 export default function Detail( { text, icon, center } ) {
   let textsToRender;

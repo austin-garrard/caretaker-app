@@ -11,9 +11,18 @@ import Detail from './Detail';
 import ActionButton from '../../material-ui/ActionButton';
 import Button from '../../material-ui/Button';
 
+const getDateTexts = (startDate, endDate) => {
+  const texts = [dateFormat(startDate, 'dddd, mmmm d')];
+  if(startDate && endDate) {
+    texts.push(`${dateFormat(startDate, 'h:MM')} - ${dateFormat(endDate, 'h:MM TT')}`);
+  }
+
+  return texts;
+};
+
 export default function EventPage( { event, onClose, onAccept, onDrop, onEdit } ) {
-  const startDate = new Date(event.startDate);
-  const endDate = new Date(event.endDate);
+  const startDate = fieldPresent(event.startDate) ? new Date(event.startDate) : null;
+  const endDate = fieldPresent(event.endDate) ? new Date(event.endDate) : null;
 
   return <View style={styles.container}>
     <Header title={event.name} onClose={onClose} />
@@ -21,7 +30,7 @@ export default function EventPage( { event, onClose, onAccept, onDrop, onEdit } 
       <View style={styles.details}>
         {renderIf(
           fieldPresent(event.startDate), () =>
-          <Detail center icon='schedule' text={dateFormat(startDate, 'dddd, mmmm d')} />
+          <Detail center icon='schedule' text={getDateTexts(startDate, endDate)} />
         )}
         {renderIf(
           fieldPresent(event.location), () =>
