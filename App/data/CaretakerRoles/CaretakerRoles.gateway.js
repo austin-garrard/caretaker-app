@@ -14,6 +14,14 @@ const createCaretakerRolesGateway = () => {
     }
   };
 
+  const postConfig = {
+    method: 'POST',
+    headers: {
+      ...config.headers,
+      'Content-Type': 'application/json'
+    }
+  };
+
   const API_URL = getApiUrl();
 
   return {
@@ -23,6 +31,12 @@ const createCaretakerRolesGateway = () => {
         .then(json => {
           return json.roles;
         })
+    },
+
+    create(newRoleData) {
+      return fetch(API_URL + '/roles', postConfig)
+        .then(response => response.json())
+        .then(json => json.newRole);
     }
   }
 };

@@ -9,7 +9,7 @@ describe('Caretaker Roles gateway', () => {
 
   const provider = createPact('Caretaker Roles Gateway', 'Caretaker Roles API');
 
-  const interaction = {
+  const getAllRolesInteraction = {
     state: 'I have all the roles for a given focus',
     uponReceiving: 'A request for all the roles',
     withRequest: {
@@ -26,9 +26,26 @@ describe('Caretaker Roles gateway', () => {
     }
   };
 
+  const addRoleInteraction = {
+    state: '_',
+    uponReceiving: 'Data for a new role',
+    withRequest: {
+      method: 'POST',
+      path: '/roles',
+      headers: { 'Accept': 'application/json' }
+    },
+    willRespondWith: {
+      status: 201,
+      body: {
+        'newRole': RolesFixture.newRole
+      }
+    }
+  };
+
   beforeAll(() => {
     return provider.setup()
-      .then(() => provider.addInteraction(interaction))
+      .then(() => provider.addInteraction(getAllRolesInteraction))
+      .then(() => provider.addInteraction(addRoleInteraction))
       .catch(e => console.error(e))
   });
 
@@ -37,6 +54,11 @@ describe('Caretaker Roles gateway', () => {
   it('gets all the roles', () => {
     return gateway.getAll()
       .then(roles => expect(roles).toEqual(RolesFixture.allRoles))
+  });
+
+  it('creates a new role', () => {
+    return gateway.create(RolesFixture.newRoleData)
+      .then(newRole => expect(newRole).toEqual(RolesFixture.newRole));
   });
 
   describe('Pact Verification', () => {
