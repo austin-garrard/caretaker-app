@@ -1,5 +1,5 @@
-export function renderIf(condition, component) {
-  return condition ? component : null;
+export function renderIf(condition, componentCallback) {
+  return condition ? componentCallback() : null;
 }
 
 export function fieldPresent(field) {

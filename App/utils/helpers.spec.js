@@ -8,11 +8,11 @@ describe('helpers', () => {
   describe('renderIf', () => {
     it('should return the component when the condition is true', () => {
       const component = <Component />;
-      expect(renderIf(true, component)).toBe(component);
+      expect(renderIf(true, () => component)).toBe(component);
     });
 
     it('should return null when the condition is false', () => {
-      expect(renderIf(false, <Component />)).toBe(null);
+      expect(renderIf(false, () => <Component />)).toBe(null);
     });
   });
 

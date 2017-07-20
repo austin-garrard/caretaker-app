@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableHighlight, Text, ScrollView } from 'react-native';
+import dateFormat from 'dateformat';
 import { renderIf, fieldPresent } from '../../../utils/helpers';
 
 import styles from './styles';
@@ -11,24 +12,27 @@ import ActionButton from '../../material-ui/ActionButton';
 import Button from '../../material-ui/Button';
 
 export default function EventPage( { event, onClose, onAccept, onDrop, onEdit } ) {
+  const startDate = new Date(event.startDate);
+  const endDate = new Date(event.endDate);
+
   return <View style={styles.container}>
     <Header title={event.name} onClose={onClose} />
     <ScrollView style={styles.scrollbox}>
       <View style={styles.details}>
         {renderIf(
-          fieldPresent(event.startDate),
-          <Detail center icon='schedule' text={event.date} />
+          fieldPresent(event.startDate), () =>
+          <Detail center icon='schedule' text={dateFormat(startDate, 'dddd, mmmm d')} />
         )}
         {renderIf(
-          fieldPresent(event.location),
+          fieldPresent(event.location), () =>
           <Detail center icon='place' text={event.location} />
         )}
         {renderIf(
-          fieldPresent(event.volunteer),
+          fieldPresent(event.volunteer), () =>
           <Detail center icon='person' text={event.volunteer} />
         )}
         {renderIf(
-          fieldPresent(event.description) && event.description.length > 0,
+          fieldPresent(event.description) && event.description.length > 0, () =>
           <Detail icon='subject' text={event.description} />
         )}
       </View>
