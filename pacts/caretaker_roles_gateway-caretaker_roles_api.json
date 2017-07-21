@@ -59,7 +59,14 @@
         "method": "POST",
         "path": "/roles",
         "headers": {
-          "Accept": "application/json"
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "newRoleData": {
+            "name": "Developer",
+            "description": "Writes code but not tests"
+          }
         }
       },
       "response": {

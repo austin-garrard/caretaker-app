@@ -32,7 +32,11 @@ describe('Caretaker Roles gateway', () => {
     withRequest: {
       method: 'POST',
       path: '/roles',
-      headers: { 'Accept': 'application/json' }
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: { newRoleData: RolesFixture.newRoleData }
     },
     willRespondWith: {
       status: 201,
