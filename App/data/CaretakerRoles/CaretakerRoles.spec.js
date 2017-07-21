@@ -1,5 +1,5 @@
 
-import { mockApiConfig, createPact } from '../../utils/testUtils';
+import { mockApiConfig, createProvider } from '../../utils/testUtils';
 import RolesFixture from './CaretakerRoles.fixture';
 import gateway from './CaretakerRoles.gateway';
 
@@ -7,9 +7,9 @@ jest.mock('../../config/ApiConfig', () => mockApiConfig);
 
 describe('Caretaker Roles gateway', () => {
 
-  const provider = createPact('Caretaker Roles Gateway', 'Caretaker Roles API');
+  const provider = createProvider('Caretaker Roles Gateway', 'Caretaker Roles API');
 
-  const getAllRolesInteraction = {
+  const getAllRoles = {
     state: 'I have all the roles for a given focus',
     uponReceiving: 'A request for all the roles',
     withRequest: {
@@ -26,7 +26,7 @@ describe('Caretaker Roles gateway', () => {
     }
   };
 
-  const addRoleInteraction = {
+  const createRole = {
     state: '_',
     uponReceiving: 'Data for a new role',
     withRequest: {
@@ -46,12 +46,7 @@ describe('Caretaker Roles gateway', () => {
     }
   };
 
-  beforeAll(() => {
-    return provider.setup()
-      .then(() => provider.addInteraction(getAllRolesInteraction))
-      .then(() => provider.addInteraction(addRoleInteraction))
-      .catch(e => console.error(e))
-  });
+  beforeAll(() => provider.setupWithInteractions([getAllRoles, createRole]));
 
   afterAll(() => provider.finalize());
 
@@ -66,7 +61,7 @@ describe('Caretaker Roles gateway', () => {
   });
 
   describe('Pact Verification', () => {
-    it('succeeded', () => provider.verify())
+    it('should succeed', () => provider.verify())
   })
 
 });
